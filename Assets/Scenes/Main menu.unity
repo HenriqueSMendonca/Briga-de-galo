@@ -916,7 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41786903b82f02d4da4e552f0bb4effe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cenaStart: SampleScene
+  cenaStart: Character Selection
 --- !u!1 &1847610829
 GameObject:
   m_ObjectHideFlags: 0
