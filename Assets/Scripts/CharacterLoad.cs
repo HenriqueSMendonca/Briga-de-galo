@@ -8,7 +8,7 @@ public class CharacterLoad : MonoBehaviour
     public Transform spawn;
     void Start()
     {
-        Instantiate(characters[PlayerPrefs.GetInt("selectedChar")], spawn);
+        Instantiate(characters[PlayerPrefs.GetInt("selectedChar")], spawn.position,Quaternion.identity);
     }
 
     // Update is called once per frame
