@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    public PlayerInputManager playerManager;
     public string cenaStart;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,10 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerManager.playerCount == 2)
+        {
+            playerManager.DisableJoining();
+        }
     }
     public void ChangeScene()
     {
@@ -26,5 +31,9 @@ public class MenuManager : MonoBehaviour
     public void Close()
     {
         Application.Quit();
+    }
+    public void Text()
+    {
+        Debug.Log("alalala");
     }
 }
