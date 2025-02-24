@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class CursorControls : MonoBehaviour
 {
@@ -11,7 +12,6 @@ public class CursorControls : MonoBehaviour
     public float speed = 5f;
     Vector2 movement;
     private Button button;
-    private string buttonName;
 
 
     private void Awake()
@@ -20,7 +20,15 @@ public class CursorControls : MonoBehaviour
     }
     void Start()
     {
-        
+        if (GameObject.FindGameObjectsWithTag("Player").Length == 1)
+        {
+            gameObject.name = "P1";
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 1);
+        } else
+        {
+            gameObject.name = "P2";
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
+        }
     }
 
     
@@ -42,15 +50,24 @@ public class CursorControls : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Button")
+        if (gameObject.name == "P1")
         {
-            buttonName = collision.gameObject.name;
-            button = collision.gameObject.GetComponent<Button>();
+            if (collision.gameObject.CompareTag("Button") || collision.gameObject.CompareTag("ButtonP1"))
+            {
+                button = collision.gameObject.GetComponent<Button>();
+            }
+        }
+        else
+        {
+            if (collision.gameObject.CompareTag("Button") || collision.gameObject.CompareTag("ButtonP2"))
+            {
+                button = collision.gameObject.GetComponent<Button>();
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Button")
+        if (collision.gameObject.CompareTag("Button") || collision.gameObject.CompareTag("ButtonP1") || collision.gameObject.CompareTag("ButtonP2"))
         {
             button = null;
         }
