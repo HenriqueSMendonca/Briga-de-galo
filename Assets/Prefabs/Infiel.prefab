@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2646816972658680655}
   - component: {fileID: 578943412693848146}
+  - component: {fileID: -227079400607728390}
   m_Layer: 0
   m_Name: Infiel
   m_TagString: Untagged
@@ -84,3 +85,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-227079400607728390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5729975057221581173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a90bd2299754645b15e669bdf1e064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomeGalo: Infiel
+  maxHP: 900
+  currentHp: 900
+  maxSP: 100
+  currentSP: 100
