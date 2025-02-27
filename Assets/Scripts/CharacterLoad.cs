@@ -9,7 +9,7 @@ public class CharacterLoad : MonoBehaviour
     void Start()
     {
         Instantiate(characters[PlayerPrefs.GetInt("selectedChar1")], spawn1.position,Quaternion.identity);
-        Instantiate(characters[PlayerPrefs.GetInt("selectedChar2")], spawn2.position, Quaternion.identity);
+        Instantiate(characters[PlayerPrefs.GetInt("selectedChar2")], spawn2.position, new Quaternion( 0, 180, 0,0));
     }
 
     // Update is called once per frame
