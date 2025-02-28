@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Galo : MonoBehaviour
 {
+    public int charID;
     public string nomeGalo;
     public int maxHP;
     public int currentHp;
@@ -11,6 +12,8 @@ public class Galo : MonoBehaviour
     public int currentSP;
     public bool isPoisoned, isStunned;
     public int poisonedTime;
+    public bool hasPriority;
+    public string[] abilityNames;
     // Start is called before the first frame update
     void Start()
     {

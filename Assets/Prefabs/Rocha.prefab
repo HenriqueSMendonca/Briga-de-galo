@@ -97,8 +97,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3a90bd2299754645b15e669bdf1e064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charID: 1
   nomeGalo: Rocha
   maxHP: 1200
   currentHp: 1200
   maxSP: 80
   currentSP: 80
+  isPoisoned: 0
+  isStunned: 0
+  poisonedTime: 0
+  hasPriority: 0
+  abilityNames:
+  - rocha1
+  - rocha2
+  - rocha3
+  - rocha4

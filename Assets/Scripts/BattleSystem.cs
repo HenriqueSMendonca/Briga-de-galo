@@ -12,7 +12,7 @@ public enum BattleState { START, PlayerTurn, CarRace, Comandos ,P1WIN, P2WIN }
 public class BattleSystem : MonoBehaviour
 {
     public PlayerInputManager playerManager;
-    public TextMeshProUGUI  dialogueText;
+    public TextMeshProUGUI  dialogueText;   
     public GameObject[] panels;
     public GameObject[] characters;
     public Transform spawn1, spawn2;
