@@ -102,3 +102,6 @@ MonoBehaviour:
   currentHp: 1908
   maxSP: 908
   currentSP: 908
+  isPoisoned: 0
+  isStunned: 0
+  poisonedTime: 2

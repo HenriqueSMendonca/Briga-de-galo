@@ -9,6 +9,8 @@ public class Galo : MonoBehaviour
     public int currentHp;
     public int maxSP;
     public int currentSP;
+    public bool isPoisoned, isStunned;
+    public int poisonedTime;
     // Start is called before the first frame update
     void Start()
     {

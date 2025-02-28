@@ -8,19 +8,12 @@ public class BattleHud : MonoBehaviour
 {
     public TextMeshProUGUI hpText, spText;
     // Start is called before the first frame update
-    void Start()
-    {       
-    }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void SetHUD(Galo galo)
     {
         hpText.text = galo.currentHp.ToString() + "/" + galo.maxHP.ToString();
-        //spText.text = galo.currentSP.ToString() + "/" + galo.maxSP.ToString();
+        spText.text = galo.currentSP.ToString() + "/" + galo.maxSP.ToString();
     }
     public void SetHP(int hp)
     {
