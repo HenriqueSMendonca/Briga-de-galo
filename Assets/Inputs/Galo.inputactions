@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Join",
+                    "type": "Button",
+                    "id": "1eb10f28-f1f6-47b1-8be3-89248b07e5f4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -59,15 +68,37 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "62edd2c9-e011-4c39-815f-4847ae4e3e30",
-                    "path": "<Gamepad>/leftStick",
+                    "name": "JoystickUD",
+                    "id": "52017452-0fbc-4b3f-a356-962093e972bc",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveV",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Negative",
+                    "id": "08c89e1a-0e2b-40fb-8ce7-e49d7c470002",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "MoveV",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Positive",
+                    "id": "d02fd2a0-4af0-4cf5-9c21-e289ecc8fb89",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveV",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "AD",
@@ -103,13 +134,57 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "3b8ed6f2-129c-464a-9502-aa16ca235ead",
-                    "path": "<Gamepad>/leftStick",
+                    "name": "JoystickLR",
+                    "id": "bf0bd5a8-a3e1-4ba8-9bd0-f5468cd5bf88",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "MoveH",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Negative",
+                    "id": "5a5433c5-970d-4a3e-966c-dc821499856b",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveH",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Positive",
+                    "id": "ecec4967-999e-484a-aaa8-2ac010c22219",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveH",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "63192427-2702-4b0b-8af9-a06c58d68b66",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Join",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2d1b85c6-b33e-4334-9396-dd767cd69e93",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Join",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
