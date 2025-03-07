@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Carro : MonoBehaviour
 {
@@ -20,12 +21,19 @@ public class Carro : MonoBehaviour
 
     void Start()
     {
+        if (GameObject.FindGameObjectsWithTag("Galo").Length == 1)
+        {
+            gameObject.name = "Galo1";           
+        }
+        else
+        {
+            gameObject.name = "Galo2";         
+        }
     }
     private void FixedUpdate()
     {
 
-        vert = Input.GetAxis("Vertical");
-        hori = -Input.GetAxis("Horizontal");
+       
         
         if (vert > 0)
         {
@@ -36,7 +44,7 @@ public class Carro : MonoBehaviour
         } else  if (vert == 0)
         {
             speed = Vector2.zero;
-            rb.velocity = Vector2.zero;
+            rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, 0.05f);
         }
         rb.AddForce(speed);
         aux = Vector2.Dot(rb.velocity, rb.GetRelativeVector(Vector2.up));
@@ -63,4 +71,13 @@ public class Carro : MonoBehaviour
 
         currentSpeed = rb.velocity.magnitude;
     }
+    public void MovingV(InputAction.CallbackContext context)
+    {      
+        vert = context.ReadValue<float>();
+    }
+    public void MovingH(InputAction.CallbackContext context)
+    {
+        hori = -context.ReadValue<float>();
+    }
+    
 }

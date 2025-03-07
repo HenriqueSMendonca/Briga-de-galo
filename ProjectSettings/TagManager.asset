@@ -7,6 +7,7 @@ TagManager:
   - Button
   - ButtonP1
   - ButtonP2
+  - Galo
   layers:
   - Default
   - TransparentFX
