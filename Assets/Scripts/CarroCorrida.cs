@@ -17,20 +17,19 @@ public class Carro : MonoBehaviour
     public Vector2 relativeForce;
     public bool inputEnabled = false;
 
-    private List<GameObject> marcas = new List<GameObject>();
-
 
     void Start()
     {
         if (GameObject.FindGameObjectsWithTag("Galo").Length == 1)
         {
-            gameObject.name = "Galo1";           
+            gameObject.name = "Galo1";
         }
         else
         {
-            gameObject.name = "Galo2";         
+            gameObject.name = "Galo2";
         }
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        
     }
     private void FixedUpdate()
     {
@@ -85,5 +84,16 @@ public class Carro : MonoBehaviour
     {
         hori = -context.ReadValue<float>();
     }
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.name == "End1")
+        {
+            Debug.Log("player1 ganhou");
+        }
+        else if (collision.gameObject.name == "End2")
+        {
+            Debug.Log("player2 ganhou");
+        }
+    }
 }

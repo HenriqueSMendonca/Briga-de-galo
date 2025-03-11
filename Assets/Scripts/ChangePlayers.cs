@@ -24,7 +24,9 @@ public class ChangePlayers : MonoBehaviour
         {
             roomFull = true;
             playerManager.DisableJoining();
-            Instantiate(pistas[Random.Range(0,4)]);
+            int random = Random.Range(0, pistas.Length);
+            Debug.Log(random);
+            Instantiate(pistas[random]);
         }
         if (gameObjects[3] == null)
         {
@@ -44,7 +46,7 @@ public class ChangePlayers : MonoBehaviour
             cursor2 = gameObjects[2].GetComponent<CursorControls>();
             carro2 = gameObjects[3].GetComponent<Carro>();
         }
-       if(Input.GetKeyDown(KeyCode.Space))
+       if(Input.GetKeyDown(KeyCode.Space) && roomFull)
         {
             gameObjects[0].GetComponent<SpriteRenderer>().enabled = !gameObjects[0].GetComponent<SpriteRenderer>().enabled;
             cursor1.inputEnabled = !cursor1.inputEnabled;

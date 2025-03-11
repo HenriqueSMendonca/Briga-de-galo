@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3676100457931685861}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.24133015, y: -0.60609096, z: -3.9019575}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -135,6 +135,7 @@ MonoBehaviour:
   hori: 0
   vert: 0
   relativeForce: {x: 0, y: 0}
+  inputEnabled: 0
 --- !u!70 &7926062930589884426
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -227,6 +228,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f4f5f677-1bd2-4eea-b27d-268bcbcd44a9
     m_ActionName: Galo/MoveH[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1eb10f28-f1f6-47b1-8be3-89248b07e5f4
+    m_ActionName: Galo/Join[/Keyboard/anyKey,/DualShock4GamepadHID/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Galo
