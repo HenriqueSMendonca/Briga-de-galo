@@ -7,7 +7,6 @@ public class RaceManager : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] GameObject start1, start2, finish1, finish2;
     GameObject galo1GO, galo2GO;
-    public BoxCollider2D[] boxCollider2Ds;
     void Start()
     {
         galo1GO = GameObject.Find("Galo1");
