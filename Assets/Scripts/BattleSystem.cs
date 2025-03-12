@@ -12,9 +12,12 @@ public enum BattleState { START, PlayerTurn, CarRace, Comandos ,P1WIN, P2WIN }
 public class BattleSystem : MonoBehaviour
 {
     public PlayerInputManager playerManager;
-    public TextMeshProUGUI  dialogueText;   
+    public TextMeshProUGUI  dialogueText;
+    public Canvas cnvs;
+    public GameObject[] players;
     public GameObject[] panels;
     public GameObject[] characters;
+    public GameObject[] pistas;
     public Transform spawn1, spawn2;
     public BattleState state;
     Galo p1Galo, p2Galo;
@@ -26,22 +29,29 @@ public class BattleSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (playerManager.playerCount == playerManager.maxPlayerCount && roomFull == false)
+        {
+            roomFull = true;
+            playerManager.DisableJoining();
+            StartTheGame();
+        }
+    }
+    void StartTheGame()
+    {
+        cnvs.gameObject.SetActive(true);
+       
+
         panels[0].SetActive(false);
         panels[1].SetActive(false);
         p1HUD.gameObject.SetActive(false);
         p2HUD.gameObject.SetActive(false);
         state = BattleState.START;
         StartCoroutine(SetupBattle());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (playerManager.playerCount == 2 && roomFull == false)
-        {
-            roomFull = true;
-            playerManager.DisableJoining();
-        }
     }
     IEnumerator SetupBattle()
     {
@@ -54,26 +64,54 @@ public class BattleSystem : MonoBehaviour
         p1HUD.SetHUD(p1Galo);
         p2HUD.SetHUD(p2Galo);
         yield return new WaitForSeconds(3);
-         
+
+        players[0] = GameObject.Find("P1");
+
+        players[1] = GameObject.Find("Galo1");
+
+        players[2] = GameObject.Find("P2");
+
+        players[3] = GameObject.Find("Galo2");
+
         state = BattleState.PlayerTurn;
         PlayerTurn();
     }
 
     void PlayerTurn()
     {
+        panels[0].SetActive(false);
+        panels[1].SetActive(false);
         p1HUD.gameObject.SetActive(true);
         p2HUD.gameObject.SetActive(true);
         dialogueText.text = "Selecione uma ação!";
+    }
+    void CarRace()
+    {
+        p1HUD.gameObject.SetActive(false);
+        p2HUD.gameObject.SetActive(false);
+        dialogueText.text = "Chegue até o final";
+        GameObject pistache = Instantiate(pistas[UnityEngine.Random.Range(0, 4)]);
+
     }
 
     public void Action1(int actionNum)
     {
         p1Decided = true;
+        if (p1Decided && p2Decided)
+        {
+            state = BattleState.CarRace;
+            CarRace();
+        }
 
     }
     public void Action2(int actionNum)
     {
         p2Decided = true;
+        if (p1Decided && p2Decided)
+        {
+            state = BattleState.CarRace;
+            CarRace();
+        }
     }
    
 }

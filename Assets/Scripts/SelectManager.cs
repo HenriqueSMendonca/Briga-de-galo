@@ -29,7 +29,7 @@ public class SelectManager : MonoBehaviour
     void Update()
     {
 
-        if (playerManager.playerCount == 2 && roomFull == false)
+        if (playerManager.playerCount == playerManager.maxPlayerCount && roomFull == false)
         {
             roomFull = true;
             playerManager.DisableJoining();

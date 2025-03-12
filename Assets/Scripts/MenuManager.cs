@@ -20,7 +20,7 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerManager.playerCount == 2 && roomFull == false)
+        if (playerManager.playerCount == playerManager.maxPlayerCount && roomFull == false)
         {
             roomFull = true;
             playerManager.DisableJoining();

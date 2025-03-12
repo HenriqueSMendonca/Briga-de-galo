@@ -30,13 +30,7 @@ public class ChangePlayers : MonoBehaviour
         }
         if (gameObjects[3] == null)
         {
-            gameObjects[0] = GameObject.Find("P1");
             
-            gameObjects[1] = GameObject.Find("Galo1");
-            
-            gameObjects[2] = GameObject.Find("P2");
-            
-            gameObjects[3] = GameObject.Find("Galo2");
             
         }
         else if (gameObjects[3] != null)

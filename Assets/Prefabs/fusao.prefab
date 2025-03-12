@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 506510036914332918}
+  - component: {fileID: -3523204026080042596}
   m_Layer: 0
   m_Name: fusao
   m_TagString: Untagged
@@ -33,6 +34,18 @@ Transform:
   - {fileID: 2830866054451400442}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3523204026080042596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813060269622947263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d14c9e080ab5546861ef5e2e9ca01c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &672226211542070426
 PrefabInstance:
   m_ObjectHideFlags: 0
