@@ -242,7 +242,7 @@ Transform:
   m_GameObject: {fileID: 809166995}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.271348, y: -1.2481462, z: -41.01593}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -268,9 +268,9 @@ MonoBehaviour:
   playerManager: {fileID: 809166999}
   pistas:
   - {fileID: 8560493010437159635, guid: a22aaba13f947c34d94df285cb2f889c, type: 3}
-  - {fileID: 8560493010437159635, guid: a22aaba13f947c34d94df285cb2f889c, type: 3}
-  - {fileID: 8560493010437159635, guid: a22aaba13f947c34d94df285cb2f889c, type: 3}
-  - {fileID: 8560493010437159635, guid: a22aaba13f947c34d94df285cb2f889c, type: 3}
+  - {fileID: 3393916639083115193, guid: 537dde342742cfd42b23b5fb25eb8f1c, type: 3}
+  - {fileID: 1102773074022770574, guid: 6a31a46ea8f347b48b774254de5741bd, type: 3}
+  - {fileID: 4397340074259233424, guid: 48c139d1419642945a0f66774d76ce84, type: 3}
 --- !u!114 &809166999
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -72,7 +72,6 @@ public class Carro : MonoBehaviour
             {
                 rb.velocity = rb.velocity.normalized * maxSpeed;
             }
-
             currentSpeed = rb.velocity.magnitude;
         }
     }
@@ -84,16 +83,5 @@ public class Carro : MonoBehaviour
     {
         hori = -context.ReadValue<float>();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.name == "End1")
-        {
-            Debug.Log("player1 ganhou");
-        }
-        else if (collision.gameObject.name == "End2")
-        {
-            Debug.Log("player2 ganhou");
-        }
-    }
+    
 }
