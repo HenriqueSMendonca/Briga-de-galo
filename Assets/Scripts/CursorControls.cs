@@ -12,6 +12,7 @@ public class CursorControls : MonoBehaviour
     public float speed = 5f;
     Vector2 movement;
     private Button button;
+    public bool inputEnabled = true;
 
 
     private void Awake()
@@ -20,6 +21,7 @@ public class CursorControls : MonoBehaviour
     }
     void Start()
     {
+        inputEnabled = true;
         if (GameObject.FindGameObjectsWithTag("Player").Length == 1)
         {
             gameObject.name = "P1";
@@ -34,7 +36,11 @@ public class CursorControls : MonoBehaviour
     
     void Update()
     {
-        rb.velocity = movement * speed;
+        if (inputEnabled)
+        {
+            rb.velocity = movement * speed;
+        }
+        
     }
 
     public void Move(InputAction.CallbackContext context) 
