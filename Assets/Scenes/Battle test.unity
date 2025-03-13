@@ -209,7 +209,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.25
+  m_fontSize: 22.85
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.45
+  m_fontSize: 27.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -724,7 +724,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.05
+  m_fontSize: 54
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -810,7 +810,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.41720593, y: 0.053750213}
   m_AnchorMax: {x: 0.8623648, y: 0.84375715}
-  m_AnchoredPosition: {x: 0.000015258789, y: 0}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0}
   m_SizeDelta: {x: 0, y: 0.000030518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &441439133
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.25
+  m_fontSize: 21.85
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1001,7 +1001,7 @@ GameObject:
   - component: {fileID: 503571697}
   m_Layer: 5
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: ButtonP2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1151,7 +1151,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
 --- !u!1 &681156278
 GameObject:
@@ -1168,7 +1168,7 @@ GameObject:
   - component: {fileID: 681156283}
   m_Layer: 5
   m_Name: Atacar
-  m_TagString: ButtonP1
+  m_TagString: ButtonP2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1249,7 +1249,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2007408877}
+      - m_Target: {fileID: 1962376927}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1342,7 +1342,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 156.61604, y: 24.955915}
   m_EdgeRadius: 0
 --- !u!1 &682911308
 GameObject:
@@ -1428,7 +1428,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.2
+  m_fontSize: 21.8
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1732,7 +1732,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.4
+  m_fontSize: 40.1
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1819,7 +1819,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.046000004, y: 0.8237644}
   m_AnchorMax: {x: 0.33026716, y: 0.9751975}
-  m_AnchoredPosition: {x: 2.1360474, y: -0.00024414062}
+  m_AnchoredPosition: {x: 2.1359863, y: -0.00024414062}
   m_SizeDelta: {x: 1.4821, y: 0.00050354}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &813523983
@@ -1960,7 +1960,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.4104538, y: 0.41880894}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1971,7 +1971,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 156.61604, y: 24.955915}
   m_EdgeRadius: 0
 --- !u!1 &924337756
 GameObject:
@@ -1988,7 +1988,7 @@ GameObject:
   - component: {fileID: 924337761}
   m_Layer: 5
   m_Name: 3
-  m_TagString: Untagged
+  m_TagString: ButtonP2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2138,7 +2138,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
 --- !u!1 &1038294256
 GameObject:
@@ -2226,7 +2226,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.6
+  m_fontSize: 24.2
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2291,7 +2291,7 @@ GameObject:
   - component: {fileID: 1045958304}
   m_Layer: 5
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: ButtonP2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2441,7 +2441,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
 --- !u!1 &1065203996
 GameObject:
@@ -2796,7 +2796,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.046000004, y: 0.5247643}
   m_AnchorMax: {x: 0.33026716, y: 0.6667261}
-  m_AnchoredPosition: {x: 2.1384888, y: -2.0774994}
+  m_AnchoredPosition: {x: 2.1384277, y: -2.0774994}
   m_SizeDelta: {x: 1.4772, y: 4.155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1119968835
@@ -2925,7 +2925,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00033569336, y: 0.08598709}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2936,7 +2936,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 156.76703, y: 27.31403}
   m_EdgeRadius: 0
 --- !u!1 &1260871124
 GameObject:
@@ -2972,7 +2972,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.84680325}
   m_AnchorMax: {x: 0.67177635, y: 1}
-  m_AnchoredPosition: {x: 0.25, y: 0.000076293945}
+  m_AnchoredPosition: {x: 0.25, y: 0.000091552734}
   m_SizeDelta: {x: -0.5, y: 0.000041962}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1260871126
@@ -3022,7 +3022,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.55
+  m_fontSize: 22.15
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3247,7 +3247,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1310315634}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2007408877}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1310315634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3318,7 +3330,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.10209656, y: 0.000013828278}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3329,7 +3341,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 153.93066, y: 25.093216}
   m_EdgeRadius: 0
 --- !u!1 &1319535539
 GameObject:
@@ -3415,7 +3427,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 49.55
+  m_fontSize: 48.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3549,7 +3561,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.4
+  m_fontSize: 40.1
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3614,7 +3626,7 @@ GameObject:
   - component: {fileID: 1394553657}
   m_Layer: 5
   m_Name: Truques
-  m_TagString: ButtonP1
+  m_TagString: ButtonP2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3636,7 +3648,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.67177635, y: 0.5}
   m_AnchorMax: {x: 0.9698882, y: 0.6526094}
-  m_AnchoredPosition: {x: 0.70529175, y: 0.45001984}
+  m_AnchoredPosition: {x: 0.70532227, y: 0.45001984}
   m_SizeDelta: {x: 2, y: 0.89999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1394553654
@@ -3776,7 +3788,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 156.61604, y: 24.955915}
   m_EdgeRadius: 0
 --- !u!1 &1416617676
 GameObject:
@@ -3874,7 +3886,7 @@ GameObject:
   - component: {fileID: 1437398246}
   m_Layer: 5
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: ButtonP1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4013,7 +4025,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.73791504, y: 0.18446827}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4024,7 +4036,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
 --- !u!1 &1477617949
 GameObject:
@@ -4110,7 +4122,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.65
+  m_fontSize: 20.3
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4175,7 +4187,7 @@ GameObject:
   - component: {fileID: 1509100058}
   m_Layer: 5
   m_Name: 4
-  m_TagString: Untagged
+  m_TagString: ButtonP2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4197,7 +4209,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.52400005, y: 0.056}
   m_AnchorMax: {x: 1, y: 0.45412263}
-  m_AnchoredPosition: {x: -0.5118103, y: -1.0921936}
+  m_AnchoredPosition: {x: -0.5118103, y: -1.0921955}
   m_SizeDelta: {x: 1.0236, y: 2.1845}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1509100055
@@ -4325,7 +4337,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
 --- !u!1 &1523845907
 GameObject:
@@ -4342,7 +4354,7 @@ GameObject:
   - component: {fileID: 1523845912}
   m_Layer: 5
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: ButtonP1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4492,7 +4504,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
 --- !u!1 &1562313386
 GameObject:
@@ -4528,7 +4540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.65215826, y: 0.37750453}
   m_AnchorMax: {x: 0.82351816, y: 0.4954955}
-  m_AnchoredPosition: {x: -0.000030517578, y: -0.0000038146973}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0}
   m_SizeDelta: {x: 0.000061035, y: 0.0000076294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1562313388
@@ -4578,7 +4590,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46.1
+  m_fontSize: 45.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4662,7 +4674,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.33551145, y: 0.84375715}
   m_AnchorMax: {x: 0.9486456, y: 1}
-  m_AnchoredPosition: {x: -0.000015258789, y: 0.0000076293945}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -0.000030518, y: -0.000015259}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1570948764
@@ -4712,7 +4724,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
+  m_fontSize: 22.55
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5061,7 +5073,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.65
+  m_fontSize: 25.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5126,7 +5138,7 @@ GameObject:
   - component: {fileID: 1771015499}
   m_Layer: 5
   m_Name: 4
-  m_TagString: Untagged
+  m_TagString: ButtonP1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5276,7 +5288,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
 --- !u!1 &1827324350
 GameObject:
@@ -5608,7 +5620,11 @@ MonoBehaviour:
   - {fileID: 5729975057221581173, guid: a1eea1f6644d81646a06ddffc6a16062, type: 3}
   - {fileID: 7537687736573561179, guid: 8735ade9eafe88c4fac489156909078c, type: 3}
   - {fileID: 8891335595177095149, guid: 6d83f4d663ff5754f94e6ab2621127d8, type: 3}
-  pistas: []
+  pistas:
+  - {fileID: 8560493010437159635, guid: a22aaba13f947c34d94df285cb2f889c, type: 3}
+  - {fileID: 3393916639083115193, guid: 537dde342742cfd42b23b5fb25eb8f1c, type: 3}
+  - {fileID: 1102773074022770574, guid: 6a31a46ea8f347b48b774254de5741bd, type: 3}
+  - {fileID: 4397340074259233424, guid: 48c139d1419642945a0f66774d76ce84, type: 3}
   spawn1: {fileID: 172865106}
   spawn2: {fileID: 2072388385}
   state: 0
@@ -5675,7 +5691,7 @@ GameObject:
   - component: {fileID: 1875328411}
   m_Layer: 5
   m_Name: 3
-  m_TagString: Untagged
+  m_TagString: ButtonP1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5825,7 +5841,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
 --- !u!1 &1889130597
 GameObject:
@@ -6027,7 +6043,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.4
+  m_fontSize: 40.1
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6161,7 +6177,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.9
+  m_fontSize: 22.5
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6302,7 +6318,7 @@ GameObject:
   - component: {fileID: 1967175539}
   m_Layer: 5
   m_Name: Defender
-  m_TagString: ButtonP1
+  m_TagString: ButtonP2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6324,7 +6340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.67177635, y: 0.19216561}
   m_AnchorMax: {x: 0.9698882, y: 0.34300002}
-  m_AnchoredPosition: {x: 0.70532227, y: 0.000015258789}
+  m_AnchoredPosition: {x: 0.70532227, y: 0}
   m_SizeDelta: {x: 2.0001, y: -0.0000019073}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1967175536
@@ -6370,7 +6386,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1967175537}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1962376927}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1967175537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6452,7 +6480,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 156.61604, y: 24.955915}
   m_EdgeRadius: 0
 --- !u!1 &1996118324
 GameObject:
@@ -6749,7 +6777,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.4
+  m_fontSize: 40.1
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

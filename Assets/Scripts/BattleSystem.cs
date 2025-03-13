@@ -11,6 +11,8 @@ public enum BattleState { START, PlayerTurn, CarRace, Comandos ,P1WIN, P2WIN }
 
 public class BattleSystem : MonoBehaviour
 {
+    Carro carro1, carro2;
+    CursorControls cursor1, cursor2;
     public PlayerInputManager playerManager;
     public TextMeshProUGUI  dialogueText;
     public Canvas cnvs;
@@ -38,7 +40,7 @@ public class BattleSystem : MonoBehaviour
         if (playerManager.playerCount == playerManager.maxPlayerCount && roomFull == false)
         {
             roomFull = true;
-            playerManager.DisableJoining();
+            playerManager.DisableJoining();           
             StartTheGame();
         }
     }
@@ -74,6 +76,10 @@ public class BattleSystem : MonoBehaviour
 
         players[3] = GameObject.Find("Galo2");
 
+        cursor1 = players[0].GetComponent<CursorControls>();
+        carro1 = players[1].GetComponent<Carro>();
+        cursor2 = players[2].GetComponent<CursorControls>();
+        carro2 = players[3].GetComponent<Carro>();
         state = BattleState.PlayerTurn;
         PlayerTurn();
     }
@@ -89,9 +95,10 @@ public class BattleSystem : MonoBehaviour
     void CarRace()
     {
         p1HUD.gameObject.SetActive(false);
-        p2HUD.gameObject.SetActive(false);
+        p2HUD.gameObject.SetActive(false);     
         dialogueText.text = "Chegue até o final";
-        GameObject pistache = Instantiate(pistas[UnityEngine.Random.Range(0, 4)]);
+        TrocaPlayer();
+        GameObject pistache = Instantiate(pistas[UnityEngine.Random.Range(0, pistas.Length - 1)]);
 
     }
 
@@ -114,5 +121,15 @@ public class BattleSystem : MonoBehaviour
             CarRace();
         }
     }
-   
+   private void TrocaPlayer()
+    {
+        players[0].GetComponent<SpriteRenderer>().enabled = !players[0].GetComponent<SpriteRenderer>().enabled;
+        cursor1.inputEnabled = !cursor1.inputEnabled;
+        players[1].GetComponent<SpriteRenderer>().enabled = !players[1].GetComponent<SpriteRenderer>().enabled;
+        carro1.inputEnabled = !carro1.inputEnabled;
+        players[2].GetComponent<SpriteRenderer>().enabled = !players[2].GetComponent<SpriteRenderer>().enabled;
+        cursor2.inputEnabled = !cursor2.inputEnabled;
+        players[3].GetComponent<SpriteRenderer>().enabled = !players[3].GetComponent<SpriteRenderer>().enabled;
+        carro2.inputEnabled = !carro2.inputEnabled;
+    }
 }
