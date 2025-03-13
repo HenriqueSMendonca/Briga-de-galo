@@ -56,6 +56,7 @@ public class CursorControls : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.name);
         if (gameObject.name == "P1")
         {
             if (collision.gameObject.CompareTag("Button") || collision.gameObject.CompareTag("ButtonP1"))
