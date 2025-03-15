@@ -12,8 +12,8 @@ public class Galo : MonoBehaviour
     public int currentSP;
     public bool isPoisoned, isStunned;
     public int poisonedTime;
-    public bool hasPriority;
     public string[] abilityNames;
+    public int selectedMove;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +24,17 @@ public class Galo : MonoBehaviour
     void Update()
     {
         
+    }
+    public bool TakeDamage(int dmg)
+    {
+        currentHp -= dmg;
+        if (currentHp <= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

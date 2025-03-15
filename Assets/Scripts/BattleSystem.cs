@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -25,6 +26,7 @@ public class BattleSystem : MonoBehaviour
     Galo p1Galo, p2Galo;
     public bool p1Decided = false , p2Decided = false;
     private bool roomFull = false;
+    public bool whoWonRace;
 
     public BattleHud p1HUD, p2HUD; 
 
@@ -101,9 +103,25 @@ public class BattleSystem : MonoBehaviour
         GameObject pistache = Instantiate(pistas[UnityEngine.Random.Range(0, pistas.Length - 1)]);
 
     }
+   public void Briga()
+    {
+        if (whoWonRace == false) { 
+        
+            dialogueText.text = "O jogador 1 ganhou a prioridade!";
+            StartCoroutine(SwitchMovimentos(p1Galo, p2Galo));
+            StartCoroutine(SwitchMovimentos(p2Galo, p1Galo));
+
+        } else
+        {
+            dialogueText.text = "O jogador 2 ganhou a prioridade!";
+            StartCoroutine(SwitchMovimentos(p2Galo, p1Galo));
+            StartCoroutine(SwitchMovimentos(p1Galo, p2Galo));
+        }
+    }
 
     public void Action1(int actionNum)
     {
+        p1Galo.selectedMove = actionNum;
         p1Decided = true;
         if (p1Decided && p2Decided)
         {
@@ -114,6 +132,7 @@ public class BattleSystem : MonoBehaviour
     }
     public void Action2(int actionNum)
     {
+        p2Galo.selectedMove = actionNum;
         p2Decided = true;
         if (p1Decided && p2Decided)
         {
@@ -131,5 +150,100 @@ public class BattleSystem : MonoBehaviour
         cursor2.inputEnabled = !cursor2.inputEnabled;
         players[3].GetComponent<SpriteRenderer>().enabled = !players[3].GetComponent<SpriteRenderer>().enabled;
         carro2.inputEnabled = !carro2.inputEnabled;
+    }
+    IEnumerator SwitchMovimentos(Galo galo1, Galo galo2)
+    {
+        yield return new WaitForSeconds(1);
+        switch (galo1.charID)
+        {
+            case 0:
+                switch (galo1.selectedMove)
+                {
+                    case 0:
+                        
+                        int dealtDamage = UnityEngine.Random.Range(40, 61);
+                        
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                        
+                }
+                break;
+
+            case 1:
+                switch (galo1.selectedMove)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                }
+                break;
+
+            case 2:
+                switch (galo1.selectedMove)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                }
+                break;
+
+            case 3:
+                switch (galo1.selectedMove)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                }
+                break;
+        }   
+    }
+    void CheckHP(Galo galo2, int dmg)
+    {
+        bool isDead = galo2.TakeDamage(dmg);
+        if (isDead)
+        {
+            EndBattle();
+        }
+    }
+    void EndBattle()
+    {
+        Debug.Log("ganhamo");
+        return;
     }
 }
