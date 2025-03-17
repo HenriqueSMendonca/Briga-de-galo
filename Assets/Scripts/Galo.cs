@@ -12,7 +12,7 @@ public class Galo : MonoBehaviour
     public int currentSP;
     public bool isPoisoned, isStunned;
     public int poisonedTime;
-    public string[] abilityNames;
+    public List<Moves> moves;
     public int selectedMove;
     // Start is called before the first frame update
     void Start()

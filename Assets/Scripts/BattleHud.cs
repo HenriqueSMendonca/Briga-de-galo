@@ -17,7 +17,7 @@ public class BattleHud : MonoBehaviour
         spText.text = galo.currentSP.ToString() + "/" + galo.maxSP.ToString();
         for (int i = 0; i < abilityText.Length; i++)
         {
-            abilityText[i].text = galo.abilityNames[i];
+            abilityText[i].text = galo.moves[i].Name;
         }
     }
     public void SetHP(int hp)

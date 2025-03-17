@@ -106,9 +106,11 @@ MonoBehaviour:
   isPoisoned: 0
   isStunned: 0
   poisonedTime: 0
-  hasPriority: 0
-  abilityNames:
-  - Infiel1
-  - Infiel2
-  - Infiel3
-  - Infiel4
+  moves:
+  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
+  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
+  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
+  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
+  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
+  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
+  selectedMove: 0

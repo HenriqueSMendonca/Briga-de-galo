@@ -108,14 +108,14 @@ public class BattleSystem : MonoBehaviour
         if (whoWonRace == false) { 
         
             dialogueText.text = "O jogador 1 ganhou a prioridade!";
-            StartCoroutine(SwitchMovimentos(p1Galo, p2Galo));
-            StartCoroutine(SwitchMovimentos(p2Galo, p1Galo));
+            StartCoroutine(UseMove(p1Galo, p2Galo));
+            StartCoroutine(UseMove(p2Galo, p1Galo));
 
         } else
         {
             dialogueText.text = "O jogador 2 ganhou a prioridade!";
-            StartCoroutine(SwitchMovimentos(p2Galo, p1Galo));
-            StartCoroutine(SwitchMovimentos(p1Galo, p2Galo));
+            StartCoroutine(UseMove(p2Galo, p1Galo));
+            StartCoroutine(UseMove(p1Galo, p2Galo));
         }
     }
 
@@ -151,87 +151,11 @@ public class BattleSystem : MonoBehaviour
         players[3].GetComponent<SpriteRenderer>().enabled = !players[3].GetComponent<SpriteRenderer>().enabled;
         carro2.inputEnabled = !carro2.inputEnabled;
     }
-    IEnumerator SwitchMovimentos(Galo galo1, Galo galo2)
+    IEnumerator UseMove(Galo galo1, Galo galo2)
     {
+        var move = galo1.moves[galo1.selectedMove];
+        Debug.Log(move.Name);
         yield return new WaitForSeconds(1);
-        switch (galo1.charID)
-        {
-            case 0:
-                switch (galo1.selectedMove)
-                {
-                    case 0:
-                        
-                        int dealtDamage = UnityEngine.Random.Range(40, 61);
-                        
-                        break;
-                    case 1:
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                    case 4:
-                        break;
-                    case 5:
-                        break;
-                        
-                }
-                break;
-
-            case 1:
-                switch (galo1.selectedMove)
-                {
-                    case 0:
-                        break;
-                    case 1:
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                    case 4:
-                        break;
-                    case 5:
-                        break;
-                }
-                break;
-
-            case 2:
-                switch (galo1.selectedMove)
-                {
-                    case 0:
-                        break;
-                    case 1:
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                    case 4:
-                        break;
-                    case 5:
-                        break;
-                }
-                break;
-
-            case 3:
-                switch (galo1.selectedMove)
-                {
-                    case 0:
-                        break;
-                    case 1:
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                    case 4:
-                        break;
-                    case 5:
-                        break;
-                }
-                break;
-        }   
     }
     void CheckHP(Galo galo2, int dmg)
     {
