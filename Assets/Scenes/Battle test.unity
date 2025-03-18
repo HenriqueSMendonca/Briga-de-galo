@@ -3668,7 +3668,7 @@ GameObject:
   - component: {fileID: 1416617679}
   - component: {fileID: 1416617678}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Menu1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4652,7 +4652,7 @@ GameObject:
   - component: {fileID: 1587015444}
   - component: {fileID: 1587015443}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Menu2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5496,6 +5496,9 @@ MonoBehaviour:
   state: 0
   p1Decided: 0
   p2Decided: 0
+  whoWonRace: 0
+  menu1: {fileID: 1416617676}
+  menu2: {fileID: 1587015441}
   p1HUD: {fileID: 1894305675}
   p2HUD: {fileID: 1889130599}
 --- !u!114 &1855696812

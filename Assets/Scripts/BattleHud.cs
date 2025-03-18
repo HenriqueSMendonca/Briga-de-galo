@@ -20,8 +20,14 @@ public class BattleHud : MonoBehaviour
             abilityText[i].text = galo.moves[i].Name;
         }
     }
-    public void SetHP(int hp)
+    public IEnumerator SetHP(Galo galo, int dmg)
     {
-       
+       for (int i = 0; i < dmg; i++)
+        {
+            yield return new WaitForSeconds(1 / dmg);
+            galo.currentHp--;
+            hpText.text = galo.currentHp.ToString() + "/" + galo.maxHP.ToString();
+        }
+        yield return new WaitForSeconds(2);
     }
 }

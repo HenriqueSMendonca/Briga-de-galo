@@ -14,6 +14,7 @@ public class Galo : MonoBehaviour
     public int poisonedTime;
     public List<Moves> moves;
     public int selectedMove;
+    public BattleHud battleHud;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +28,9 @@ public class Galo : MonoBehaviour
     }
     public bool TakeDamage(int dmg)
     {
-        currentHp -= dmg;
-        if (currentHp <= 0)
+        int fakeHP = currentHp;
+        fakeHP -= dmg;
+        if ( fakeHP <= 0)
         {
             return true;
         }
