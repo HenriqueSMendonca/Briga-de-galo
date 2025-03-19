@@ -22,7 +22,7 @@ public class BattleHud : MonoBehaviour
     }
     public IEnumerator SetHP(Galo galo, int dmg)
     {
-       for (int i = 0; i < dmg; i++)
+       for (int i = 0; i < dmg && galo.currentHp > 0; i++)
         {
             yield return new WaitForSeconds(1 / dmg);
             galo.currentHp--;

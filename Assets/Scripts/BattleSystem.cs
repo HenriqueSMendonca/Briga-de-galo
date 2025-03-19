@@ -178,7 +178,7 @@ public class BattleSystem : MonoBehaviour
     {
         bool isDead = galo2.TakeDamage(dmg);
         StartCoroutine(galo2.battleHud.SetHP(galo2, dmg));
-        yield return new WaitForSeconds(dmg / 100);
+        yield return new WaitForSeconds(1 / dmg);
         
         if (isDead)
         {
@@ -196,7 +196,7 @@ public class BattleSystem : MonoBehaviour
     void EndBattle(Galo galo1)
     {
         state = BattleState.WIN;
-        Debug.Log($"{galo1.name} ganhou a briga");
+        dialogueText.text = $"{galo1.nomeGalo} ganhou a briga";
         
         return;
     }
