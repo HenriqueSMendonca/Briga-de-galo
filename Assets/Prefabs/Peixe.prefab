@@ -104,14 +104,11 @@ MonoBehaviour:
   currentHp: 900
   maxSP: 120
   currentSP: 120
-  isPoisoned: 0
-  isStunned: 0
-  poisonedTime: 0
   moves:
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
-  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
+  - {fileID: 11400000, guid: 559d49275a41141439e2b04228ef2a70, type: 2}
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
   selectedMove: 0

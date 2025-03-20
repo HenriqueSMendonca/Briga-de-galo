@@ -16,4 +16,6 @@ MonoBehaviour:
   description: "Um ataque b\xE1sico"
   damage: 50
   spCost: 0
+  effects:
+    status: 0
   target: 0

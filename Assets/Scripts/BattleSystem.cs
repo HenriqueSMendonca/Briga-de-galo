@@ -175,15 +175,16 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(2);
         var move = galo1.moves[galo1.selectedMove];
         dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2);       
         StartCoroutine(CheckHP(galo1, galo2, move.Damage));
+        yield return RunMoveEffects(move, galo1, galo2);
     }
     IEnumerator CheckHP(Galo galo1, Galo galo2, int dmg)
     {
         dmg = Mathf.FloorToInt((dmg * UnityEngine.Random.Range(0.9f, 1.1f) * galo2.guard));
-        bool isDead = galo2.TakeDamage(dmg);
-        StartCoroutine(galo2.battleHud.SetHP(galo2, dmg));
-        yield return new WaitForSeconds(1 / Math.Clamp(dmg, 1, 5));
+        bool isDead = galo2.TakeDamage(dmg);       
+        yield return new WaitForSeconds(1 / Math.Clamp(dmg, 1, 1000));
+        galo1.OnAfterTurn();
 
         if (isDead)
         {
@@ -211,7 +212,7 @@ public class BattleSystem : MonoBehaviour
     {
         var effects = move.Effects;
         if (effects.Status != ConditionID.none)
-        {
+        {           
             if (move.Target == Moves.MoveTarget.Self)
             {
                 galo1.SetStatus(effects.Status);
@@ -227,7 +228,8 @@ public class BattleSystem : MonoBehaviour
     }
     IEnumerator ShowStatusChanges(Galo galo)
     {
-        dialogueText.text = $"{galo.nomeGalo}  {galo.Status.StartMessage}";
-        yield return new WaitForSeconds(0);
+        dialogueText.text = $"{galo.nomeGalo} {galo.Status.StartMessage}";
+        yield return new WaitForSeconds(2);
     }
+    
 }

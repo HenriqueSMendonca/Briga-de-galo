@@ -17,5 +17,5 @@ MonoBehaviour:
   damage: 0
   spCost: 0
   effects:
-    status: 0
+    status: 1
   target: 0

@@ -11,7 +11,11 @@ public class ConditionDB
             new Condition()
             {
                 Name = "Veneno",
-                StartMessage = "foi envenenado"
+                StartMessage = "foi envenenado",
+                OnAfterTurn = (Galo galo) =>
+                {
+                  galo.TakeDamage(galo.maxHP / 5);
+                }
             }
         },
         {

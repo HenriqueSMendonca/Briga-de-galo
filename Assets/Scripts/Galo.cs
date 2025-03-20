@@ -28,9 +28,9 @@ public class Galo : MonoBehaviour
     }
     public bool TakeDamage(int dmg)
     {
-        int fakeHP = currentHp;
-        fakeHP -= dmg;
-        if ( fakeHP <= 0)
+        StartCoroutine(battleHud.SetHP(this ,dmg));
+        currentHp -= dmg;
+        if ( currentHp <= 0)
         {
             return true;
         }
@@ -43,5 +43,9 @@ public class Galo : MonoBehaviour
     {
         Status = ConditionDB.Conditions[conditionId];
     
+    }
+    public void OnAfterTurn()
+    {
+        Status?.OnAfterTurn?.Invoke(this);
     }
 }

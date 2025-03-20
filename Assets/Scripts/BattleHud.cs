@@ -18,17 +18,19 @@ public class BattleHud : MonoBehaviour
         spText.text = galo.currentSP.ToString() + "/" + galo.maxSP.ToString();
         for (int i = 0; i < abilityText.Length; i++)
         {
-            abilityText[i].text = galo.moves[i].Name;
+            abilityText[i].text = galo.moves[i + 2].Name;
         }
     }
     public IEnumerator SetHP(Galo galo, int dmg)
     {
-       for (int i = 0; i < dmg && galo.currentHp > 0; i++)
+        int fakeHP = galo.currentHp;
+        for (int i = 0; i < dmg && fakeHP > 0; i++)
         {
-            yield return new WaitForSeconds(1 / Math.Clamp(dmg, 1, 5));
-            galo.currentHp--;
-            hpText.text = galo.currentHp.ToString() + "/" + galo.maxHP.ToString();
+            
+            yield return new WaitForSeconds(1 / Math.Clamp(dmg, 1f, 1000));
+            fakeHP--;
+            hpText.text = fakeHP.ToString() + "/" + galo.maxHP.ToString();
         }
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0);
     }
 }
