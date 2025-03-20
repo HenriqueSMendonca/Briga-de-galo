@@ -15,7 +15,7 @@ public class BattleSystem : MonoBehaviour
     Carro carro1, carro2;
     CursorControls cursor1, cursor2;
     public PlayerInputManager playerManager;
-    public TextMeshProUGUI  dialogueText;
+    public TextMeshProUGUI dialogueText;
     public Canvas cnvs;
     public GameObject[] players;
     public GameObject[] panels;
@@ -24,18 +24,18 @@ public class BattleSystem : MonoBehaviour
     public Transform spawn1, spawn2;
     public BattleState state;
     Galo p1Galo, p2Galo;
-    public bool p1Decided = false , p2Decided = false;
+    public bool p1Decided = false, p2Decided = false;
     private bool roomFull = false;
     public bool whoWonRace;
     private int moveCount;
     private GameObject pistache;
     public GameObject menu1, menu2;
-    public BattleHud p1HUD, p2HUD; 
+    public BattleHud p1HUD, p2HUD;
 
     // Start is called before the first frame update
     void Start()
     {
-        cnvs.gameObject.SetActive(false);  
+        cnvs.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -44,14 +44,14 @@ public class BattleSystem : MonoBehaviour
         if (playerManager.playerCount == playerManager.maxPlayerCount && roomFull == false)
         {
             roomFull = true;
-            playerManager.DisableJoining();           
+            playerManager.DisableJoining();
             StartTheGame();
         }
     }
     void StartTheGame()
     {
         cnvs.gameObject.SetActive(true);
-       
+
 
         panels[0].SetActive(false);
         panels[1].SetActive(false);
@@ -64,7 +64,7 @@ public class BattleSystem : MonoBehaviour
     {
         GameObject p1GO = Instantiate(characters[PlayerPrefs.GetInt("selectedChar1")], spawn1.position, Quaternion.identity);
         p1Galo = p1GO.GetComponent<Galo>();
-         GameObject p2GO = Instantiate(characters[PlayerPrefs.GetInt("selectedChar2")], spawn2.position, new Quaternion(0, 180, 0, 0));
+        GameObject p2GO = Instantiate(characters[PlayerPrefs.GetInt("selectedChar2")], spawn2.position, new Quaternion(0, 180, 0, 0));
         p2Galo = p2GO.GetComponent<Galo>();
 
         dialogueText.text = p1Galo.nomeGalo + " e " + p2Galo.nomeGalo + " estão prontos pra brigar!";
@@ -97,7 +97,7 @@ public class BattleSystem : MonoBehaviour
         moveCount = 0;
         panels[0].SetActive(false);
         panels[1].SetActive(false);
-        p1HUD.gameObject.SetActive(true);      
+        p1HUD.gameObject.SetActive(true);
         p2HUD.gameObject.SetActive(true);
         menu1.SetActive(true);
         menu2.SetActive(true);
@@ -116,19 +116,21 @@ public class BattleSystem : MonoBehaviour
         pistache = Instantiate(pistas[UnityEngine.Random.Range(0, pistas.Length - 1)]);
 
     }
-   public void Briga()
+    public void Briga()
     {
         p1HUD.gameObject.SetActive(true);
         p2HUD.gameObject.SetActive(true);
         TrocaPlayer();
         Destroy(pistache);
-        if (whoWonRace == false) { 
-        
+        if (whoWonRace == false)
+        {
+
             dialogueText.text = "O jogador 1 ganhou a prioridade!";
             StartCoroutine(UseMove(p1Galo, p2Galo));
-            
 
-        } else
+
+        }
+        else
         {
             dialogueText.text = "O jogador 2 ganhou a prioridade!";
             StartCoroutine(UseMove(p2Galo, p1Galo));
@@ -156,7 +158,7 @@ public class BattleSystem : MonoBehaviour
             CarRace();
         }
     }
-   private void TrocaPlayer()
+    private void TrocaPlayer()
     {
         players[0].GetComponent<SpriteRenderer>().enabled = !players[0].GetComponent<SpriteRenderer>().enabled;
         cursor1.inputEnabled = !cursor1.inputEnabled;
@@ -174,33 +176,58 @@ public class BattleSystem : MonoBehaviour
         var move = galo1.moves[galo1.selectedMove];
         dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
         yield return new WaitForSeconds(2);
-        StartCoroutine(CheckHP(galo1, galo2, move.Damage));        
+        StartCoroutine(CheckHP(galo1, galo2, move.Damage));
     }
-     IEnumerator CheckHP(Galo galo1, Galo galo2, int dmg)
+    IEnumerator CheckHP(Galo galo1, Galo galo2, int dmg)
     {
         dmg = Mathf.FloorToInt((dmg * UnityEngine.Random.Range(0.9f, 1.1f) * galo2.guard));
         bool isDead = galo2.TakeDamage(dmg);
         StartCoroutine(galo2.battleHud.SetHP(galo2, dmg));
-        yield return new WaitForSeconds(1 / dmg);
-        
+        yield return new WaitForSeconds(1 / Math.Clamp(dmg, 1, 5));
+
         if (isDead)
         {
             EndBattle(galo1);
-        } else if (moveCount == 2)
+        }
+        else if (moveCount == 2)
         {
             state = BattleState.PlayerTurn;
             PlayerTurn();
-        } else
-        {         
+        }
+        else
+        {
             StartCoroutine(UseMove(galo2, galo1));
-            
+
         }
     }
     void EndBattle(Galo galo1)
     {
         state = BattleState.WIN;
         dialogueText.text = $"{galo1.nomeGalo} ganhou a briga";
-        
+
         return;
+    }
+    IEnumerator RunMoveEffects(Moves move, Galo galo1, Galo galo2)
+    {
+        var effects = move.Effects;
+        if (effects.Status != ConditionID.none)
+        {
+            if (move.Target == Moves.MoveTarget.Self)
+            {
+                galo1.SetStatus(effects.Status);
+                yield return ShowStatusChanges(galo1);
+            }
+            else
+            {
+                galo2.SetStatus(effects.Status);
+                yield return ShowStatusChanges(galo2);
+            }
+        }
+       
+    }
+    IEnumerator ShowStatusChanges(Galo galo)
+    {
+        dialogueText.text = $"{galo.nomeGalo}  {galo.Status.StartMessage}";
+        yield return new WaitForSeconds(0);
     }
 }

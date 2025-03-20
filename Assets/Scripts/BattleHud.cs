@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class BattleHud : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class BattleHud : MonoBehaviour
     {
        for (int i = 0; i < dmg && galo.currentHp > 0; i++)
         {
-            yield return new WaitForSeconds(1 / dmg);
+            yield return new WaitForSeconds(1 / Math.Clamp(dmg, 1, 5));
             galo.currentHp--;
             hpText.text = galo.currentHp.ToString() + "/" + galo.maxHP.ToString();
         }

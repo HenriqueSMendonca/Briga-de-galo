@@ -11,11 +11,10 @@ public class Galo : MonoBehaviour
     public int currentHp;
     public int maxSP;
     public int currentSP;
-    public bool isPoisoned, isStunned;
-    public int poisonedTime;
     public List<Moves> moves;
     public int selectedMove;
     public BattleHud battleHud;
+    public Condition Status {  get; private set; }
     // Start is called before the first frame update
     void Start()
     {
@@ -39,5 +38,10 @@ public class Galo : MonoBehaviour
         {
             return false;
         }
+    }
+    public void SetStatus(ConditionID conditionId)
+    {
+        Status = ConditionDB.Conditions[conditionId];
+    
     }
 }

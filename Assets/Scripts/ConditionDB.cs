@@ -11,7 +11,15 @@ public class ConditionDB
             new Condition()
             {
                 Name = "Veneno",
-                StartMessage = "Foi envenenado"
+                StartMessage = "foi envenenado"
+            }
+        },
+        {
+            ConditionID.stn,
+            new Condition()
+            {
+                Name = "Atordoado",
+                StartMessage = "foi atordoado"
             }
         }
         
@@ -19,5 +27,5 @@ public class ConditionDB
 }
 public enum ConditionID
 {
-   none, psn, stn, grd, nau, wek, irn,
+   none, psn, stn, grd, nau, wek, irn, off, pry, fcs
 }
