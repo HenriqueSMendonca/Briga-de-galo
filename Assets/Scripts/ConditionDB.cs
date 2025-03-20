@@ -19,5 +19,5 @@ public class ConditionDB
 }
 public enum ConditionID
 {
-   none, psn, stn, grd, nau, wek
+   none, psn, stn, grd, nau, wek, irn,
 }
