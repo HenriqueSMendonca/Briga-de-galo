@@ -6,6 +6,7 @@ public class Galo : MonoBehaviour
 {
     public int charID;
     public string nomeGalo;
+    public int guard;
     public int maxHP;
     public int currentHp;
     public int maxSP;

@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charID: 2
   nomeGalo: Infiel
+  guard: 1
   maxHP: 900
   currentHp: 900
   maxSP: 100
@@ -114,3 +115,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
   selectedMove: 0
+  battleHud: {fileID: 0}

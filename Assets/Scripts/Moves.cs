@@ -26,7 +26,9 @@ public class Moves : ScriptableObject
     [System.Serializable]
     public class MoveEffects
     {
-        
+        [SerializeField] ConditionID status;
+
+        public ConditionID Status { get { return status; } }
     }
     public enum MoveTarget
     {

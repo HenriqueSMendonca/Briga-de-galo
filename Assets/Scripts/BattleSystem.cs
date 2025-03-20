@@ -92,6 +92,8 @@ public class BattleSystem : MonoBehaviour
 
     void PlayerTurn()
     {
+        p1Galo.guard = 1;
+        p2Galo.guard = 1;
         moveCount = 0;
         panels[0].SetActive(false);
         panels[1].SetActive(false);
@@ -176,6 +178,7 @@ public class BattleSystem : MonoBehaviour
     }
      IEnumerator CheckHP(Galo galo1, Galo galo2, int dmg)
     {
+        dmg = Mathf.FloorToInt((dmg * UnityEngine.Random.Range(0.9f, 1.1f) * galo2.guard));
         bool isDead = galo2.TakeDamage(dmg);
         StartCoroutine(galo2.battleHud.SetHP(galo2, dmg));
         yield return new WaitForSeconds(1 / dmg);
