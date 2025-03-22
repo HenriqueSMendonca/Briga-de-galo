@@ -10,4 +10,6 @@ public class Condition
     public string StartMessage { get; set; }
 
     public Action<Galo> OnAfterTurn {  get; set; }
+    public Action<Galo> OnInflicted { get; set; }
+    public Action<Galo> OnStart { get; set; }
 }

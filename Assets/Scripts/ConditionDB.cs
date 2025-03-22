@@ -12,8 +12,18 @@ public class ConditionDB
             {
                 Name = "Veneno",
                 StartMessage = "foi envenenado",
+                OnStart = (Galo galo) =>
+                {
+                    galo.StatusTime = Random.Range(1,3);
+                },
+                
                 OnAfterTurn = (Galo galo) =>
                 {
+                    if (galo.StatusTime <= 0)
+                    {
+                        galo.CureStatus();  
+                    }
+                    galo.StatusTime--;
                   galo.TakeDamage(galo.maxHP / 5);
                 }
             }
@@ -23,7 +33,11 @@ public class ConditionDB
             new Condition()
             {
                 Name = "Atordoado",
-                StartMessage = "foi atordoado"
+                StartMessage = "foi atordoado",
+                OnInflicted = (Galo galo) =>
+                {
+
+                }
             }
         }
         

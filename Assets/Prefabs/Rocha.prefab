@@ -99,14 +99,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charID: 1
   nomeGalo: Rocha
-  guard: 1
+  guard: 100
+  attack: 100
   maxHP: 1200
   currentHp: 1200
   maxSP: 80
   currentSP: 80
-  isPoisoned: 0
-  isStunned: 0
-  poisonedTime: 0
   moves:
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
