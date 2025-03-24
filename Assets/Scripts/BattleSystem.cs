@@ -86,6 +86,7 @@ public class BattleSystem : MonoBehaviour
         carro1 = players[1].GetComponent<Carro>();
         cursor2 = players[2].GetComponent<CursorControls>();
         carro2 = players[3].GetComponent<Carro>();
+
         state = BattleState.PlayerTurn;
         PlayerTurn();
     }
@@ -175,9 +176,27 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(2);
         var move = galo1.moves[galo1.selectedMove];
         dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
-        yield return new WaitForSeconds(2);       
-        StartCoroutine(CheckHP(galo1, galo2, move.Damage));
-        yield return RunMoveEffects(move, galo1, galo2);
+        yield return new WaitForSeconds(2);
+        if (move.Target == Moves.MoveTarget.Self)
+        {
+            galo1.Heal(move.Damage);
+            if (moveCount == 2)
+            {
+                state = BattleState.PlayerTurn;
+                PlayerTurn();
+            }
+            else
+            {
+                StartCoroutine(UseMove(galo2, galo1));
+
+            }
+            yield return RunMoveEffects(move, galo1, galo2);
+        }
+        else
+        {
+            StartCoroutine(CheckHP(galo1, galo2, move.Damage));
+            yield return RunMoveEffects(move, galo1, galo2);
+        }
     }
     IEnumerator CheckHP(Galo galo1, Galo galo2, int dmg)
     {

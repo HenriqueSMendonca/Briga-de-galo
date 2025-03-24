@@ -29,6 +29,18 @@ public class ConditionDB
             }
         },
         {
+            ConditionID.grd,
+            new Condition()
+            {
+                Name = "Defendendo",
+                StartMessage = "está defendendo",
+                OnInflicted = (Galo galo) =>
+                {
+                    galo.guard += 0.25f;
+                }
+            }
+        },
+        {
             ConditionID.stn,
             new Condition()
             {
@@ -36,7 +48,15 @@ public class ConditionDB
                 StartMessage = "foi atordoado",
                 OnInflicted = (Galo galo) =>
                 {
-
+                  
+                },
+                 OnAfterTurn = (Galo galo) =>
+                {
+                    if (galo.StatusTime <= 0)
+                    {
+                        galo.CureStatus();
+                    }
+                    galo.StatusTime--;
                 }
             }
         }
@@ -45,5 +65,5 @@ public class ConditionDB
 }
 public enum ConditionID
 {
-   none, psn, stn, grd, nau, wek, irn, off, pry, fcs
+   none, psn, stn, grd, nau, wek, irn, off, pry
 }

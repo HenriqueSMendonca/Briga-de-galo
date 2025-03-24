@@ -999,6 +999,7 @@ GameObject:
   - component: {fileID: 503571695}
   - component: {fileID: 503571694}
   - component: {fileID: 503571697}
+  - component: {fileID: 503571698}
   m_Layer: 5
   m_Name: 2
   m_TagString: ButtonP2
@@ -1069,7 +1070,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 503571695}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1855696811}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: Action2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1962376927}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &503571695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1153,6 +1178,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
+--- !u!114 &503571698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503571692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1a79b81fda4d04f95ccabebbaa55b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: {fileID: 1260871126}
+  galo: {fileID: 0}
+  move: 3
 --- !u!1 &681156278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1206,7 @@ GameObject:
   - component: {fileID: 681156281}
   - component: {fileID: 681156280}
   - component: {fileID: 681156283}
+  - component: {fileID: 681156284}
   m_Layer: 5
   m_Name: Atacar
   m_TagString: ButtonP2
@@ -1344,6 +1385,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 156.61604, y: 24.955915}
   m_EdgeRadius: 0
+--- !u!114 &681156284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681156278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1a79b81fda4d04f95ccabebbaa55b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: {fileID: 1260871126}
+  galo: {fileID: 0}
+  move: 0
 --- !u!1 &682911308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1661,6 +1717,7 @@ GameObject:
   - component: {fileID: 813523984}
   - component: {fileID: 813523983}
   - component: {fileID: 813523986}
+  - component: {fileID: 813523987}
   m_Layer: 5
   m_Name: Atacar
   m_TagString: ButtonP1
@@ -1839,6 +1896,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 156.61604, y: 24.955915}
   m_EdgeRadius: 0
+--- !u!114 &813523987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813523981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1a79b81fda4d04f95ccabebbaa55b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: {fileID: 1570948764}
+  galo: {fileID: 0}
+  move: 0
 --- !u!1 &924337756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,6 +1924,7 @@ GameObject:
   - component: {fileID: 924337759}
   - component: {fileID: 924337758}
   - component: {fileID: 924337761}
+  - component: {fileID: 924337762}
   m_Layer: 5
   m_Name: 3
   m_TagString: ButtonP2
@@ -1922,7 +1995,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 924337759}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1855696811}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: Action2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1962376927}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &924337759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2006,6 +2103,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
+--- !u!114 &924337762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924337756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1a79b81fda4d04f95ccabebbaa55b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: {fileID: 1260871126}
+  galo: {fileID: 0}
+  move: 4
 --- !u!1 &1038294256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,6 +2267,7 @@ GameObject:
   - component: {fileID: 1045958302}
   - component: {fileID: 1045958301}
   - component: {fileID: 1045958304}
+  - component: {fileID: 1045958305}
   m_Layer: 5
   m_Name: 1
   m_TagString: ButtonP2
@@ -2225,7 +2338,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1045958302}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1855696811}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: Action2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1962376927}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1045958302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2309,6 +2446,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
+--- !u!114 &1045958305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045958299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1a79b81fda4d04f95ccabebbaa55b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: {fileID: 1260871126}
+  galo: {fileID: 0}
+  move: 2
 --- !u!1 &1065203996
 GameObject:
   m_ObjectHideFlags: 0
@@ -2892,7 +3044,7 @@ MonoBehaviour:
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -2924,7 +3076,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 2.1916733, y: 0, z: 1.9230804, w: 0}
+  m_margin: {x: 0.006202706, y: 0, z: 0.08624268, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3043,6 +3195,7 @@ GameObject:
   - component: {fileID: 1310315634}
   - component: {fileID: 1310315633}
   - component: {fileID: 1310315636}
+  - component: {fileID: 1310315637}
   m_Layer: 5
   m_Name: Defender
   m_TagString: ButtonP1
@@ -3122,6 +3275,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1855696811}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: Action1
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -3209,6 +3374,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 153.93066, y: 25.093216}
   m_EdgeRadius: 0
+--- !u!114 &1310315637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310315631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1a79b81fda4d04f95ccabebbaa55b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: {fileID: 1570948764}
+  galo: {fileID: 0}
+  move: 1
 --- !u!1 &1319535539
 GameObject:
   m_ObjectHideFlags: 0
@@ -3750,6 +3930,7 @@ GameObject:
   - component: {fileID: 1437398244}
   - component: {fileID: 1437398243}
   - component: {fileID: 1437398246}
+  - component: {fileID: 1437398247}
   m_Layer: 5
   m_Name: 1
   m_TagString: ButtonP1
@@ -3928,6 +4109,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
+--- !u!114 &1437398247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437398241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1a79b81fda4d04f95ccabebbaa55b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: {fileID: 1570948764}
+  galo: {fileID: 0}
+  move: 2
 --- !u!1 &1477617949
 GameObject:
   m_ObjectHideFlags: 0
@@ -4075,6 +4271,7 @@ GameObject:
   - component: {fileID: 1509100056}
   - component: {fileID: 1509100055}
   - component: {fileID: 1509100058}
+  - component: {fileID: 1509100059}
   m_Layer: 5
   m_Name: 4
   m_TagString: ButtonP2
@@ -4145,7 +4342,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1509100056}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1855696811}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: Action2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1962376927}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1509100056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4229,6 +4450,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
+--- !u!114 &1509100059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509100053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1a79b81fda4d04f95ccabebbaa55b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: {fileID: 1260871126}
+  galo: {fileID: 0}
+  move: 5
 --- !u!1 &1523845907
 GameObject:
   m_ObjectHideFlags: 0
@@ -4242,6 +4478,7 @@ GameObject:
   - component: {fileID: 1523845910}
   - component: {fileID: 1523845909}
   - component: {fileID: 1523845912}
+  - component: {fileID: 1523845913}
   m_Layer: 5
   m_Name: 2
   m_TagString: ButtonP1
@@ -4420,6 +4657,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
+--- !u!114 &1523845913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523845907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1a79b81fda4d04f95ccabebbaa55b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: {fileID: 1570948764}
+  galo: {fileID: 0}
+  move: 3
 --- !u!1 &1562313386
 GameObject:
   m_ObjectHideFlags: 0
@@ -4587,9 +4839,9 @@ RectTransform:
   m_Father: {fileID: 1416617677}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.33551145, y: 0.84375715}
-  m_AnchorMax: {x: 0.9486456, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -0.000030518, y: -0.000015259}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.000015258789, y: 0.0000076293945}
+  m_SizeDelta: {x: -0.000030518, y: -0.000005722}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1570948764
 MonoBehaviour:
@@ -4642,7 +4894,7 @@ MonoBehaviour:
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -4674,7 +4926,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 2.2349167, y: 0, z: 1.7521363, w: 0}
+  m_margin: {x: 0.19469452, y: 0, z: 0.11848462, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5050,6 +5302,7 @@ GameObject:
   - component: {fileID: 1771015497}
   - component: {fileID: 1771015496}
   - component: {fileID: 1771015499}
+  - component: {fileID: 1771015500}
   m_Layer: 5
   m_Name: 4
   m_TagString: ButtonP1
@@ -5228,6 +5481,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
+--- !u!114 &1771015500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771015494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1a79b81fda4d04f95ccabebbaa55b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: {fileID: 1570948764}
+  galo: {fileID: 0}
+  move: 5
 --- !u!1 &1827324350
 GameObject:
   m_ObjectHideFlags: 0
@@ -5630,6 +5898,7 @@ GameObject:
   - component: {fileID: 1875328409}
   - component: {fileID: 1875328408}
   - component: {fileID: 1875328411}
+  - component: {fileID: 1875328412}
   m_Layer: 5
   m_Name: 3
   m_TagString: ButtonP1
@@ -5808,6 +6077,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 115.376205, y: 56.712288}
   m_EdgeRadius: 0
+--- !u!114 &1875328412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875328406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1a79b81fda4d04f95ccabebbaa55b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: {fileID: 1570948764}
+  galo: {fileID: 0}
+  move: 4
 --- !u!1 &1889130597
 GameObject:
   m_ObjectHideFlags: 0
@@ -5863,9 +6147,16 @@ MonoBehaviour:
   spText: {fileID: 1562313388}
   abilityText:
   - {fileID: 1065203998}
-  - {fileID: 1996118326}
   - {fileID: 1837939753}
+  - {fileID: 1996118326}
   - {fileID: 145495993}
+  descriptions:
+  - {fileID: 681156284}
+  - {fileID: 1967175540}
+  - {fileID: 1045958305}
+  - {fileID: 503571698}
+  - {fileID: 924337762}
+  - {fileID: 1509100059}
 --- !u!1 &1894305673
 GameObject:
   m_ObjectHideFlags: 0
@@ -5924,6 +6215,13 @@ MonoBehaviour:
   - {fileID: 1904622457}
   - {fileID: 2050452013}
   - {fileID: 1330508237}
+  descriptions:
+  - {fileID: 813523987}
+  - {fileID: 1310315637}
+  - {fileID: 1437398247}
+  - {fileID: 1523845913}
+  - {fileID: 1875328412}
+  - {fileID: 1771015500}
 --- !u!1 &1904622455
 GameObject:
   m_ObjectHideFlags: 0
@@ -6281,6 +6579,7 @@ GameObject:
   - component: {fileID: 1967175537}
   - component: {fileID: 1967175536}
   - component: {fileID: 1967175539}
+  - component: {fileID: 1967175540}
   m_Layer: 5
   m_Name: Defender
   m_TagString: ButtonP2
@@ -6360,6 +6659,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1855696811}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: Action2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -6447,6 +6758,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 156.61604, y: 24.955915}
   m_EdgeRadius: 0
+--- !u!114 &1967175540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967175534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1a79b81fda4d04f95ccabebbaa55b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: {fileID: 1260871126}
+  galo: {fileID: 0}
+  move: 1
 --- !u!1 &1996118324
 GameObject:
   m_ObjectHideFlags: 0

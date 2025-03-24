@@ -6,8 +6,8 @@ public class Galo : MonoBehaviour
 {
     public int charID;
     public string nomeGalo;
-    public int guard;
-    public int attack;
+    public float guard;
+    public float attack;
     public int maxHP;
     public int currentHp;
     public int maxSP;
@@ -31,6 +31,7 @@ public class Galo : MonoBehaviour
     public bool TakeDamage(int dmg)
     {
         StartCoroutine(battleHud.SetHP(this ,dmg));
+        Debug.Log(dmg);
         currentHp -= dmg;
         if ( currentHp <= 0)
         {
@@ -40,6 +41,11 @@ public class Galo : MonoBehaviour
         {
             return false;
         }
+    }
+    public void Heal(int dmg)
+    {
+        StartCoroutine(battleHud.HealHP(this, dmg));
+        currentHp += dmg;
     }
     public void SetStatus(ConditionID conditionId)
     {
@@ -54,5 +60,9 @@ public class Galo : MonoBehaviour
     public void CureStatus()
     {
         Status = null;
+    }
+    public void OnInflicted()
+    {
+        Status?.OnInflicted?.Invoke(this);
     }
 }

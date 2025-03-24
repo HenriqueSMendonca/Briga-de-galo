@@ -99,15 +99,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charID: 0
   nomeGalo: Desleixado
-  guard: 100
-  attack: 100
+  guard: 1
+  attack: 1
   maxHP: 1000
   currentHp: 1000
   maxSP: 100
   currentSP: 100
   moves:
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
-  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
+  - {fileID: 11400000, guid: 75dccb844a19c8a41ad0543cb74b8bac, type: 2}
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}

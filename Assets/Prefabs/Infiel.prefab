@@ -99,17 +99,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charID: 2
   nomeGalo: Infiel
-  guard: 100
-  attack: 100
+  guard: 1
+  attack: 1
   maxHP: 900
   currentHp: 900
   maxSP: 100
   currentSP: 100
   moves:
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
+  - {fileID: 11400000, guid: 75dccb844a19c8a41ad0543cb74b8bac, type: 2}
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
-  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
-  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
+  - {fileID: 11400000, guid: ab180f3ef5ebf3349aa79328dec399ef, type: 2}
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
   selectedMove: 0
