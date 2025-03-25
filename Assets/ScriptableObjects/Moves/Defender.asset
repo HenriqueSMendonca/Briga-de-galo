@@ -19,3 +19,4 @@ MonoBehaviour:
   effects:
     status: 3
   target: 1
+  movePriority: 3

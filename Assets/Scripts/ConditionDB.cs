@@ -34,9 +34,25 @@ public class ConditionDB
             {
                 Name = "Defendendo",
                 StartMessage = "está defendendo",
-                OnInflicted = (Galo galo) =>
+                OnStart = (Galo galo) =>
                 {
-                    galo.guard += 0.25f;
+                    galo.StatusTime = 0;
+                },
+                OnInflicted = (Galo galo) =>
+                { bool inflicted = false;
+                    if (inflicted == false){
+                    galo.guard += 1;
+                        inflicted = true;
+                    }
+                },
+                OnAfterTurn = (Galo galo) =>
+                {
+                    if (galo.StatusTime <= 0)
+                    {
+                        galo.CureStatus();
+                        galo.guard -= 1;
+                    }
+                    galo.StatusTime--;
                 }
             }
         },

@@ -51,8 +51,6 @@ public class BattleSystem : MonoBehaviour
     void StartTheGame()
     {
         cnvs.gameObject.SetActive(true);
-
-
         panels[0].SetActive(false);
         panels[1].SetActive(false);
         p1HUD.gameObject.SetActive(false);
@@ -93,8 +91,9 @@ public class BattleSystem : MonoBehaviour
 
     void PlayerTurn()
     {
-        p1Galo.guard = 1;
-        p2Galo.guard = 1;
+        carro1.acceleration = 5;
+        carro2.acceleration = 5;
+
         moveCount = 0;
         panels[0].SetActive(false);
         panels[1].SetActive(false);
@@ -145,6 +144,8 @@ public class BattleSystem : MonoBehaviour
         if (p1Decided && p2Decided)
         {
             state = BattleState.CarRace;
+            carro1.acceleration += p1Galo.moves[p1Galo.selectedMove].Priority;
+            Debug.Log(p1Galo.selectedMove);
             CarRace();
         }
 
@@ -156,6 +157,7 @@ public class BattleSystem : MonoBehaviour
         if (p1Decided && p2Decided)
         {
             state = BattleState.CarRace;
+            carro2.acceleration += p2Galo.moves[actionNum].Priority;
             CarRace();
         }
     }
@@ -200,7 +202,10 @@ public class BattleSystem : MonoBehaviour
     }
     IEnumerator CheckHP(Galo galo1, Galo galo2, int dmg)
     {
+        Debug.Log(dmg);
         dmg = Mathf.FloorToInt((dmg * UnityEngine.Random.Range(0.9f, 1.1f) * (galo1.attack / galo2.guard)));
+        Debug.Log(dmg);
+        Debug.Log (galo2.guard);
         bool isDead = galo2.TakeDamage(dmg);       
         yield return new WaitForSeconds(1 / Math.Clamp(dmg, 1, 1000));
         galo1.OnAfterTurn();
@@ -235,6 +240,7 @@ public class BattleSystem : MonoBehaviour
             if (move.Target == Moves.MoveTarget.Self)
             {
                 galo1.SetStatus(effects.Status);
+                galo1.OnInflicted();
                 yield return ShowStatusChanges(galo1);
             }
             else
