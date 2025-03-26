@@ -91,6 +91,16 @@ public class BattleSystem : MonoBehaviour
 
     void PlayerTurn()
     {
+        p1Galo.OnAfterTurn();
+        p2Galo.OnAfterTurn();
+        for (int i = 0; p1Galo.Status?.Count > i; i++)
+        {
+            Debug.Log(p1Galo.Status[i].Name);
+        }
+        for (int i = 0; p2Galo.Status?.Count > i; i++)
+        {
+            Debug.Log(p2Galo.Status[i].Name);
+        }
         carro1.acceleration = 5;
         carro2.acceleration = 5;
 
@@ -175,7 +185,34 @@ public class BattleSystem : MonoBehaviour
     }
     IEnumerator UseMove(Galo galo1, Galo galo2)
     {
+        for (int i = 0; p1Galo.Status?.Count > i; i++)
+        {
+            Debug.Log(p1Galo.Status[i].Name);
+        }
+        for (int i = 0; p2Galo.Status?.Count > i; i++)
+        {
+            Debug.Log(p2Galo.Status[i].Name);
+        }
+        bool canRunMove = galo1.OnBeforeMove();
+        
         moveCount++;
+        if (!canRunMove)
+        {
+            dialogueText.text = $"{galo1.nomeGalo} está atordoado e não conseguiu atacar!";
+            
+            yield return new WaitForSeconds(1);
+            if (moveCount == 2)
+            {                
+                state = BattleState.PlayerTurn;
+                PlayerTurn();
+            }
+            else
+            {
+                StartCoroutine(UseMove(galo2, galo1));
+
+            }
+            yield break;
+        }
         yield return new WaitForSeconds(2);
         var move = galo1.moves[galo1.selectedMove];
         if (galo1.currentSP >= move.SpCost)
@@ -209,7 +246,7 @@ public class BattleSystem : MonoBehaviour
             {
                 StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                 yield return RunMoveEffects(move, galo1, galo2);
-            }
+            }           
         } else
         {
             dialogueText.text = $"{galo1.name} não possui fôlego o suficiente!";
@@ -223,17 +260,14 @@ public class BattleSystem : MonoBehaviour
                 StartCoroutine(UseMove(galo2, galo1));
 
             }
-        }
+            
+        }        
     }
     IEnumerator CheckHP(Galo galo1, Galo galo2, int dmg)
     {
-        Debug.Log(dmg);
         dmg = Mathf.FloorToInt((dmg * UnityEngine.Random.Range(0.9f, 1.1f) * (galo1.attack / galo2.guard)));
-        Debug.Log(dmg);
-        Debug.Log (galo2.guard);
         bool isDead = galo2.TakeDamage(dmg);       
-        yield return new WaitForSeconds(1 / Math.Clamp(dmg, 1, 1000));
-        galo1.OnAfterTurn();
+        yield return new WaitForSeconds(1 / Math.Clamp(dmg, 1, 1000));       
 
         if (isDead)
         {
@@ -263,28 +297,34 @@ public class BattleSystem : MonoBehaviour
         if (effects.Status != ConditionID.none)
         {
             if (UnityEngine.Random.Range(0, 100) <= ConditionDB.Conditions[effects.Status].Percentage)
-            {
+        {
+            Debug.Log("worked");
+
+            
                 if (move.Target == Moves.MoveTarget.Self)
                 {
                     galo1.SetStatus(effects.Status);
                     galo1.OnInflicted();
-                    yield return ShowStatusChanges(galo1);
+                    yield return ShowStatusChanges(galo1, effects);
                 }
                 else
                 {
                     galo2.SetStatus(effects.Status);
-                    yield return ShowStatusChanges(galo2);
+                    yield return ShowStatusChanges(galo2, effects);
                 }
-            } else
-            {
-                yield return new WaitForSeconds(2);
+
+
             }
+            else
+            {
+                Debug.Log("nah");
+                yield return new WaitForSeconds(2);
+            }           
         }
-       
     }
-    IEnumerator ShowStatusChanges(Galo galo)
+    IEnumerator ShowStatusChanges(Galo galo, Moves.MoveEffects effects)
     {
-        dialogueText.text = $"{galo.nomeGalo} {galo.Status.StartMessage}";
+        dialogueText.text = $"{galo.nomeGalo} {ConditionDB.Conditions[effects.Status].StartMessage}";
         yield return new WaitForSeconds(2);
     }
     

@@ -15,16 +15,17 @@ public class ConditionDB
                 Percentage = 100,
                 OnStart = (Galo galo) =>
                 {
-                    galo.StatusTime = Random.Range(1,3);
+                    Conditions[ConditionID.psn].StatusTime = Random.Range(1,3);
                 },
                 
                 OnAfterTurn = (Galo galo) =>
                 {
-                    if (galo.StatusTime <= 0)
+                    if (Conditions[ConditionID.psn].StatusTime <= 0)
                     {
-                        galo.CureStatus();  
+                       int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.psn]);
+                        galo.CureStatus(index);  
                     }
-                    galo.StatusTime--;
+                    Conditions[ConditionID.psn].StatusTime--;
                   galo.TakeDamage(galo.maxHP / 5);
                 }
             }
@@ -38,7 +39,7 @@ public class ConditionDB
                 Percentage = 100,
                 OnStart = (Galo galo) =>
                 {
-                    galo.StatusTime = 0;
+                    Conditions[ConditionID.psn].StatusTime = 0;
                 },
                 OnInflicted = (Galo galo) =>
                 { bool inflicted = false;
@@ -49,12 +50,14 @@ public class ConditionDB
                 },
                 OnAfterTurn = (Galo galo) =>
                 {
-                    if (galo.StatusTime <= 0)
+                    if (Conditions[ConditionID.psn].StatusTime <= 0)
                     {
-                        galo.CureStatus();
+                        int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.grd]);
+                        Debug.Log(index);
+                        galo.CureStatus(index);
                         galo.guard -= 1;
                     }
-                    galo.StatusTime--;
+                    Conditions[ConditionID.psn].StatusTime--;
                 }
             }
         },
@@ -65,22 +68,29 @@ public class ConditionDB
                 Name = "Atordoado",
                 StartMessage = "foi atordoado",
                 Percentage = 50,
-                OnInflicted = (Galo galo) =>
+                OnStart = (Galo galo) =>
                 {
-                  bool inflicted = false;
-                    if (inflicted == false)
-                    {
-                        
-                    }
+                    Conditions[ConditionID.psn].StatusTime = 0;
                 },
                  OnAfterTurn = (Galo galo) =>
                 {
-                    if (galo.StatusTime <= 0)
-                    {
-                        galo.CureStatus();
+                    if (Conditions[ConditionID.stn].Percentage <= 25){
+                        Conditions[ConditionID.stn].Percentage += 25;
+                        Debug.Log(ConditionDB.Conditions[ConditionID.stn].Percentage);
                     }
-                    galo.StatusTime--;
+                    Conditions[ConditionID.psn].StatusTime--;
+                },
+                OnBeforeMove = (Galo galo) =>
+                {
+                    
+                   Conditions[ConditionID.stn].Percentage -= 50;
+                    int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.stn]);
+                        galo.CureStatus(index);
+                    Debug.Log(ConditionDB.Conditions[ConditionID.stn].Percentage);
+                    return false;
+                    
                 }
+                
             }
         }
         

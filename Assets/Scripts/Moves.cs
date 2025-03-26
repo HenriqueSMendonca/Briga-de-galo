@@ -21,7 +21,6 @@ public class Moves : ScriptableObject
     public int Damage { get { return damage; } }
     public int SpCost { get { return spCost; } }
     public MoveEffects Effects { get { return effects; } }
-    
     public MoveTarget Target { get { return target; } }
 
     public int Priority { get { return movePriority; } }

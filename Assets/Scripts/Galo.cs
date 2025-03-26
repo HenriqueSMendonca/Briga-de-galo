@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Galo : MonoBehaviour
@@ -16,8 +17,7 @@ public class Galo : MonoBehaviour
     public List<Moves> moves;
     public int selectedMove;
     public BattleHud battleHud;
-    public int StatusTime { get; set; }
-    public Condition Status {  get; private set; }
+    public List<Condition> Status = new List<Condition>();
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +32,6 @@ public class Galo : MonoBehaviour
     public bool TakeDamage(int dmg)
     {
         StartCoroutine(battleHud.SetHP(this ,dmg));
-        Debug.Log(dmg);
         currentHp -= dmg;
         if ( currentHp <= 0)
         {
@@ -74,20 +73,40 @@ public class Galo : MonoBehaviour
     }
     public void SetStatus(ConditionID conditionId)
     {
-        Status = ConditionDB.Conditions[conditionId];
-        Status?.OnStart?.Invoke(this);
+        Status.Add(ConditionDB.Conditions[conditionId]);
+        for (int i = 0; Status?.Count > i; i++)
+        {
+            Status[i]?.OnStart?.Invoke(this);
+        }
     
     }
     public void OnAfterTurn()
     {
-        Status?.OnAfterTurn?.Invoke(this);
+        for (int i = 0; Status?.Count > i; i++)
+        {
+            Status[i]?.OnAfterTurn?.Invoke(this);
+        }
     }
-    public void CureStatus()
+    public void CureStatus(int i)
     {
-        Status = null;
+        Status.RemoveAt(i);
     }
     public void OnInflicted()
     {
-        Status?.OnInflicted?.Invoke(this);
+        for (int i = 0; Status?.Count > i; i++)
+        {
+            Status[i]?.OnInflicted?.Invoke(this);
+        }
+    }
+    public bool OnBeforeMove()
+    {
+        for (int i = 0; Status?.Count > i; i++)
+        {
+            if (Status[i]?.OnBeforeMove != null)
+            {
+                return Status[i].OnBeforeMove(this);
+            }
+        }
+        return true;
     }
 }
