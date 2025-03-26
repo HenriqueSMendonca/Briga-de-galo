@@ -187,6 +187,7 @@ public class BattleSystem : MonoBehaviour
     {
         for (int i = 0; p1Galo.Status?.Count > i; i++)
         {
+            Debug.Log(i);
             Debug.Log(p1Galo.Status[i].Name);
         }
         for (int i = 0; p2Galo.Status?.Count > i; i++)
