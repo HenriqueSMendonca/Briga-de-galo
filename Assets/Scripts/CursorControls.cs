@@ -57,7 +57,7 @@ public class CursorControls : MonoBehaviour
     {
         if (button != null && context.started == true)
         {
-            button.onClick.Invoke();
+            button.onClick?.Invoke();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

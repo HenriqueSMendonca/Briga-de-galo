@@ -12,6 +12,7 @@ public class ConditionDB
             {
                 Name = "Veneno",
                 StartMessage = "foi envenenado",
+                Percentage = 100,
                 OnStart = (Galo galo) =>
                 {
                     galo.StatusTime = Random.Range(1,3);
@@ -34,6 +35,7 @@ public class ConditionDB
             {
                 Name = "Defendendo",
                 StartMessage = "está defendendo",
+                Percentage = 100,
                 OnStart = (Galo galo) =>
                 {
                     galo.StatusTime = 0;
@@ -62,9 +64,14 @@ public class ConditionDB
             {
                 Name = "Atordoado",
                 StartMessage = "foi atordoado",
+                Percentage = 50,
                 OnInflicted = (Galo galo) =>
                 {
-                  
+                  bool inflicted = false;
+                    if (inflicted == false)
+                    {
+                        
+                    }
                 },
                  OnAfterTurn = (Galo galo) =>
                 {

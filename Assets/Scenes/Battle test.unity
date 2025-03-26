@@ -209,7 +209,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.25
+  m_fontSize: 25.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.45
+  m_fontSize: 31.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.55
+  m_fontSize: 37.95
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -724,7 +724,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.05
+  m_fontSize: 62
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.25
+  m_fontSize: 24.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1165,7 +1165,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.65382767, y: -0.21794128}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1176,7 +1176,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 115.376205, y: 56.712288}
+  m_Size: {x: 105.35082, y: 62.378807}
   m_EdgeRadius: 0
 --- !u!114 &503571698
 MonoBehaviour:
@@ -1193,6 +1193,7 @@ MonoBehaviour:
   description: {fileID: 1260871126}
   galo: {fileID: 0}
   move: 3
+  cost: 0
 --- !u!1 &681156278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,7 +1373,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.000022888184, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1383,7 +1384,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 156.61604, y: 24.955915}
+  m_Size: {x: 135.12563, y: 24.955915}
   m_EdgeRadius: 0
 --- !u!114 &681156284
 MonoBehaviour:
@@ -1400,6 +1401,7 @@ MonoBehaviour:
   description: {fileID: 1260871126}
   galo: {fileID: 0}
   move: 0
+  cost: 0
 --- !u!1 &682911308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,7 +1486,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.2
+  m_fontSize: 24.8
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1654,7 +1656,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.4
+  m_fontSize: 36.85
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1883,7 +1885,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.4104538, y: 0.41880894}
+  m_Offset: {x: -0.41046524, y: 0.41880894}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1894,7 +1896,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 156.61604, y: 24.955915}
+  m_Size: {x: 139.20892, y: 24.955915}
   m_EdgeRadius: 0
 --- !u!114 &813523987
 MonoBehaviour:
@@ -1911,6 +1913,7 @@ MonoBehaviour:
   description: {fileID: 1570948764}
   galo: {fileID: 0}
   move: 0
+  cost: 0
 --- !u!1 &924337756
 GameObject:
   m_ObjectHideFlags: 0
@@ -2090,7 +2093,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.21793938, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2101,7 +2104,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 115.376205, y: 56.712288}
+  m_Size: {x: 106.22261, y: 56.712288}
   m_EdgeRadius: 0
 --- !u!114 &924337762
 MonoBehaviour:
@@ -2118,6 +2121,7 @@ MonoBehaviour:
   description: {fileID: 1260871126}
   galo: {fileID: 0}
   move: 4
+  cost: 0
 --- !u!1 &1038294256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,7 +2208,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.6
+  m_fontSize: 27.05
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2433,7 +2437,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.21793938, y: -0.21794128}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2444,7 +2448,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 115.376205, y: 56.712288}
+  m_Size: {x: 106.22261, y: 64.122345}
   m_EdgeRadius: 0
 --- !u!114 &1045958305
 MonoBehaviour:
@@ -2461,6 +2465,7 @@ MonoBehaviour:
   description: {fileID: 1260871126}
   galo: {fileID: 0}
   move: 2
+  cost: 0
 --- !u!1 &1065203996
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,7 +2550,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.7
+  m_fontSize: 38
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2943,7 +2948,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00033569336, y: 0.08598709}
+  m_Offset: {x: 0.25562668, y: 0.08598709}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2954,7 +2959,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 156.76703, y: 27.31403}
+  m_Size: {x: 137.824, y: 27.31403}
   m_EdgeRadius: 0
 --- !u!1 &1260871124
 GameObject:
@@ -3040,7 +3045,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.55
+  m_fontSize: 25.2
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3361,7 +3366,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.10209656, y: 0.000013828278}
+  m_Offset: {x: 0.6140518, y: 0.00001335144}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3372,7 +3377,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 153.93066, y: 25.093216}
+  m_Size: {x: 135.49962, y: 25.093216}
   m_EdgeRadius: 0
 --- !u!114 &1310315637
 MonoBehaviour:
@@ -3389,6 +3394,7 @@ MonoBehaviour:
   description: {fileID: 1570948764}
   galo: {fileID: 0}
   move: 1
+  cost: 0
 --- !u!1 &1319535539
 GameObject:
   m_ObjectHideFlags: 0
@@ -3473,7 +3479,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 49.55
+  m_fontSize: 47.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3607,7 +3613,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.4
+  m_fontSize: 36.85
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3823,7 +3829,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.000015258789, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3834,7 +3840,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 156.61604, y: 24.955915}
+  m_Size: {x: 135.12555, y: 24.955915}
   m_EdgeRadius: 0
 --- !u!1 &1416617676
 GameObject:
@@ -4096,7 +4102,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.73791504, y: 0.18446827}
+  m_Offset: {x: 0.34534073, y: 0.008252144}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4107,7 +4113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 115.376205, y: 56.712288}
+  m_Size: {x: 101.90391, y: 61.99862}
   m_EdgeRadius: 0
 --- !u!114 &1437398247
 MonoBehaviour:
@@ -4124,6 +4130,7 @@ MonoBehaviour:
   description: {fileID: 1570948764}
   galo: {fileID: 0}
   move: 2
+  cost: 0
 --- !u!1 &1477617949
 GameObject:
   m_ObjectHideFlags: 0
@@ -4208,7 +4215,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.65
+  m_fontSize: 23.1
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4437,7 +4444,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.43590355, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4448,7 +4455,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 115.376205, y: 56.712288}
+  m_Size: {x: 106.65849, y: 56.712288}
   m_EdgeRadius: 0
 --- !u!114 &1509100059
 MonoBehaviour:
@@ -4465,6 +4472,7 @@ MonoBehaviour:
   description: {fileID: 1260871126}
   galo: {fileID: 0}
   move: 5
+  cost: 0
 --- !u!1 &1523845907
 GameObject:
   m_ObjectHideFlags: 0
@@ -4644,7 +4652,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.17765045, y: -0.000002861023}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4655,7 +4663,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 115.376205, y: 56.712288}
+  m_Size: {x: 102.94104, y: 63.107506}
   m_EdgeRadius: 0
 --- !u!114 &1523845913
 MonoBehaviour:
@@ -4672,6 +4680,7 @@ MonoBehaviour:
   description: {fileID: 1570948764}
   galo: {fileID: 0}
   move: 3
+  cost: 0
 --- !u!1 &1562313386
 GameObject:
   m_ObjectHideFlags: 0
@@ -4756,7 +4765,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46.1
+  m_fontSize: 43.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4890,7 +4899,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
+  m_fontSize: 25.7
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5239,7 +5248,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.65
+  m_fontSize: 28.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5468,7 +5477,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.345356, y: 0.17268276}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5479,7 +5488,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 115.376205, y: 56.712288}
+  m_Size: {x: 102.94361, y: 62.58322}
   m_EdgeRadius: 0
 --- !u!114 &1771015500
 MonoBehaviour:
@@ -5496,6 +5505,7 @@ MonoBehaviour:
   description: {fileID: 1570948764}
   galo: {fileID: 0}
   move: 5
+  cost: 0
 --- !u!1 &1827324350
 GameObject:
   m_ObjectHideFlags: 0
@@ -5714,7 +5724,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.2
+  m_fontSize: 37.6
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6064,7 +6074,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.17266083, y: 0.17268181}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6075,7 +6085,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 115.376205, y: 56.712288}
+  m_Size: {x: 101.90759, y: 61.89249}
   m_EdgeRadius: 0
 --- !u!114 &1875328412
 MonoBehaviour:
@@ -6092,6 +6102,7 @@ MonoBehaviour:
   description: {fileID: 1570948764}
   galo: {fileID: 0}
   move: 4
+  cost: 0
 --- !u!1 &1889130597
 GameObject:
   m_ObjectHideFlags: 0
@@ -6306,7 +6317,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.4
+  m_fontSize: 36.85
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6440,7 +6451,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.9
+  m_fontSize: 25.6
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6745,7 +6756,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.5117073, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6756,7 +6767,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 156.61604, y: 24.955915}
+  m_Size: {x: 135.12561, y: 24.955915}
   m_EdgeRadius: 0
 --- !u!114 &1967175540
 MonoBehaviour:
@@ -6773,6 +6784,7 @@ MonoBehaviour:
   description: {fileID: 1260871126}
   galo: {fileID: 0}
   move: 1
+  cost: 0
 --- !u!1 &1996118324
 GameObject:
   m_ObjectHideFlags: 0
@@ -6857,7 +6869,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.7
+  m_fontSize: 38
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7067,7 +7079,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.4
+  m_fontSize: 36.85
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

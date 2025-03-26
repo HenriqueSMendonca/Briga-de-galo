@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -44,8 +45,32 @@ public class Galo : MonoBehaviour
     }
     public void Heal(int dmg)
     {
+        dmg *= -1;
         StartCoroutine(battleHud.HealHP(this, dmg));
         currentHp += dmg;
+        if (currentHp > maxHP)
+        {
+            currentHp = maxHP;
+        }
+    }
+    public void RemoveSP(int spCost)
+    {
+        StartCoroutine(battleHud.SetSP(this, spCost));
+        currentSP -= spCost;
+        if (currentSP < 0)
+        {
+            currentSP = 0;
+        }
+    }
+    public void HealSP(int spHeal)
+    {
+        spHeal *= -1;
+        StartCoroutine(battleHud.HealSP(this, spHeal));
+        currentSP += spHeal;
+        if (currentSP > maxSP)
+        {
+            currentSP = maxSP;
+        }
     }
     public void SetStatus(ConditionID conditionId)
     {
