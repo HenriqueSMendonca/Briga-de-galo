@@ -10,25 +10,16 @@ public class Galo : MonoBehaviour
     public string nomeGalo;
     public float guard;
     public float attack;
+    public float carSpeed;
     public int maxHP;
     public int currentHp;
     public int maxSP;
     public int currentSP;
+    public bool isParry;
     public List<Moves> moves;
     public int selectedMove;
     public BattleHud battleHud;
     public List<Condition> Status = new List<Condition>();
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public bool TakeDamage(int dmg)
     {
         StartCoroutine(battleHud.SetHP(this ,dmg));

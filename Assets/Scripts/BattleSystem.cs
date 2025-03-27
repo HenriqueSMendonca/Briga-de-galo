@@ -101,8 +101,8 @@ public class BattleSystem : MonoBehaviour
         {
             Debug.Log(p2Galo.Status[i].Name);
         }
-        carro1.acceleration = 5;
-        carro2.acceleration = 5;
+        carro1.acceleration = p1Galo.carSpeed;
+        carro2.acceleration = p2Galo.carSpeed;
 
         moveCount = 0;
         panels[0].SetActive(false);
@@ -228,7 +228,7 @@ public class BattleSystem : MonoBehaviour
                 galo1.RemoveSP(move.SpCost);
             }
             
-            if (move.Damage < 0)
+            if (move.Damage <= 0)
             {
                 galo1.Heal(move.Damage);
                 if (moveCount == 2)
@@ -245,8 +245,15 @@ public class BattleSystem : MonoBehaviour
             }
             else
             {
-                StartCoroutine(CheckHP(galo1, galo2, move.Damage));
-                yield return RunMoveEffects(move, galo1, galo2);
+                if (galo2.isParry)
+                {
+                    StartCoroutine(CheckHP(galo2, galo1, move.Damage));
+                }
+                else
+                {
+                    StartCoroutine(CheckHP(galo1, galo2, move.Damage));
+                    yield return RunMoveEffects(move, galo1, galo2);
+                }
             }           
         } else
         {

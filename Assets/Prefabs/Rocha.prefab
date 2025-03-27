@@ -101,6 +101,7 @@ MonoBehaviour:
   nomeGalo: Rocha
   guard: 1
   attack: 1
+  carSpeed: 5
   maxHP: 1200
   currentHp: 1200
   maxSP: 80

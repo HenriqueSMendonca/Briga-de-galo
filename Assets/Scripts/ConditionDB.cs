@@ -17,9 +17,7 @@ public class ConditionDB
                 OnStart = (Galo galo) =>
                 {
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.psn]);
-                        Debug.Log(index);
-                    galo.Status[index].StatusTime = UnityEngine.Random.Range(1,3);
-                    Debug.Log(galo.Status[index].StatusTime);
+                    galo.Status[index].StatusTime = UnityEngine.Random.Range(1,4);
                 },
                 
                 OnAfterTurn = (Galo galo) =>
@@ -104,8 +102,191 @@ public class ConditionDB
                 }
                 
             }
-        }
-        
+        },
+        {
+            ConditionID.nau,
+            new Condition()
+            {
+                Name = "Nausea",
+                StartMessage = "está enjoado",
+                Percentage = 100,
+                OnStart = (Galo galo) =>
+                {
+                    int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.nau]);
+                    galo.Status[index].StatusTime = UnityEngine.Random.Range(1,4);
+                },
+                OnInflicted = (Galo galo) =>
+                { bool inflicted = false;
+                    if (inflicted == false){
+                    galo.guard -= 0.5f;
+                    galo.carSpeed -= 1;
+                        inflicted = true;
+                    }
+                },
+                OnAfterTurn = (Galo galo) =>
+                {
+                    int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.nau]);
+                    if (galo.Status[index].StatusTime <= 0)
+                    {
+
+                        galo.CureStatus(ConditionID.nau);
+                        galo.guard += 0.5f;
+                        galo.carSpeed += 1;
+                    } else
+                    {
+                        galo.Status[index].StatusTime--;
+                    }
+
+
+                }
+            }
+        },
+        {
+            ConditionID.wek,
+            new Condition()
+            {
+                Name = "Fraqueza",
+                StartMessage = "foi enfraquecido",
+                Percentage = 100,
+                OnStart = (Galo galo) =>
+                {
+                    int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.wek]);
+                    galo.Status[index].StatusTime = UnityEngine.Random.Range(1,4);
+                },
+                OnInflicted = (Galo galo) =>
+                { bool inflicted = false;
+                    if (inflicted == false){
+                    galo.attack -= 0.5f;
+                        inflicted = true;
+                    }
+                },
+                OnAfterTurn = (Galo galo) =>
+                {
+                    int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.wek]);
+                    if (galo.Status[index].StatusTime <= 0)
+                    {
+
+                        galo.CureStatus(ConditionID.wek);
+                        galo.attack += 0.5f;
+                    } else
+                    {
+                        galo.Status[index].StatusTime--;
+                    }
+
+
+                }
+            }
+        },
+        {
+            ConditionID.irn,
+            new Condition()
+            {
+                Name = "Fortalecido",
+                StartMessage = "se fortaleceu",
+                Percentage = 100,
+                OnStart = (Galo galo) =>
+                {
+                    int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.irn]);
+                    galo.Status[index].StatusTime = UnityEngine.Random.Range(1,4);
+                },
+                OnInflicted = (Galo galo) =>
+                { bool inflicted = false;
+                    if (inflicted == false){
+                    galo.guard += 1;
+                        inflicted = true;
+                    }
+                },
+                OnAfterTurn = (Galo galo) =>
+                {
+                    int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.irn]);
+                    if (galo.Status[index].StatusTime <= 0)
+                    {
+
+                        galo.CureStatus(ConditionID.irn);
+                        galo.guard -= 1;
+                    } else
+                    {
+                        galo.Status[index].StatusTime--;
+                    }
+
+
+                }
+            }
+        },
+        {
+            ConditionID.off,
+            new Condition()
+            {
+                Name = "Despreparado",
+                StartMessage = "perdeu sua postura",
+                Percentage = 100,
+                OnStart = (Galo galo) =>
+                {
+                    int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.off]);
+                    galo.Status[index].StatusTime = UnityEngine.Random.Range(1,3);
+                },
+                OnInflicted = (Galo galo) =>
+                { bool inflicted = false;
+                    if (inflicted == false){
+                    galo.guard -= 1f;
+                        inflicted = true;
+                    }
+                },
+                OnAfterTurn = (Galo galo) =>
+                {
+                    int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.off]);
+                    if (galo.Status[index].StatusTime <= 0)
+                    {
+
+                        galo.CureStatus(ConditionID.off);
+                        galo.guard += 1f;
+                    } else
+                    {
+                        galo.Status[index].StatusTime--;
+                    }
+
+
+                }
+            }
+        },
+        {
+            ConditionID.pry,
+            new Condition()
+            {
+                Name = "Preparado",
+                StartMessage = "está preparando um contra-ataque",
+                Percentage = 100,
+                OnStart = (Galo galo) =>
+                {
+                    int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.pry]);
+                    galo.Status[index].StatusTime = 0;
+                },
+                OnInflicted = (Galo galo) =>
+                { bool inflicted = false;
+                    if (inflicted == false){
+                    galo.isParry = true;
+                        inflicted = true;
+                    }
+                },
+                OnAfterTurn = (Galo galo) =>
+                {
+                    int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.pry]);
+                    if (galo.Status[index].StatusTime <= 0)
+                    {
+                        
+                        galo.CureStatus(ConditionID.pry);
+                        galo.isParry= false;
+                        galo.SetStatus(ConditionID.off);
+                    } else
+                    {
+                        galo.Status[index].StatusTime--;
+                    }
+
+
+                }
+            }
+        },
+
     };
 }
 public enum ConditionID

@@ -101,6 +101,7 @@ MonoBehaviour:
   nomeGalo: Desleixado
   guard: 1
   attack: 1
+  carSpeed: 5
   maxHP: 1000
   currentHp: 1000
   maxSP: 100

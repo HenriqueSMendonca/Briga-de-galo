@@ -101,6 +101,7 @@ MonoBehaviour:
   nomeGalo: Infiel
   guard: 1
   attack: 1
+  carSpeed: 5
   maxHP: 900
   currentHp: 900
   maxSP: 100
