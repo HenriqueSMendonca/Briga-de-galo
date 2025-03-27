@@ -87,9 +87,18 @@ public class Galo : MonoBehaviour
             Status[i]?.OnAfterTurn?.Invoke(this);
         }
     }
-    public void CureStatus(int i)
+    public void CureStatus(ConditionID cond)
     {
-        Status.RemoveAt(i);
+        for (int i = 0; i < Status.Count; i++)
+        {
+            if (Status[i] == ConditionDB.Conditions[cond])
+            {
+                Debug.Log($"{Status[i].Name} foi curado");
+                Status.RemoveAt(i);
+            }
+        }
+        
+        
     }
     public void OnInflicted()
     {
