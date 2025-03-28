@@ -12,6 +12,7 @@ public class SelectManager : MonoBehaviour
     private bool p1Selected, p2Selected;
     public Sprite[] characters;
     public SpriteRenderer p1, p2;
+    private bool roomFull = false;
     
     void Start()
     { 
@@ -28,14 +29,11 @@ public class SelectManager : MonoBehaviour
     void Update()
     {
 
-        if (playerManager.playerCount == 2)
+        if (playerManager.playerCount == playerManager.maxPlayerCount && roomFull == false)
         {
+            roomFull = true;
             playerManager.DisableJoining();
-        }
-        if (p1Selected && p2Selected)
-        {
-            startBtn.interactable = true;
-        }
+        }      
         p1.sprite = characters[PlayerPrefs.GetInt("selectedChar1")];
         p2.sprite = characters[PlayerPrefs.GetInt("selectedChar2")];
     }
@@ -48,6 +46,10 @@ public class SelectManager : MonoBehaviour
         {
             p1.gameObject.SetActive(true);
         }
+        if (p1Selected && p2Selected)
+        {
+            startBtn.interactable = true;
+        }
     }
     public void CharacterChoice2(int choice)
     {
@@ -56,6 +58,10 @@ public class SelectManager : MonoBehaviour
         if (p2.gameObject.activeSelf == false)
         {
             p2.gameObject.SetActive(true);
+        }
+        if (p1Selected && p2Selected)
+        {
+            startBtn.interactable = true;
         }
     }
 

@@ -158,10 +158,10 @@ RectTransform:
   - {fileID: 1188834990}
   m_Father: {fileID: 1847610833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.42800003, y: 0.12424326}
+  m_AnchorMax: {x: 0.5712772, y: 0.19624326}
+  m_AnchoredPosition: {x: 0.5, y: 1}
+  m_SizeDelta: {x: -3, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &231276914
 MonoBehaviour:
@@ -337,10 +337,10 @@ RectTransform:
   - {fileID: 940448828}
   m_Father: {fileID: 1847610833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.42800003, y: 0.23674776}
+  m_AnchorMax: {x: 0.5712772, y: 0.30648652}
+  m_AnchoredPosition: {x: 0.5, y: 1.5}
+  m_SizeDelta: {x: -3, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609892052
 MonoBehaviour:
@@ -786,10 +786,10 @@ RectTransform:
   - {fileID: 2109713188}
   m_Father: {fileID: 1847610833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.42800003, y: 0.3515045}
+  m_AnchorMax: {x: 0.5712772, y: 0.42574778}
+  m_AnchoredPosition: {x: 0.5, y: -0.5}
+  m_SizeDelta: {x: -3, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1195413784
 MonoBehaviour:
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NotificationBehavior: 3
-  m_MaxPlayerCount: 2
+  m_MaxPlayerCount: 4
   m_AllowJoining: 1
   m_JoinBehavior: 1
   m_PlayerJoinedEvent:
@@ -1103,7 +1103,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 2734521286607933002, guid: 6c7905c3f954ce648b11f645d6e4b90d, type: 3}
-  m_PlayerPrefab: {fileID: 871048679700831183, guid: 9596c7f413ada3b408fe470c7ba55df2, type: 3}
+  m_PlayerPrefab: {fileID: 1813060269622947263, guid: bbc0392841c8c274c8d04419f91ac973, type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1

@@ -9,7 +9,7 @@ public class Carro : MonoBehaviour
     [SerializeField]
     public Rigidbody2D rb;
     [SerializeField]
-    private float maxSpeed, acceleration, target, currentSpeed;
+    public float maxSpeed, acceleration, target, currentSpeed;
     private Vector2 speed;
     public float hori, vert;
     private float aux;

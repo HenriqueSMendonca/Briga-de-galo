@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
 {
     public PlayerInputManager playerManager;
     public string cenaStart;
+    private bool roomFull = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +20,9 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerManager.playerCount == 2)
+        if (playerManager.playerCount == playerManager.maxPlayerCount && roomFull == false)
         {
+            roomFull = true;
             playerManager.DisableJoining();
         }
     }

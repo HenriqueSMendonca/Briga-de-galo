@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4555074752618953301}
   - component: {fileID: 4513285076930261523}
+  - component: {fileID: -5407478129755091519}
   m_Layer: 0
   m_Name: Rocha
   m_TagString: Untagged
@@ -84,3 +85,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5407478129755091519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7411359049473825408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a90bd2299754645b15e669bdf1e064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charID: 1
+  nomeGalo: Rocha
+  guard: 1
+  attack: 1
+  carSpeed: 5
+  maxHP: 1200
+  currentHp: 1200
+  maxSP: 80
+  currentSP: 80
+  isParry: 0
+  tookDamage: 0
+  moves:
+  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
+  - {fileID: 11400000, guid: 75dccb844a19c8a41ad0543cb74b8bac, type: 2}
+  - {fileID: 11400000, guid: 2f8b5ba994f90844b919fe2a1a664b02, type: 2}
+  - {fileID: 11400000, guid: 8cb846949c02aeb46bdaff519701cd05, type: 2}
+  - {fileID: 11400000, guid: 0c2e95632389b8a4d8a0a87a7836aa96, type: 2}
+  - {fileID: 11400000, guid: 1e98482bbdc31064b87b1959328887b0, type: 2}
+  selectedMove: 0
+  battleHud: {fileID: 0}

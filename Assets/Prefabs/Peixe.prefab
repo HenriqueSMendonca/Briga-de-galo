@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4519853977191036284}
   - component: {fileID: 741271324522726804}
+  - component: {fileID: -6535519393175754614}
   m_Layer: 0
   m_Name: Peixe
   m_TagString: Untagged
@@ -84,3 +85,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-6535519393175754614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7537687736573561179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a90bd2299754645b15e669bdf1e064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charID: 3
+  nomeGalo: Peixe
+  guard: 1
+  attack: 1
+  carSpeed: 5
+  maxHP: 900
+  currentHp: 900
+  maxSP: 120
+  currentSP: 120
+  isParry: 0
+  tookDamage: 0
+  moves:
+  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
+  - {fileID: 11400000, guid: 75dccb844a19c8a41ad0543cb74b8bac, type: 2}
+  - {fileID: 11400000, guid: 1cd8dd1da64fa5a45b73f9f84ee46aa8, type: 2}
+  - {fileID: 11400000, guid: 559d49275a41141439e2b04228ef2a70, type: 2}
+  - {fileID: 11400000, guid: 40cc38cadf7e68d488dfdb89895e8d37, type: 2}
+  - {fileID: 11400000, guid: 62301109d534e9644ab8b77ad9724054, type: 2}
+  selectedMove: 0
+  battleHud: {fileID: 0}

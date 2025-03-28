@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3313793465316505939}
   - component: {fileID: 5447627369581271341}
+  - component: {fileID: -5989527944199564562}
   m_Layer: 0
   m_Name: Desleixado
   m_TagString: Untagged
@@ -84,3 +85,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5989527944199564562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5007771006888812772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a90bd2299754645b15e669bdf1e064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charID: 0
+  nomeGalo: Desleixado
+  guard: 1
+  attack: 1
+  carSpeed: 5
+  maxHP: 1000
+  currentHp: 1000
+  maxSP: 100
+  currentSP: 100
+  isParry: 0
+  tookDamage: 0
+  moves:
+  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
+  - {fileID: 11400000, guid: 75dccb844a19c8a41ad0543cb74b8bac, type: 2}
+  - {fileID: 11400000, guid: d5dea48e7a0866242a3a6b647a003bed, type: 2}
+  - {fileID: 11400000, guid: 2689208bbd6111a44840853cf4c4d048, type: 2}
+  - {fileID: 11400000, guid: 7d4a8e2eb0a7231468e4bc0cb6f26b83, type: 2}
+  - {fileID: 11400000, guid: fc4c73b748d5c5147bee11d6242adfd8, type: 2}
+  selectedMove: 0
+  battleHud: {fileID: 0}
