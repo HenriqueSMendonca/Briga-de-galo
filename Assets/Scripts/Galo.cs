@@ -16,6 +16,7 @@ public class Galo : MonoBehaviour
     public int maxSP;
     public int currentSP;
     public bool isParry;
+    public bool tookDamage;
     public List<Moves> moves;
     public int selectedMove;
     public BattleHud battleHud;

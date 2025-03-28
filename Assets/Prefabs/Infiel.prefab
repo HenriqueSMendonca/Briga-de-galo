@@ -106,12 +106,14 @@ MonoBehaviour:
   currentHp: 900
   maxSP: 100
   currentSP: 100
+  isParry: 0
+  tookDamage: 0
   moves:
   - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
   - {fileID: 11400000, guid: 75dccb844a19c8a41ad0543cb74b8bac, type: 2}
-  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
+  - {fileID: 11400000, guid: e87c4aef8710250449a82d2cc420a8f7, type: 2}
   - {fileID: 11400000, guid: ab180f3ef5ebf3349aa79328dec399ef, type: 2}
-  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
-  - {fileID: 11400000, guid: 5aa98dc37aeae0248a3762f7589a7c4e, type: 2}
+  - {fileID: 11400000, guid: f6802365960bd2a46b7a5ec2211c3bf9, type: 2}
+  - {fileID: 11400000, guid: 90d1687933ae671448fa5a1f6f7bab2a, type: 2}
   selectedMove: 0
   battleHud: {fileID: 0}

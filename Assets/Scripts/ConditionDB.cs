@@ -207,9 +207,7 @@ public class ConditionDB
                     } else
                     {
                         galo.Status[index].StatusTime--;
-                    }
-
-
+                    }                   
                 }
             }
         },
@@ -237,7 +235,7 @@ public class ConditionDB
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.off]);
                     if (galo.Status[index].StatusTime <= 0)
                     {
-
+                       
                         galo.CureStatus(ConditionID.off);
                         galo.guard += 1f;
                     } else
@@ -271,9 +269,13 @@ public class ConditionDB
                 OnAfterTurn = (Galo galo) =>
                 {
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.pry]);
+                    if (galo.Status[index].Percentage <= 50){
+                        galo.Status[index].Percentage += 50;
+                    }
                     if (galo.Status[index].StatusTime <= 0)
                     {
-                        
+
+                        galo.Status[index].Percentage -= 100;
                         galo.CureStatus(ConditionID.pry);
                         galo.isParry= false;
                         galo.SetStatus(ConditionID.off);

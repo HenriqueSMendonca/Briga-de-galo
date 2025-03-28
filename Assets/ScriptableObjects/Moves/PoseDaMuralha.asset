@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
-  m_Name: AutoCuidado
+  m_Name: PoseDaMuralha
   m_EditorClassIdentifier: 
-  moveName: Auto-cuidado
-  description: "Cura 1/3 da vida do usu\xE1rio, 30 de f\xF4lego"
-  damage: -300
-  spCost: 30
+  moveName: Pose da muralha
+  description: "aplica fortalecido, 40 de f\xF4lego"
+  damage: 0
+  spCost: 40
   effects:
-    status: 0
+    status: 6
   target: 1
-  movePriority: -1
+  movePriority: 3

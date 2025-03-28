@@ -104,6 +104,8 @@ public class BattleSystem : MonoBehaviour
         carro1.acceleration = p1Galo.carSpeed;
         carro2.acceleration = p2Galo.carSpeed;
 
+        p1Galo.tookDamage = false;
+        p2Galo.tookDamage = false;
         moveCount = 0;
         panels[0].SetActive(false);
         panels[1].SetActive(false);
@@ -216,63 +218,283 @@ public class BattleSystem : MonoBehaviour
         }
         yield return new WaitForSeconds(2);
         var move = galo1.moves[galo1.selectedMove];
-        if (galo1.currentSP >= move.SpCost)
+        switch (move.Name)
         {
-            dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
-            yield return new WaitForSeconds(2);
-            if (move.SpCost < 0)
-            {
-                galo1.HealSP(move.SpCost);
-            } else
-            {
-                galo1.RemoveSP(move.SpCost);
-            }
-            
-            if (move.Damage <= 0)
-            {
-                galo1.Heal(move.Damage);
-                if (moveCount == 2)
+            case ("Cabecada"): 
                 {
-                    state = BattleState.PlayerTurn;
-                    PlayerTurn();
-                }
-                else
-                {
-                    StartCoroutine(UseMove(galo2, galo1));
+                    if (galo1.currentSP >= move.SpCost)
+                    {
+                        dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
+                        yield return new WaitForSeconds(2);
+                        galo1.RemoveSP(move.SpCost);
+                        StartCoroutine(CheckHP(galo1, galo2, move.Damage));
+                        StartCoroutine(CheckHP(galo1, galo1, move.Damage / 2));
 
-                }
-                yield return RunMoveEffects(move, galo1, galo2);
-            }
-            else
-            {
-                if (galo2.isParry)
-                {
-                    StartCoroutine(CheckHP(galo2, galo1, move.Damage));
-                }
-                else
-                {
-                    StartCoroutine(CheckHP(galo1, galo2, move.Damage));
-                    yield return RunMoveEffects(move, galo1, galo2);
-                }
-            }           
-        } else
-        {
-            dialogueText.text = $"{galo1.name} não possui fôlego o suficiente!";
-            if (moveCount == 2)
-            {
-                state = BattleState.PlayerTurn;
-                PlayerTurn();
-            }
-            else
-            {
-                StartCoroutine(UseMove(galo2, galo1));
+                        if (moveCount == 2)
+                        {
+                            state = BattleState.PlayerTurn;
+                            PlayerTurn();
+                        }
+                        else
+                        {
+                            StartCoroutine(UseMove(galo2, galo1));
 
-            }
-            
-        }        
+                        }
+                        yield return RunMoveEffects(move, galo1, galo2);
+                    } else
+                    {
+                        dialogueText.text = $"{galo1.name} não possui fôlego o suficiente!";
+                        if (moveCount == 2)
+                        {
+                            state = BattleState.PlayerTurn;
+                            PlayerTurn();
+                        }
+                        else
+                        {
+                            StartCoroutine(UseMove(galo2, galo1));
+
+                        }
+                    }
+                    break;
+                }
+            case ("Mordida"):
+                {
+                    if (galo1.currentSP >= move.SpCost)
+                    {
+                        dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
+                        yield return new WaitForSeconds(2);
+                        galo1.RemoveSP(move.SpCost);
+                            if (galo2.Status.Contains(ConditionDB.Conditions[ConditionID.stn]))
+                            {
+                            StartCoroutine(CheckHP(galo1, galo2, move.Damage * 3));
+                        } else
+                        {
+                            StartCoroutine(CheckHP(galo1, galo2, move.Damage));
+                        }
+                        
+                        if (moveCount == 2)
+                        {
+                            state = BattleState.PlayerTurn;
+                            PlayerTurn();
+                        }
+                        else
+                        {
+                            StartCoroutine(UseMove(galo2, galo1));
+
+                        }
+                        yield return RunMoveEffects(move, galo1, galo2);
+                    }
+                    else
+                    {
+                        dialogueText.text = $"{galo1.name} não possui fôlego o suficiente!";
+                        if (moveCount == 2)
+                        {
+                            state = BattleState.PlayerTurn;
+                            PlayerTurn();
+                        }
+                        else
+                        {
+                            StartCoroutine(UseMove(galo2, galo1));
+
+                        }
+                    }
+                    break;
+                }
+            case ("Sermao"):
+                {
+                    if (galo1.currentSP >= move.SpCost)
+                    {
+                        dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
+                        yield return new WaitForSeconds(2);
+                        galo1.RemoveSP(move.SpCost);
+                        if ((galo2.currentSP - 30) < 0)
+                        {
+                            StartCoroutine(CheckHP(galo1, galo2, (galo2.currentSP - 30) * -10));
+                        }
+                        galo2.RemoveSP(30);
+                        if (moveCount == 2)
+                        {
+                            state = BattleState.PlayerTurn;
+                            PlayerTurn();
+                        }
+                        else
+                        {
+                            StartCoroutine(UseMove(galo2, galo1));
+
+                        }
+                        yield return RunMoveEffects(move, galo1, galo2);
+                    }
+                    else
+                    {
+                        dialogueText.text = $"{galo1.name} não possui fôlego o suficiente!";
+                        if (moveCount == 2)
+                        {
+                            state = BattleState.PlayerTurn;
+                            PlayerTurn();
+                        }
+                        else
+                        {
+                            StartCoroutine(UseMove(galo2, galo1));
+
+                        }
+                    }
+                    break;
+                }
+            case ("Punho de pedra"):
+                {
+                    if (galo1.currentSP >= move.SpCost)
+                    {
+                        dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
+                        yield return new WaitForSeconds(2);
+                        galo1.RemoveSP(move.SpCost);
+                        if (galo1.tookDamage)
+                        {
+                            dialogueText.text = $"{galo1.nomeGalo} perdeu seu foco!";
+                        } else
+                        {
+                            StartCoroutine(CheckHP(galo1, galo2, move.Damage)); 
+                        }
+                        if (moveCount == 2)
+                        {
+                            state = BattleState.PlayerTurn;
+                            PlayerTurn();
+                        }
+                        else
+                        {
+                            StartCoroutine(UseMove(galo2, galo1));
+
+                        }
+                        yield return RunMoveEffects(move, galo1, galo2);
+                    }
+                    else
+                    {
+                        dialogueText.text = $"{galo1.name} não possui fôlego o suficiente!";
+                        if (moveCount == 2)
+                        {
+                            state = BattleState.PlayerTurn;
+                            PlayerTurn();
+                        }
+                        else
+                        {
+                            StartCoroutine(UseMove(galo2, galo1));
+
+                        }
+                    }     
+                    
+                    break;
+                }
+            case ("Manipulacao"):
+                {
+                    if (galo1.currentSP >= move.SpCost)
+                    {
+                        dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
+                        yield return new WaitForSeconds(2);
+                        galo1.RemoveSP(move.SpCost);
+                        if (galo1.Status != null)
+                        {
+                            StartCoroutine(CheckHP(galo1, galo2, move.Damage * 2));
+                        }
+                        else
+                        {
+                            StartCoroutine(CheckHP(galo1, galo2, move.Damage));
+                        }
+                        if (moveCount == 2)
+                        {
+                            state = BattleState.PlayerTurn;
+                            PlayerTurn();
+                        }
+                        else
+                        {
+                            StartCoroutine(UseMove(galo2, galo1));
+
+                        }
+                        yield return RunMoveEffects(move, galo1, galo2);
+                    }
+                    else
+                    {
+                        dialogueText.text = $"{galo1.name} não possui fôlego o suficiente!";
+                        if (moveCount == 2)
+                        {
+                            state = BattleState.PlayerTurn;
+                            PlayerTurn();
+                        }
+                        else
+                        {
+                            StartCoroutine(UseMove(galo2, galo1));
+
+                        }                     
+                    }
+                    break;
+                }
+           default: 
+                {
+
+                    if (galo1.currentSP >= move.SpCost)
+                    {
+                        dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
+                        yield return new WaitForSeconds(2);
+                        if (move.SpCost < 0)
+                        {
+                            galo1.HealSP(move.SpCost);
+                        }
+                        else
+                        {
+                            galo1.RemoveSP(move.SpCost);
+                        }
+
+                        if (move.Damage <= 0)
+                        {
+                            galo1.Heal(move.Damage);
+                            if (moveCount == 2)
+                            {
+                                state = BattleState.PlayerTurn;
+                                PlayerTurn();
+                            }
+                            else
+                            {
+                                StartCoroutine(UseMove(galo2, galo1));
+
+                            }
+                            yield return RunMoveEffects(move, galo1, galo2);
+                        }
+                        else
+                        {
+                            if (galo2.isParry)
+                            {
+                                StartCoroutine(CheckHP(galo2, galo1, move.Damage));
+                                galo2.CureStatus(ConditionID.pry);
+                                galo2.isParry = false;
+                            }
+                            else
+                            {
+                                StartCoroutine(CheckHP(galo1, galo2, move.Damage));
+                                yield return RunMoveEffects(move, galo1, galo2);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        dialogueText.text = $"{galo1.name} não possui fôlego o suficiente!";
+                        if (moveCount == 2)
+                        {
+                            state = BattleState.PlayerTurn;
+                            PlayerTurn();
+                        }
+                        else
+                        {
+                            StartCoroutine(UseMove(galo2, galo1));
+
+                        }
+                        
+                    }
+                }
+            break;
+        } 
+              
     }
     IEnumerator CheckHP(Galo galo1, Galo galo2, int dmg)
     {
+        galo2.tookDamage = true;
         dmg = Mathf.FloorToInt((dmg * UnityEngine.Random.Range(0.9f, 1.1f) * (galo1.attack / galo2.guard)));
         bool isDead = galo2.TakeDamage(dmg);       
         yield return new WaitForSeconds(1 / Math.Clamp(dmg, 1, 1000));       

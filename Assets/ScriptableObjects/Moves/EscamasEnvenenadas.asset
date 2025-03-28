@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: EscamasEnvenenadas
   m_EditorClassIdentifier: 
   moveName: Escamas Envenenadas
-  description: "Envenena o oponente, custa 25 de f\xF4lego"
+  description: "Envenena o oponente, 25 de f\xF4lego"
   damage: 0
   spCost: 25
   effects:
     status: 1
   target: 0
+  movePriority: 0
