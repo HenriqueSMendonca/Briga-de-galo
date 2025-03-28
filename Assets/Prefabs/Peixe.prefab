@@ -105,7 +105,7 @@ MonoBehaviour:
   maxHP: 900
   currentHp: 900
   maxSP: 120
-  currentSP: 0
+  currentSP: 120
   isParry: 0
   tookDamage: 0
   moves:

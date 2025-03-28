@@ -327,6 +327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Galo
       objectReference: {fileID: 0}
+    - target: {fileID: 8567526468354622104, guid: e24602e6f01dade44bb129fca10039eb, type: 3}
+      propertyPath: acceleration
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8618096259260843479, guid: e24602e6f01dade44bb129fca10039eb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

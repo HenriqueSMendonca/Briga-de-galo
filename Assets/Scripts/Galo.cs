@@ -65,7 +65,7 @@ public class Galo : MonoBehaviour
     }
     public void SetStatus(ConditionID conditionId)
     {
-        Status.Add(ConditionDB.Conditions[conditionId]);
+            Status.Add(ConditionDB.Conditions[conditionId]);      
         for (int i = 0; Status?.Count > i; i++)
         {
             Status[i]?.OnStart?.Invoke(this);

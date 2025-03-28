@@ -91,6 +91,7 @@ public class BattleSystem : MonoBehaviour
 
     void PlayerTurn()
     {
+        
         p1Galo.OnAfterTurn();
         p2Galo.OnAfterTurn();
         for (int i = 0; p1Galo.Status?.Count > i; i++)
@@ -148,12 +149,13 @@ public class BattleSystem : MonoBehaviour
             StartCoroutine(UseMove(p2Galo, p1Galo));
         }
     }
-
+    
     public void Action1(int actionNum)
     {
         p1Galo.selectedMove = actionNum;
         p1Decided = true;
         carro1.acceleration += p1Galo.moves[p1Galo.selectedMove].Priority;
+        Debug.Log(carro1.acceleration);
         if (p1Decided && p2Decided)
         {
 
@@ -197,20 +199,24 @@ public class BattleSystem : MonoBehaviour
             Debug.Log(p2Galo.Status[i].Name);
         }
         bool canRunMove = galo1.OnBeforeMove();
-        
+
+
         moveCount++;
+            Debug.Log(moveCount);
         if (!canRunMove)
         {
             dialogueText.text = $"{galo1.nomeGalo} está atordoado e não conseguiu atacar!";
             
             yield return new WaitForSeconds(1);
             if (moveCount == 2)
-            {                
+            {
+                Debug.Log("dude");
                 state = BattleState.PlayerTurn;
                 PlayerTurn();
             }
             else
             {
+                Debug.Log("dude");
                 StartCoroutine(UseMove(galo2, galo1));
 
             }
@@ -227,27 +233,28 @@ public class BattleSystem : MonoBehaviour
                         dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
                         yield return new WaitForSeconds(2);
                         galo1.RemoveSP(move.SpCost);
-                        StartCoroutine(CheckHP(galo1, galo2, move.Damage));
-                        StartCoroutine(CheckHP(galo1, galo1, move.Damage / 2));
-
-                        if (moveCount == 2)
+                        if (galo2.isParry)
                         {
-                            state = BattleState.PlayerTurn;
-                            PlayerTurn();
+                            StartCoroutine(CheckHP(galo2, galo1, move.Damage));
+                            galo2.CureStatus(ConditionID.pry);
+                            galo2.isParry = false;
                         }
                         else
                         {
-                            StartCoroutine(UseMove(galo2, galo1));
-
+                            StartCoroutine(CheckHP(galo1, galo2, move.Damage));
+                            StartCoroutine(Recoil(galo1, move.Damage / 2));
+                            yield return RunMoveEffects(move, galo1, galo2);
                         }
-                        yield return RunMoveEffects(move, galo1, galo2);
+                        
                     } else
                     {
-                        dialogueText.text = $"{galo1.name} não possui fôlego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         if (moveCount == 2)
                         {
+                            Debug.Log("dude");
                             state = BattleState.PlayerTurn;
                             PlayerTurn();
+                            break;
                         }
                         else
                         {
@@ -264,33 +271,33 @@ public class BattleSystem : MonoBehaviour
                         dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
                         yield return new WaitForSeconds(2);
                         galo1.RemoveSP(move.SpCost);
-                            if (galo2.Status.Contains(ConditionDB.Conditions[ConditionID.stn]))
-                            {
-                            StartCoroutine(CheckHP(galo1, galo2, move.Damage * 3));
-                        } else
+                        if (galo2.isParry)
                         {
-                            StartCoroutine(CheckHP(galo1, galo2, move.Damage));
-                        }
-                        
-                        if (moveCount == 2)
-                        {
-                            state = BattleState.PlayerTurn;
-                            PlayerTurn();
+                            StartCoroutine(CheckHP(galo2, galo1, move.Damage));
+                            galo2.CureStatus(ConditionID.pry);
+                            galo2.isParry = false;
                         }
                         else
                         {
-                            StartCoroutine(UseMove(galo2, galo1));
-
+                            if (galo2.Status.Contains(ConditionDB.Conditions[ConditionID.stn]))
+                            {
+                                StartCoroutine(CheckHP(galo1, galo2, move.Damage * 3));
+                            }
+                            else
+                            {
+                                StartCoroutine(CheckHP(galo1, galo2, move.Damage));
+                            }
+                            yield return RunMoveEffects(move, galo1, galo2);
                         }
-                        yield return RunMoveEffects(move, galo1, galo2);
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.name} não possui fôlego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         if (moveCount == 2)
                         {
                             state = BattleState.PlayerTurn;
                             PlayerTurn();
+                            break;
                         }
                         else
                         {
@@ -310,27 +317,35 @@ public class BattleSystem : MonoBehaviour
                         if ((galo2.currentSP - 30) < 0)
                         {
                             StartCoroutine(CheckHP(galo1, galo2, (galo2.currentSP - 30) * -10));
-                        }
-                        galo2.RemoveSP(30);
-                        if (moveCount == 2)
+                            galo2.RemoveSP(30);
+                            yield return RunMoveEffects(move, galo1, galo2);
+                        } else
                         {
-                            state = BattleState.PlayerTurn;
-                            PlayerTurn();
-                        }
-                        else
-                        {
-                            StartCoroutine(UseMove(galo2, galo1));
+                            galo2.RemoveSP(30);
+                            yield return RunMoveEffects(move, galo1, galo2);
+                            if (moveCount == 2)
+                            {
+                                state = BattleState.PlayerTurn;
+                                PlayerTurn();
+                                break;
+                            }
+                            else
+                            {
+                                StartCoroutine(UseMove(galo2, galo1));
 
+                            }
                         }
-                        yield return RunMoveEffects(move, galo1, galo2);
+                        
+                        
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.name} não possui fôlego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         if (moveCount == 2)
                         {
                             state = BattleState.PlayerTurn;
                             PlayerTurn();
+                            break;
                         }
                         else
                         {
@@ -349,30 +364,43 @@ public class BattleSystem : MonoBehaviour
                         galo1.RemoveSP(move.SpCost);
                         if (galo1.tookDamage)
                         {
-                            dialogueText.text = $"{galo1.nomeGalo} perdeu seu foco!";
+                            dialogueText.text = $"{galo1.nomeGalo} perdeu seu foco e errou!";
+                            yield return new WaitForSeconds(2);
+                            if (moveCount == 2)
+                            {
+                                state = BattleState.PlayerTurn;
+                                PlayerTurn();
+                                break;
+                            }
+                            else
+                            {
+                                StartCoroutine(UseMove(galo2, galo1));
+
+                            }
                         } else
                         {
-                            StartCoroutine(CheckHP(galo1, galo2, move.Damage)); 
+                            if (galo2.isParry)
+                            {
+                                StartCoroutine(CheckHP(galo2, galo1, move.Damage));
+                                galo2.CureStatus(ConditionID.pry);
+                                galo2.isParry = false;
+                            }
+                            else
+                            {
+                                StartCoroutine(CheckHP(galo1, galo2, move.Damage));
+                                yield return RunMoveEffects(move, galo1, galo2);
+                            }
+                            
                         }
-                        if (moveCount == 2)
-                        {
-                            state = BattleState.PlayerTurn;
-                            PlayerTurn();
-                        }
-                        else
-                        {
-                            StartCoroutine(UseMove(galo2, galo1));
-
-                        }
-                        yield return RunMoveEffects(move, galo1, galo2);
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.name} não possui fôlego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         if (moveCount == 2)
                         {
                             state = BattleState.PlayerTurn;
                             PlayerTurn();
+                            break;
                         }
                         else
                         {
@@ -389,34 +417,36 @@ public class BattleSystem : MonoBehaviour
                     {
                         dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
                         yield return new WaitForSeconds(2);
-                        galo1.RemoveSP(move.SpCost);
-                        if (galo1.Status != null)
-                        {
-                            StartCoroutine(CheckHP(galo1, galo2, move.Damage * 2));
-                        }
-                        else
-                        {
-                            StartCoroutine(CheckHP(galo1, galo2, move.Damage));
-                        }
-                        if (moveCount == 2)
-                        {
-                            state = BattleState.PlayerTurn;
-                            PlayerTurn();
-                        }
-                        else
-                        {
-                            StartCoroutine(UseMove(galo2, galo1));
 
+                        galo1.RemoveSP(move.SpCost);
+                        if (galo2.isParry)
+                        {
+                            StartCoroutine(CheckHP(galo2, galo1, move.Damage));
+                            galo2.CureStatus(ConditionID.pry);
+                            galo2.isParry = false;
                         }
-                        yield return RunMoveEffects(move, galo1, galo2);
+                        else
+                        {
+                            if (galo1.Status != null)
+                            {
+                                StartCoroutine(CheckHP(galo1, galo2, move.Damage * 2));
+                            }
+                            else
+                            {
+                                StartCoroutine(CheckHP(galo1, galo2, move.Damage));
+                            }
+                            yield return RunMoveEffects(move, galo1, galo2);
+                        }
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.name} não possui fôlego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         if (moveCount == 2)
                         {
+                            Debug.Log("dude");
                             state = BattleState.PlayerTurn;
                             PlayerTurn();
+                            break;
                         }
                         else
                         {
@@ -445,17 +475,20 @@ public class BattleSystem : MonoBehaviour
                         if (move.Damage <= 0)
                         {
                             galo1.Heal(move.Damage);
+                            yield return RunMoveEffects(move, galo1, galo2);
                             if (moveCount == 2)
                             {
+                                
                                 state = BattleState.PlayerTurn;
                                 PlayerTurn();
+                                break;
                             }
                             else
                             {
                                 StartCoroutine(UseMove(galo2, galo1));
 
                             }
-                            yield return RunMoveEffects(move, galo1, galo2);
+                            
                         }
                         else
                         {
@@ -464,6 +497,7 @@ public class BattleSystem : MonoBehaviour
                                 StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                                 galo2.CureStatus(ConditionID.pry);
                                 galo2.isParry = false;
+                                yield return RunMoveEffects(move, galo1, galo2);
                             }
                             else
                             {
@@ -474,7 +508,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.name} não possui fôlego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         if (moveCount == 2)
                         {
                             state = BattleState.PlayerTurn;
@@ -514,6 +548,17 @@ public class BattleSystem : MonoBehaviour
 
         }
     }
+    IEnumerator Recoil (Galo galo1, int dmg)
+    {
+        galo1.tookDamage = true;
+        dmg = Mathf.FloorToInt((dmg * UnityEngine.Random.Range(0.9f, 1.1f) * (galo1.attack / galo1.guard)));
+        bool isDead = galo1.TakeDamage(dmg);
+        yield return new WaitForSeconds(1 / Math.Clamp(dmg, 1, 1000));
+        if (isDead)
+        {
+            EndBattle(galo1);
+        }
+    }
     void EndBattle(Galo galo1)
     {
         state = BattleState.WIN;
@@ -533,14 +578,29 @@ public class BattleSystem : MonoBehaviour
             
                 if (move.Target == Moves.MoveTarget.Self)
                 {
-                    galo1.SetStatus(effects.Status);
-                    galo1.OnInflicted();
-                    yield return ShowStatusChanges(galo1, effects);
+                    if (!galo1.Status.Contains(ConditionDB.Conditions[effects.Status]))
+                    {
+                        galo1.SetStatus(effects.Status);
+                        galo1.OnInflicted();
+                        yield return ShowStatusChanges(galo1, effects);
+                    } else
+                    {
+                        dialogueText.text = $"{galo1.nomeGalo} já possui esse efeito de status";
+                        yield return new WaitForSeconds(2);
+                    }
                 }
                 else
                 {
-                    galo2.SetStatus(effects.Status);
-                    yield return ShowStatusChanges(galo2, effects);
+                    if (!galo2.Status.Contains(ConditionDB.Conditions[effects.Status]))
+                    {
+                        galo2.SetStatus(effects.Status);
+                        galo2.OnInflicted();
+                        yield return ShowStatusChanges(galo2, effects);
+                    } else
+                    {
+                        dialogueText.text = $"{galo2.nomeGalo} já possui esse efeito de status";
+                        yield return new WaitForSeconds(2);
+                    }
                 }
 
 

@@ -11,6 +11,8 @@ public class Condition
     public int Percentage { get; set; }
     public int StatusTime { get; set; }
 
+    public bool Inflicted { get; set; }
+
     public Action<Galo> OnAfterTurn {  get; set; }
     public Action<Galo> OnInflicted { get; set; }
     public Action<Galo> OnStart { get; set; }
