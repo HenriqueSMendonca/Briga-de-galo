@@ -224,9 +224,15 @@ public class BattleSystem : MonoBehaviour
         }
         yield return new WaitForSeconds(2);
         var move = galo1.moves[galo1.selectedMove];
+        if (move.Name == "Ataque")
+        {
+            dialogueText.text = $"{galo1.nomeGalo} está preparando um ataque";
+            yield return new WaitForSeconds(2);
+
+        }
         switch (move.Name)
         {
-            case ("Cabecada"): 
+            case ("Cabeçada"): 
                 {
                     if (galo1.currentSP >= move.SpCost)
                     {
@@ -307,7 +313,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     break;
                 }
-            case ("Sermao"):
+            case ("Sermão"):
                 {
                     if (galo1.currentSP >= move.SpCost)
                     {
@@ -411,7 +417,7 @@ public class BattleSystem : MonoBehaviour
                     
                     break;
                 }
-            case ("Manipulacao"):
+            case ("Manipulação"):
                 {
                     if (galo1.currentSP >= move.SpCost)
                     {

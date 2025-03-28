@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: "Serm\xE3o"
   m_EditorClassIdentifier: 
-  moveName: Sermao
+  moveName: "Serm\xE3o"
   description: "retira 30 de f\xF4lego do oponente e causa danos se ele ficar sem,
     custa 20 de f\xF4lego"
   damage: 0

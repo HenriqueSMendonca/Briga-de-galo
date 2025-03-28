@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: "Manipula\xE7\xE3o"
   m_EditorClassIdentifier: 
-  moveName: Manipulacao
+  moveName: "Manipula\xE7\xE3o"
   description: "causa 200 de dano se o usu\xE1rio possuir um efeito de status do
     contr\xE1rio causa 100 de dano,  25 de f\xF4lego"
   damage: 100

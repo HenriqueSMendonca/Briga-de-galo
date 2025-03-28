@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: "Cabe\xE7ada"
   m_EditorClassIdentifier: 
-  moveName: Cabecada
+  moveName: "Cabe\xE7ada"
   description: "causa 200 de dano ao alvo e 100 ao usu\xE1rio, 30 de f\xF4lego"
   damage: 200
   spCost: 30
