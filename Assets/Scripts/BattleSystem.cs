@@ -14,8 +14,9 @@ public class BattleSystem : MonoBehaviour
 {
     Carro carro1, carro2;
     CursorControls cursor1, cursor2;
+    ActionCommands command1, command2;
     public PlayerInputManager playerManager;
-    public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI dialogueText, commandInputs1, commandInputs2;
     public Canvas cnvs;
     public GameObject[] players;
     public GameObject[] panels;
@@ -26,7 +27,7 @@ public class BattleSystem : MonoBehaviour
     Galo p1Galo, p2Galo;
     public bool p1Decided = false, p2Decided = false;
     private bool roomFull = false;
-    public bool whoWonRace;
+    public bool whoWonRace, p1Input, p2Input;
     private int moveCount;
     private GameObject pistache;
     public GameObject menu1, menu2;
@@ -41,6 +42,14 @@ public class BattleSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (p1Input)
+        {
+            commandInputs1.text = command1.inputString;
+        }
+        if (p2Input)
+        {
+            commandInputs2.text = command2.inputString;
+        }
         if (playerManager.playerCount == playerManager.maxPlayerCount && roomFull == false)
         {
             roomFull = true;
@@ -80,10 +89,16 @@ public class BattleSystem : MonoBehaviour
 
         players[3] = GameObject.Find("Galo2");
 
+        players[4] = GameObject.Find("Text1");
+
+        players[5] = GameObject.Find("Text2");
+
         cursor1 = players[0].GetComponent<CursorControls>();
         carro1 = players[1].GetComponent<Carro>();
         cursor2 = players[2].GetComponent<CursorControls>();
         carro2 = players[3].GetComponent<Carro>();
+        command1 = players[4].GetComponent<ActionCommands>();
+        command2 = players[5].GetComponent<ActionCommands>();
 
         state = BattleState.PlayerTurn;
         PlayerTurn();
@@ -91,7 +106,7 @@ public class BattleSystem : MonoBehaviour
 
     void PlayerTurn()
     {
-        
+
         p1Galo.OnAfterTurn();
         p2Galo.OnAfterTurn();
         for (int i = 0; p1Galo.Status?.Count > i; i++)
@@ -149,7 +164,7 @@ public class BattleSystem : MonoBehaviour
             StartCoroutine(UseMove(p2Galo, p1Galo));
         }
     }
-    
+
     public void Action1(int actionNum)
     {
         p1Galo.selectedMove = actionNum;
@@ -159,7 +174,7 @@ public class BattleSystem : MonoBehaviour
         if (p1Decided && p2Decided)
         {
 
-            state = BattleState.CarRace;           
+            state = BattleState.CarRace;
             CarRace();
         }
 
@@ -202,11 +217,11 @@ public class BattleSystem : MonoBehaviour
 
 
         moveCount++;
-            Debug.Log(moveCount);
+        Debug.Log(moveCount);
         if (!canRunMove)
         {
             dialogueText.text = $"{galo1.nomeGalo} está atordoado e não conseguiu atacar!";
-            
+
             yield return new WaitForSeconds(1);
             if (moveCount == 2)
             {
@@ -232,7 +247,7 @@ public class BattleSystem : MonoBehaviour
         }
         switch (move.Name)
         {
-            case ("Cabeçada"): 
+            case ("Cabeçada"):
                 {
                     if (galo1.currentSP >= move.SpCost)
                     {
@@ -251,8 +266,9 @@ public class BattleSystem : MonoBehaviour
                             StartCoroutine(Recoil(galo1, move.Damage / 2));
                             yield return RunMoveEffects(move, galo1, galo2);
                         }
-                        
-                    } else
+
+                    }
+                    else
                     {
                         dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         if (moveCount == 2)
@@ -325,7 +341,8 @@ public class BattleSystem : MonoBehaviour
                             StartCoroutine(CheckHP(galo1, galo2, (galo2.currentSP - 30) * -10));
                             galo2.RemoveSP(30);
                             yield return RunMoveEffects(move, galo1, galo2);
-                        } else
+                        }
+                        else
                         {
                             galo2.RemoveSP(30);
                             yield return RunMoveEffects(move, galo1, galo2);
@@ -341,8 +358,8 @@ public class BattleSystem : MonoBehaviour
 
                             }
                         }
-                        
-                        
+
+
                     }
                     else
                     {
@@ -383,7 +400,8 @@ public class BattleSystem : MonoBehaviour
                                 StartCoroutine(UseMove(galo2, galo1));
 
                             }
-                        } else
+                        }
+                        else
                         {
                             if (galo2.isParry)
                             {
@@ -396,7 +414,7 @@ public class BattleSystem : MonoBehaviour
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                                 yield return RunMoveEffects(move, galo1, galo2);
                             }
-                            
+
                         }
                     }
                     else
@@ -413,8 +431,8 @@ public class BattleSystem : MonoBehaviour
                             StartCoroutine(UseMove(galo2, galo1));
 
                         }
-                    }     
-                    
+                    }
+
                     break;
                 }
             case ("Manipulação"):
@@ -458,11 +476,11 @@ public class BattleSystem : MonoBehaviour
                         {
                             StartCoroutine(UseMove(galo2, galo1));
 
-                        }                     
+                        }
                     }
                     break;
                 }
-           default: 
+            default:
                 {
 
                     if (galo1.currentSP >= move.SpCost)
@@ -484,7 +502,7 @@ public class BattleSystem : MonoBehaviour
                             yield return RunMoveEffects(move, galo1, galo2);
                             if (moveCount == 2)
                             {
-                                
+
                                 state = BattleState.PlayerTurn;
                                 PlayerTurn();
                                 break;
@@ -494,7 +512,7 @@ public class BattleSystem : MonoBehaviour
                                 StartCoroutine(UseMove(galo2, galo1));
 
                             }
-                            
+
                         }
                         else
                         {
@@ -525,19 +543,19 @@ public class BattleSystem : MonoBehaviour
                             StartCoroutine(UseMove(galo2, galo1));
 
                         }
-                        
+
                     }
                 }
-            break;
-        } 
-              
+                break;
+        }
+
     }
     IEnumerator CheckHP(Galo galo1, Galo galo2, int dmg)
     {
         galo2.tookDamage = true;
         dmg = Mathf.FloorToInt((dmg * UnityEngine.Random.Range(0.9f, 1.1f) * (galo1.attack / galo2.guard)));
-        bool isDead = galo2.TakeDamage(dmg);       
-        yield return new WaitForSeconds(1 / Math.Clamp(dmg, 1, 1000));       
+        bool isDead = galo2.TakeDamage(dmg);
+        yield return new WaitForSeconds(1 / Math.Clamp(dmg, 1, 1000));
 
         if (isDead)
         {
@@ -554,7 +572,7 @@ public class BattleSystem : MonoBehaviour
 
         }
     }
-    IEnumerator Recoil (Galo galo1, int dmg)
+    IEnumerator Recoil(Galo galo1, int dmg)
     {
         galo1.tookDamage = true;
         dmg = Mathf.FloorToInt((dmg * UnityEngine.Random.Range(0.9f, 1.1f) * (galo1.attack / galo1.guard)));
@@ -578,10 +596,10 @@ public class BattleSystem : MonoBehaviour
         if (effects.Status != ConditionID.none)
         {
             if (UnityEngine.Random.Range(0, 100) <= ConditionDB.Conditions[effects.Status].Percentage)
-        {
-            Debug.Log("worked");
+            {
+                Debug.Log("worked");
 
-            
+
                 if (move.Target == Moves.MoveTarget.Self)
                 {
                     if (!galo1.Status.Contains(ConditionDB.Conditions[effects.Status]))
@@ -589,7 +607,8 @@ public class BattleSystem : MonoBehaviour
                         galo1.SetStatus(effects.Status);
                         galo1.OnInflicted();
                         yield return ShowStatusChanges(galo1, effects);
-                    } else
+                    }
+                    else
                     {
                         dialogueText.text = $"{galo1.nomeGalo} já possui esse efeito de status";
                         yield return new WaitForSeconds(2);
@@ -602,7 +621,8 @@ public class BattleSystem : MonoBehaviour
                         galo2.SetStatus(effects.Status);
                         galo2.OnInflicted();
                         yield return ShowStatusChanges(galo2, effects);
-                    } else
+                    }
+                    else
                     {
                         dialogueText.text = $"{galo2.nomeGalo} já possui esse efeito de status";
                         yield return new WaitForSeconds(2);
@@ -615,7 +635,7 @@ public class BattleSystem : MonoBehaviour
             {
                 Debug.Log("nah");
                 yield return new WaitForSeconds(2);
-            }           
+            }
         }
     }
     IEnumerator ShowStatusChanges(Galo galo, Moves.MoveEffects effects)
@@ -623,5 +643,6 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = $"{galo.nomeGalo} {ConditionDB.Conditions[effects.Status].StartMessage}";
         yield return new WaitForSeconds(2);
     }
+
     
 }

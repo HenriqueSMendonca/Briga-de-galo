@@ -211,6 +211,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0c6eac74-0098-4982-b626-10c1690e3649
     m_ActionName: Player/Buttons[/Keyboard/z,/DualShock4GamepadHID/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a36891ce-2924-467a-85f7-6a064d8bb6d3
+    m_ActionName: Player/Z[/Keyboard/z,/DualShock4GamepadHID/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 97541e8d-a551-4534-b3fd-25a124b6af2b
+    m_ActionName: Player/X[/Keyboard/x,/DualShock4GamepadHID/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d9f967e6-7bed-488c-b75d-1c6c661dee7c
+    m_ActionName: Player/C[/Keyboard/c,/DualShock4GamepadHID/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 567c6c1a-c5e7-4804-b3fc-ca88ee90a94e
+    m_ActionName: Player/V[/Keyboard/v,/DualShock4GamepadHID/buttonNorth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -230,3 +246,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8006479339177897072}
   speed: 5
+  inputEnabled: 0

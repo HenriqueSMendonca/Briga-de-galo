@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Buttons",
+                    "name": "Interact",
                     "type": "Button",
                     "id": "0c6eac74-0098-4982-b626-10c1690e3649",
                     "expectedControlType": "Button",
@@ -35,7 +35,7 @@
             ],
             "bindings": [
                 {
-                    "name": "WASD",
+                    "name": "Arrows",
                     "id": "1c75de64-c3ab-4a7d-8609-5f20ff99391b",
                     "path": "2DVector",
                     "interactions": "",
@@ -48,7 +48,7 @@
                 {
                     "name": "up",
                     "id": "6b8ed8bb-5bb5-492c-8b3e-acbf7ed8f1f7",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -59,7 +59,7 @@
                 {
                     "name": "down",
                     "id": "85ee89ad-120b-4d15-b2d5-d1507107df05",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -70,7 +70,7 @@
                 {
                     "name": "left",
                     "id": "93f2ab65-8b26-4ee0-af2a-11d119815f9c",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -81,7 +81,7 @@
                 {
                     "name": "right",
                     "id": "c583c0d8-5a76-4a74-a8f1-41f6ba6b4930",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -129,7 +129,7 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",
-                    "action": "Buttons",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -140,7 +140,7 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",
-                    "action": "Buttons",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
