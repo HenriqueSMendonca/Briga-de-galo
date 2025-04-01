@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: "BombaD'\xE1gua"
   m_EditorClassIdentifier: 
   moveName: "Bomba d'\xE1gua"
-  description: "causa 150 de dano, custa 30 de f\xF4lego"
+  description: "causa 150 de dano, custa 30 de f\xF4lego (CXVV)"
   damage: 150
   spCost: 30
   effects:
     status: 0
   target: 0
   movePriority: 0
+  combo: CXVV

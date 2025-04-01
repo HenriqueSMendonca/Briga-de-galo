@@ -6,6 +6,7 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum BattleState { START, PlayerTurn, CarRace, Comandos ,WIN }
@@ -31,11 +32,14 @@ public class BattleSystem : MonoBehaviour
     private int moveCount;
     private GameObject pistache;
     public GameObject menu1, menu2;
+    public GameObject commandBox1, commandBox2;
     public BattleHud p1HUD, p2HUD;
+    public GameObject endScreen;
 
     // Start is called before the first frame update
     void Start()
     {
+        endScreen.SetActive(false);
         cnvs.gameObject.SetActive(false);
     }
 
@@ -59,6 +63,8 @@ public class BattleSystem : MonoBehaviour
     }
     void StartTheGame()
     {
+        commandBox1.SetActive(false);
+        commandBox2.SetActive(false);
         cnvs.gameObject.SetActive(true);
         panels[0].SetActive(false);
         panels[1].SetActive(false);
@@ -106,6 +112,13 @@ public class BattleSystem : MonoBehaviour
 
     void PlayerTurn()
     {
+        if (p1Galo.currentHp <= 0)
+        {
+            EndBattle(p1Galo);
+        } else if (p2Galo.currentHp <= 0)
+        {
+            EndBattle(p2Galo);
+        }
 
         p1Galo.OnAfterTurn();
         p2Galo.OnAfterTurn();
@@ -241,8 +254,51 @@ public class BattleSystem : MonoBehaviour
         var move = galo1.moves[galo1.selectedMove];
         if (move.Name == "Ataque")
         {
+           
             dialogueText.text = $"{galo1.nomeGalo} está preparando um ataque";
             yield return new WaitForSeconds(2);
+            if (galo1 == p1Galo)
+            {
+                p1Input = true;
+                command1.inputEnabled = true;
+                commandBox1.SetActive(true);
+            }
+            else
+            {
+                p2Input = true;
+                command2.inputEnabled = true;
+                commandBox2.SetActive(true);
+            }
+            yield return new WaitForSeconds(10);
+            if (galo1 == p1Galo)
+            {
+                for (int i = 0; i < galo1.moves.Count; i++)
+                {
+                    if (command1.inputString == galo1.moves[i].Combo)
+                    {
+                        move = galo1.moves[i];
+                    }
+                }
+                
+                p1Input = false;
+                command1.inputEnabled = false;
+                commandBox1.SetActive(false);
+                command1.inputString = null;
+            }
+            else
+            {
+                for (int i = 0; i < galo1.moves.Count; i++)
+                {
+                    if (command2.inputString == galo1.moves[i].Combo)
+                    {
+                        move = galo1.moves[i];
+                    }
+                }
+                p2Input = false;
+                command2.inputEnabled = false;
+                commandBox2.SetActive(false);
+                command2.inputString = null;
+            }
 
         }
         switch (move.Name)
@@ -586,6 +642,9 @@ public class BattleSystem : MonoBehaviour
     void EndBattle(Galo galo1)
     {
         state = BattleState.WIN;
+        p1HUD.gameObject.SetActive(false);
+        p2HUD.gameObject.SetActive(false);
+        endScreen.SetActive(true);
         dialogueText.text = $"{galo1.nomeGalo} ganhou a briga";
 
         return;
@@ -644,5 +703,12 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(2);
     }
 
-    
+    public void Revanche()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void Sair()
+    {
+        SceneManager.LoadScene("Main menu");
+    }
 }

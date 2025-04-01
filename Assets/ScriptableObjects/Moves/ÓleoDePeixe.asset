@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: "\xD3leoDePeixe"
   m_EditorClassIdentifier: 
   moveName: "\xD3leo de peixe"
-  description: "aplica nausea no oponente, custa 10 de f\xF4lego"
+  description: "aplica nausea no oponente, custa 10 de f\xF4lego (VXVC)"
   damage: 0
   spCost: 10
   effects:
     status: 4
   target: 0
   movePriority: 0
+  combo: VXVC

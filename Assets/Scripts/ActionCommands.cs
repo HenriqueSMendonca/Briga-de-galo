@@ -22,7 +22,7 @@ public class ActionCommands : MonoBehaviour
 
     public void Input(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && inputEnabled)
         {
             inputString += context.action.name;
         }

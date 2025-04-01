@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveName: Golpe baixo
   description: "100 de dano com 50% de chance de atordoar o oponente, chance reduzida
-    em usos consecutivos, 20 de f\xF4lego"
+    em usos consecutivos, 20 de f\xF4lego (VVV)"
   damage: 100
   spCost: 20
   effects:
     status: 2
   target: 0
   movePriority: 1
+  combo: VVV

@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: "Cabe\xE7ada"
   m_EditorClassIdentifier: 
   moveName: "Cabe\xE7ada"
-  description: "causa 200 de dano ao alvo e 100 ao usu\xE1rio, 30 de f\xF4lego"
+  description: "causa 200 de dano ao alvo e 100 ao usu\xE1rio, 30 de f\xF4lego (CZZ)"
   damage: 200
   spCost: 30
   effects:
     status: 0
   target: 0
   movePriority: 0
+  combo: CZZ
