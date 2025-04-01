@@ -15,6 +15,7 @@ public class Moves : ScriptableObject
     [SerializeField] MoveEffects effects;
     [SerializeField] MoveTarget target;
     [SerializeField] int movePriority;
+    [SerializeField] string combo;
 
     public string Name { get { return moveName; } }
     public string Description { get { return description; } }
@@ -23,6 +24,7 @@ public class Moves : ScriptableObject
     public MoveEffects Effects { get { return effects; } }
     public MoveTarget Target { get { return target; } }
 
+    public string Combo { get { return combo; } }
     public int Priority { get { return movePriority; } }
 
     [System.Serializable]

@@ -19,3 +19,5 @@ MonoBehaviour:
   effects:
     status: 0
   target: 0
+  movePriority: 0
+  combo: NAHBRO

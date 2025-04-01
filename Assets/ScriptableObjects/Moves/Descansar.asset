@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Descansar
   m_EditorClassIdentifier: 
   moveName: Descansar
-  description: "Recupera todo o f\xF4lego do usu\xE1rio"
+  description: "Recupera todo o f\xF4lego do usu\xE1rio (ZZZZ)"
   damage: 0
   spCost: -80
   effects:
     status: 0
   target: 0
   movePriority: 0
+  combo: ZZZZ
