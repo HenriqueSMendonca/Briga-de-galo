@@ -541,7 +541,7 @@ MonoBehaviour:
   m_text: Button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 343fc8aa68e27174fac604a87d6d6a4e, type: 2}
-  m_sharedMaterial: {fileID: -7352593767263701936, guid: 343fc8aa68e27174fac604a87d6d6a4e, type: 2}
+  m_sharedMaterial: {fileID: -4337342133965024504, guid: 343fc8aa68e27174fac604a87d6d6a4e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -565,12 +565,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 12.55
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 0
-  m_fontSizeMax: 0
+  m_fontSizeMax: 70
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -677,7 +677,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 343fc8aa68e27174fac604a87d6d6a4e, type: 2}
-  m_sharedMaterial: {fileID: -7352593767263701936, guid: 343fc8aa68e27174fac604a87d6d6a4e, type: 2}
+  m_sharedMaterial: {fileID: -4337342133965024504, guid: 343fc8aa68e27174fac604a87d6d6a4e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -701,12 +701,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 12.6
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 0
-  m_fontSizeMax: 0
+  m_fontSizeMax: 70
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1277,7 +1277,7 @@ MonoBehaviour:
   m_text: Jogar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 343fc8aa68e27174fac604a87d6d6a4e, type: 2}
-  m_sharedMaterial: {fileID: -7352593767263701936, guid: 343fc8aa68e27174fac604a87d6d6a4e, type: 2}
+  m_sharedMaterial: {fileID: -4337342133965024504, guid: 343fc8aa68e27174fac604a87d6d6a4e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1301,12 +1301,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 12.65
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 0
-  m_fontSizeMax: 0
+  m_fontSizeMax: 70
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
