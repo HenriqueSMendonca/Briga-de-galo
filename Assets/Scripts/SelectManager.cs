@@ -8,17 +8,20 @@ using UnityEngine.UI;
 public class SelectManager : MonoBehaviour
 {
     public PlayerInputManager playerManager;
-    public Button startBtn;
+    public Button[] startBtns;
     private bool p1Selected, p2Selected;
     public Sprite[] characters;
     public SpriteRenderer p1, p2;
     private bool roomFull = false;
+    public Canvas canvas;
     
     void Start()
-    { 
+    {
+        canvas.gameObject.SetActive(false);
         PlayerPrefs.SetInt("selectedChar1", 4);
         PlayerPrefs.SetInt("selectedChar2", 4);
-        startBtn.interactable = false;
+        startBtns[0].interactable = false;
+        startBtns[1].interactable = false;
         p1Selected = false;
         p2Selected = false;
         p1.gameObject.SetActive(false);
@@ -33,6 +36,7 @@ public class SelectManager : MonoBehaviour
         {
             roomFull = true;
             playerManager.DisableJoining();
+            canvas.gameObject.SetActive(true);
         }      
         p1.sprite = characters[PlayerPrefs.GetInt("selectedChar1")];
         p2.sprite = characters[PlayerPrefs.GetInt("selectedChar2")];
@@ -48,7 +52,8 @@ public class SelectManager : MonoBehaviour
         }
         if (p1Selected && p2Selected)
         {
-            startBtn.interactable = true;
+            startBtns[0].interactable = true;
+            startBtns[1].interactable = true;
         }
     }
     public void CharacterChoice2(int choice)
@@ -61,7 +66,8 @@ public class SelectManager : MonoBehaviour
         }
         if (p1Selected && p2Selected)
         {
-            startBtn.interactable = true;
+            startBtns[0].interactable = true;
+            startBtns[1].interactable = true;
         }
     }
 
