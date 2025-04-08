@@ -68,6 +68,7 @@ public class CursorControls : MonoBehaviour
             if (collision.gameObject.CompareTag("Button") || collision.gameObject.CompareTag("ButtonP1"))
             {
                 button = collision.gameObject.GetComponent<Button>();
+                collision.gameObject.GetComponent<Button>().onClick.Invoke();
             }
         }
         else
