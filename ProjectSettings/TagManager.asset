@@ -9,6 +9,8 @@ TagManager:
   - ButtonP2
   - Galo
   - Text
+  - Input1
+  - Input2
   layers:
   - Default
   - TransparentFX

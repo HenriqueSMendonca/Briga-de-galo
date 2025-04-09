@@ -31,7 +31,7 @@ public class BattleSystem : MonoBehaviour
     public bool whoWonRace, p1Input, p2Input;
     private int moveCount;
     private GameObject pistache;
-    public GameObject menu1, menu2;
+    public GameObject menu1, menu2, desc1, desc2;
     public GameObject commandBox1, commandBox2;
     public BattleHud p1HUD, p2HUD;
     public GameObject endScreen;
@@ -142,6 +142,8 @@ public class BattleSystem : MonoBehaviour
         p2HUD.gameObject.SetActive(true);
         menu1.SetActive(true);
         menu2.SetActive(true);
+        desc1.SetActive(true);
+        desc2.SetActive(true);
         dialogueText.text = "Selecione uma ação!";
     }
     void CarRace()
@@ -152,6 +154,8 @@ public class BattleSystem : MonoBehaviour
         p2HUD.gameObject.SetActive(false);
         menu1.SetActive(false);
         menu2.SetActive(false);
+        desc1.SetActive(false);
+        desc2.SetActive(false);
         dialogueText.text = "Chegue até o final";
         TrocaPlayer();
         pistache = Instantiate(pistas[UnityEngine.Random.Range(0, pistas.Length - 1)]);
@@ -206,12 +210,8 @@ public class BattleSystem : MonoBehaviour
     }
     private void TrocaPlayer()
     {
-        players[0].GetComponent<SpriteRenderer>().enabled = !players[0].GetComponent<SpriteRenderer>().enabled;
-        cursor1.inputEnabled = !cursor1.inputEnabled;
         players[1].GetComponent<SpriteRenderer>().enabled = !players[1].GetComponent<SpriteRenderer>().enabled;
         carro1.inputEnabled = !carro1.inputEnabled;
-        players[2].GetComponent<SpriteRenderer>().enabled = !players[2].GetComponent<SpriteRenderer>().enabled;
-        cursor2.inputEnabled = !cursor2.inputEnabled;
         players[3].GetComponent<SpriteRenderer>().enabled = !players[3].GetComponent<SpriteRenderer>().enabled;
         carro2.inputEnabled = !carro2.inputEnabled;
     }
