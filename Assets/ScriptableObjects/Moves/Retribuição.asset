@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: "Retribui\xE7\xE3o"
   m_EditorClassIdentifier: 
-  moveName: "retribui\xE7\xE3o"
+  moveName: "Retribui\xE7\xE3o"
   description: "Devolve o dano ao inimigo ao ser atacado neste turno, chance reduzida
     em usos consecutivos, 30 de f\xF4lego (XZXZ)"
   damage: 0

@@ -19,7 +19,13 @@ public class ButtonDescription : MonoBehaviour, ISelectHandler
     }
     public void OnSelect(BaseEventData eventData)
     {
-        description.text = galo.moves[move].Description;
+        if (galo.moves[move].Description != null)
+        {
+            description.text = galo.moves[move].Description;
+        } else
+        {
+            description.text = "";
+        }
         if (cost > galo.currentSP)
         {
             gameObject.GetComponent<Button>().onClick = null;
