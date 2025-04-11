@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bcdff2cc58d3add439d1de8f10d906c8
+guid: ee77944df1ba24446ab61a53ad1ce448
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -53,9 +53,9 @@ ScriptedImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
     normalMap: 0
     textureFormat: 0
     maxTextureSize: 0
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638799187692292624
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: BG_Coracao
+  - name: BG_backgroundSelecaoPersonagem
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -130,9 +130,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 41
-      height: 58
-    spriteID: 6663bab37e46e5b4c835da24f0e2ca2e
+      width: 137
+      height: 144
+    spriteID: ddb34cfc0f5835744986fa1cc36b9a57
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,24 +144,72 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1182443926
-    name: BG_Coracao
+    guid: 1307926313
+    name: BG_backgroundSelecaoPersonagem
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: BG_Coracao
+    - name: BG_backgroundSelecaoPersonagem
       frameIndex: 0
       cellRect:
         x: 0
         y: 0
-        width: 41
-        height: 58
-      spriteId: 6663bab37e46e5b4c835da24f0e2ca2e
+        width: 137
+        height: 144
+      spriteId: ddb34cfc0f5835744986fa1cc36b9a57
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 41, y: 58}
+  canvasSize: {x: 137, y: 144}
