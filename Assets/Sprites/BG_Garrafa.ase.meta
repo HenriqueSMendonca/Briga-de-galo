@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: acd32b3becc313c4db97226c4fb2c8a7
+guid: b513ec68a1d48e7408cd91f386be1230
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: BG_cruz
+  - name: BG_Garrafa
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -130,9 +130,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 50
-      height: 64
-    spriteID: 3eaf7a92047ec2e4cb0a94fbf25c1ce0
+      width: 34
+      height: 57
+    spriteID: 274c97578ede70f44a35b19b18f9fb44
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,24 +144,24 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1848182180
-    name: BG_cruz
+    guid: -355514816
+    name: BG_Garrafa
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: BG_cruz
+    - name: BG_Garrafa
       frameIndex: 0
       cellRect:
         x: 0
         y: 0
-        width: 50
-        height: 64
-      spriteId: 3eaf7a92047ec2e4cb0a94fbf25c1ce0
+        width: 34
+        height: 57
+      spriteId: 274c97578ede70f44a35b19b18f9fb44
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 50, y: 64}
+  canvasSize: {x: 34, y: 64}
