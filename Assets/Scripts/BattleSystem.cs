@@ -184,6 +184,8 @@ public class BattleSystem : MonoBehaviour
 
     public void Action1(int actionNum)
     {
+        menu1.SetActive (false);
+        desc1.SetActive (false);
         p1Galo.selectedMove = actionNum;
         p1Decided = true;
         carro1.acceleration += p1Galo.moves[p1Galo.selectedMove].Priority;
@@ -198,6 +200,8 @@ public class BattleSystem : MonoBehaviour
     }
     public void Action2(int actionNum)
     {
+        menu2.SetActive(false);
+        desc2.SetActive(false);
         p2Galo.selectedMove = actionNum;
         p2Decided = true;
         carro1.acceleration += p1Galo.moves[p1Galo.selectedMove].Priority;
@@ -644,7 +648,7 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.WIN;
         p1HUD.gameObject.SetActive(false);
         p2HUD.gameObject.SetActive(false);
-        endScreen.SetActive(true);
+        endScreen.SetActive(true);      
         dialogueText.text = $"{galo1.nomeGalo} ganhou a briga";
 
         return;
