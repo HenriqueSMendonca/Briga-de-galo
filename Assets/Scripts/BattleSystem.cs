@@ -38,9 +38,9 @@ public class BattleSystem : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {      
         endScreen.SetActive(false);
-        cnvs.gameObject.SetActive(false);
+        cnvs.gameObject.SetActive(false);     
     }
 
     // Update is called once per frame
@@ -221,15 +221,6 @@ public class BattleSystem : MonoBehaviour
     }
     IEnumerator UseMove(Galo galo1, Galo galo2)
     {
-        for (int i = 0; p1Galo.Status?.Count > i; i++)
-        {
-            Debug.Log(i);
-            Debug.Log(p1Galo.Status[i].Name);
-        }
-        for (int i = 0; p2Galo.Status?.Count > i; i++)
-        {
-            Debug.Log(p2Galo.Status[i].Name);
-        }
         bool canRunMove = galo1.OnBeforeMove();
 
 
@@ -254,6 +245,7 @@ public class BattleSystem : MonoBehaviour
             }
             yield break;
         }
+        ActionCommands.commandCheck += MoveCheck(galo1);
         yield return new WaitForSeconds(2);
         var move = galo1.moves[galo1.selectedMove];
         if (move.Name == "Ataque")
@@ -274,37 +266,9 @@ public class BattleSystem : MonoBehaviour
                 commandBox2.SetActive(true);
             }
             yield return new WaitForSeconds(10);
-            if (galo1 == p1Galo)
-            {
-                for (int i = 0; i < galo1.moves.Count; i++)
-                {
-                    if (command1.inputString == galo1.moves[i].Combo)
-                    {
-                        move = galo1.moves[i];
-                    }
-                }
-                
-                p1Input = false;
-                command1.inputEnabled = false;
-                commandBox1.SetActive(false);
-                command1.inputString = null;
-            }
-            else
-            {
-                for (int i = 0; i < galo1.moves.Count; i++)
-                {
-                    if (command2.inputString == galo1.moves[i].Combo)
-                    {
-                        move = galo1.moves[i];
-                    }
-                }
-                p2Input = false;
-                command2.inputEnabled = false;
-                commandBox2.SetActive(false);
-                command2.inputString = null;
-            }
 
         }
+        move = galo1.moves[galo1.selectedMove];
         switch (move.Name)
         {
             case ("Cabeçada"):
@@ -714,5 +678,45 @@ public class BattleSystem : MonoBehaviour
     public void Sair()
     {
         SceneManager.LoadScene("Main menu");
+    }
+    public IEnumerator MoveCheck1()
+    {
+        var move = p1Galo.moves[p1Galo.selectedMove];
+        for (int i = 0; i < p1Galo.moves.Count; i++)
+        {
+            if (command1.inputString == p1Galo.moves[i].Combo)
+            {
+                p1Galo.selectedMove = i;
+            }
+        }
+
+        p1Input = false;
+        command1.inputEnabled = false;
+        commandBox1.SetActive(false);
+        command1.inputString = null;
+        yield break;
+
+
+
+
+
+
+    }
+    public IEnumerator MoveCheck2()
+    {
+        var move = p2Galo.moves[p2Galo.selectedMove];
+        for (int i = 0; i < p2Galo.moves.Count; i++)
+        {
+            if (command2.inputString == p2Galo.moves[i].Combo)
+            {
+                p2Galo.selectedMove = i;
+
+            }
+        }
+        p2Input = false;
+        command2.inputEnabled = false;
+        commandBox2.SetActive(false);
+        command2.inputString = null;
+        yield break;
     }
 }
