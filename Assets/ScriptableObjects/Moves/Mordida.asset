@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Mordida
   m_EditorClassIdentifier: 
   moveName: Mordida
-  description: "Causa 300 se o oponente estiver atordoado do contr\xE1rio causa 100
-    de dano, 30 de f\xF4lego (CCC)"
+  description: "(CCC) Causa 300 se o oponente estiver atordoado do contr\xE1rio causa
+    100 de dano, 30 de f\xF4lego"
   damage: 100
   spCost: 30
   effects:

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Attack
   m_EditorClassIdentifier: 
   moveName: Ataque
-  description: "Um ataque b\xE1sico"
+  description: "Um ataque b\xE1sico, causa 50 de dano ou permite usar um de seus
+    truques ao digitar a sequ\xEAncia respectiva"
   damage: 50
   spCost: 0
   effects:

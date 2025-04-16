@@ -33,7 +33,7 @@ public class ConditionDB
                         Debug.Log(galo.Status[index].StatusTime);
                         galo.Status[index].StatusTime--;
                     }
-                  galo.TakeDamage(galo.maxHP / 5);
+                  galo.TakeDamage(galo.maxHP / 6);
                 }
             }
         },

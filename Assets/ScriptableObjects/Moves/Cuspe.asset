@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cuspe
   m_EditorClassIdentifier: 
   moveName: Cuspe
-  description: "Aplica nausea no oponente, 10 de f\xF4lego (CVZ)"
+  description: "(CVZ) Aplica nausea no oponente, 10 de f\xF4lego"
   damage: 0
   spCost: 10
   effects:
