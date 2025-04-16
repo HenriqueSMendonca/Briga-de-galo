@@ -24,7 +24,7 @@ public class ActionCommands : MonoBehaviour
 
     public void Input(InputAction.CallbackContext context)
     {
-        if (context.started && inputEnabled)
+        if (context.started && inputEnabled && inputString.Length < 9)
         {
             inputString += context.action.name;
             commandCheck?.Invoke();
