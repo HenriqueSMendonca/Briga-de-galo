@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: "Manipula\xE7\xE3o"
   m_EditorClassIdentifier: 
   moveName: "Manipula\xE7\xE3o"
-  description: "causa 200 de dano se o usu\xE1rio possuir um efeito de status do
-    contr\xE1rio causa 100 de dano,  25 de f\xF4lego (XXX)"
+  description: "(XXX) Causa 200 de dano se o usu\xE1rio possuir um efeito de status
+    do contr\xE1rio causa 100 de dano,  25 de f\xF4lego"
   damage: 100
   spCost: 25
   effects:

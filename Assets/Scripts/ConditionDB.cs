@@ -33,7 +33,7 @@ public class ConditionDB
                         Debug.Log(galo.Status[index].StatusTime);
                         galo.Status[index].StatusTime--;
                     }
-                  galo.TakeDamage(galo.maxHP / 5);
+                  galo.TakeDamage(galo.maxHP / 6);
                 }
             }
         },
@@ -116,13 +116,13 @@ public class ConditionDB
                 OnStart = (Galo galo) =>
                 {
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.nau]);
-                    galo.Status[index].StatusTime = UnityEngine.Random.Range(1,4);
+                    galo.Status[index].StatusTime = UnityEngine.Random.Range(2,4);
                 },
                 OnInflicted = (Galo galo) =>
                 { 
                     if (ConditionDB.Conditions[ConditionID.nau].Inflicted == false){
                     galo.guard -= 0.5f;
-                    galo.carSpeed -= 1;
+                    galo.carSpeed -= 3;
                         ConditionDB.Conditions[ConditionID.nau].Inflicted = true;
                     }
                 },
@@ -135,7 +135,7 @@ public class ConditionDB
                         galo.CureStatus(ConditionID.nau);
                         ConditionDB.Conditions[ConditionID.nau].Inflicted = false;
                         galo.guard += 0.5f;
-                        galo.carSpeed += 1;
+                        galo.carSpeed += 3;
                     } else
                     {
                         galo.Status[index].StatusTime--;

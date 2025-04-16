@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PunhoDePedra
   m_EditorClassIdentifier: 
   moveName: Punho de pedra
-  description: "causa 500 de dano se n\xE3o for interrompido, 50 de f\xF4lego (ZZXXCVCV)"
+  description: "(ZZXXCVCV) Causa 500 de dano se n\xE3o for interrompido, 50 de f\xF4lego "
   damage: 500
   spCost: 50
   effects:
