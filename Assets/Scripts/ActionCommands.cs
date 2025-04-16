@@ -6,6 +6,8 @@ using UnityEngine.Windows;
 
 public class ActionCommands : MonoBehaviour
 {
+    public delegate void CommandCheck();
+    public static CommandCheck commandCheck;
     public bool inputEnabled = false;
     public string inputString;
     private void Start()
@@ -25,6 +27,7 @@ public class ActionCommands : MonoBehaviour
         if (context.started && inputEnabled)
         {
             inputString += context.action.name;
+            commandCheck?.Invoke();
         }
     }
 }
