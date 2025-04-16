@@ -166,7 +166,7 @@ public class BattleSystem : MonoBehaviour
         desc2.SetActive(false);
         dialogueText.text = "Chegue até o final";
         TrocaPlayer();
-        pistache = Instantiate(pistas[UnityEngine.Random.Range(0, pistas.Length - 1)]);
+        pistache = Instantiate(pistas[UnityEngine.Random.Range(0, pistas.Length)]);
 
     }
     public void Briga()
