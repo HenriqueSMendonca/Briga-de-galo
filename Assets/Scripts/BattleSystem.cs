@@ -36,11 +36,19 @@ public class BattleSystem : MonoBehaviour
     public BattleHud p1HUD, p2HUD;
     public GameObject endScreen;
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void OnEnable()
     {
+        ActionCommands.commandCheck += MoveCheck;
+    }
+    private void OnDisable()
+    {
+        ActionCommands.commandCheck -= MoveCheck;
+    }
+    void Start()
+    {      
         endScreen.SetActive(false);
-        cnvs.gameObject.SetActive(false);
+        cnvs.gameObject.SetActive(false);     
     }
 
     // Update is called once per frame
@@ -158,7 +166,7 @@ public class BattleSystem : MonoBehaviour
         desc2.SetActive(false);
         dialogueText.text = "Chegue até o final";
         TrocaPlayer();
-        pistache = Instantiate(pistas[UnityEngine.Random.Range(0, pistas.Length - 1)]);
+        pistache = Instantiate(pistas[UnityEngine.Random.Range(0, pistas.Length)]);
 
     }
     public void Briga()
@@ -171,14 +179,14 @@ public class BattleSystem : MonoBehaviour
         {
 
             dialogueText.text = "O jogador 1 ganhou a prioridade!";
-            StartCoroutine(UseMove(p1Galo, p2Galo));
+            StartCoroutine(CheckAttack(p1Galo, p2Galo));
 
 
         }
         else
         {
             dialogueText.text = "O jogador 2 ganhou a prioridade!";
-            StartCoroutine(UseMove(p2Galo, p1Galo));
+            StartCoroutine(CheckAttack(p2Galo, p1Galo));
         }
     }
 
@@ -219,48 +227,14 @@ public class BattleSystem : MonoBehaviour
         players[3].GetComponent<SpriteRenderer>().enabled = !players[3].GetComponent<SpriteRenderer>().enabled;
         carro2.inputEnabled = !carro2.inputEnabled;
     }
-    IEnumerator UseMove(Galo galo1, Galo galo2)
-    {
-        for (int i = 0; p1Galo.Status?.Count > i; i++)
-        {
-            Debug.Log(i);
-            Debug.Log(p1Galo.Status[i].Name);
-        }
-        for (int i = 0; p2Galo.Status?.Count > i; i++)
-        {
-            Debug.Log(p2Galo.Status[i].Name);
-        }
-        bool canRunMove = galo1.OnBeforeMove();
 
-
-        moveCount++;
-        Debug.Log(moveCount);
-        if (!canRunMove)
+    IEnumerator CheckAttack(Galo galo1, Galo galo2)
+    { 
+        if (galo1.moves[galo1.selectedMove].Name == "Ataque")
         {
-            dialogueText.text = $"{galo1.nomeGalo} está atordoado e não conseguiu atacar!";
 
-            yield return new WaitForSeconds(1);
-            if (moveCount == 2)
-            {
-                Debug.Log("dude");
-                state = BattleState.PlayerTurn;
-                PlayerTurn();
-            }
-            else
-            {
-                Debug.Log("dude");
-                StartCoroutine(UseMove(galo2, galo1));
-
-            }
-            yield break;
-        }
-        yield return new WaitForSeconds(2);
-        var move = galo1.moves[galo1.selectedMove];
-        if (move.Name == "Ataque")
-        {
-           
             dialogueText.text = $"{galo1.nomeGalo} está preparando um ataque";
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
             if (galo1 == p1Galo)
             {
                 p1Input = true;
@@ -273,38 +247,69 @@ public class BattleSystem : MonoBehaviour
                 command2.inputEnabled = true;
                 commandBox2.SetActive(true);
             }
-            yield return new WaitForSeconds(10);
-            if (galo1 == p1Galo)
+
+        }
+        if (galo2.moves[galo2.selectedMove].Name == "Ataque")
+        {
+
+            dialogueText.text = $"{galo2.nomeGalo} está preparando um ataque";
+            yield return new WaitForSeconds(1);
+            if (galo2 == p1Galo)
             {
-                for (int i = 0; i < galo1.moves.Count; i++)
-                {
-                    if (command1.inputString == galo1.moves[i].Combo)
-                    {
-                        move = galo1.moves[i];
-                    }
-                }
-                
-                p1Input = false;
-                command1.inputEnabled = false;
-                commandBox1.SetActive(false);
-                command1.inputString = null;
+                p1Input = true;
+                command1.inputEnabled = true;
+                commandBox1.SetActive(true);
             }
             else
             {
-                for (int i = 0; i < galo1.moves.Count; i++)
-                {
-                    if (command2.inputString == galo1.moves[i].Combo)
-                    {
-                        move = galo1.moves[i];
-                    }
-                }
-                p2Input = false;
-                command2.inputEnabled = false;
-                commandBox2.SetActive(false);
-                command2.inputString = null;
+                p2Input = true;
+                command2.inputEnabled = true;
+                commandBox2.SetActive(true);
             }
+            
 
         }
+        for (int i = 10; i > 0 && (galo1.moves[galo1.selectedMove].Name == "Ataque" || galo2.moves[galo2.selectedMove].Name == "Ataque"); i--)
+        {
+            Debug.Log(i);
+            yield return new WaitForSeconds(1);
+        }
+        p1Input = false;
+        command1.inputEnabled = false;
+        commandBox1.SetActive(false);
+        command1.inputString = null;
+        p2Input = false;
+        command2.inputEnabled = false;
+        commandBox2.SetActive(false);
+        command2.inputString = null;
+        StartCoroutine(UseMove(galo1, galo2));
+    }
+    IEnumerator UseMove(Galo galo1, Galo galo2)
+    {
+        bool canRunMove = galo1.OnBeforeMove();
+
+
+        moveCount++;
+        if (!canRunMove)
+        {
+            dialogueText.text = $"{galo1.nomeGalo} está atordoado e não conseguiu atacar!";
+
+            yield return new WaitForSeconds(1);
+            if (moveCount == 2)
+            {
+                state = BattleState.PlayerTurn;
+                PlayerTurn();
+            }
+            else
+            {
+                CheckAttack(galo1, galo2);
+                StartCoroutine(UseMove(galo2, galo1));
+
+            }
+            yield break;
+        }       
+        yield return new WaitForSeconds(2);
+        var move = galo1.moves[galo1.selectedMove];
         switch (move.Name)
         {
             case ("Cabeçada"):
@@ -331,6 +336,7 @@ public class BattleSystem : MonoBehaviour
                     else
                     {
                         dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
+                        yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
                             Debug.Log("dude");
@@ -375,6 +381,7 @@ public class BattleSystem : MonoBehaviour
                     else
                     {
                         dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
+                        yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
                             state = BattleState.PlayerTurn;
@@ -424,6 +431,7 @@ public class BattleSystem : MonoBehaviour
                     else
                     {
                         dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
+                        yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
                             state = BattleState.PlayerTurn;
@@ -480,6 +488,7 @@ public class BattleSystem : MonoBehaviour
                     else
                     {
                         dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
+                        yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
                             state = BattleState.PlayerTurn;
@@ -525,6 +534,7 @@ public class BattleSystem : MonoBehaviour
                     else
                     {
                         dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
+                        yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
                             Debug.Log("dude");
@@ -593,6 +603,7 @@ public class BattleSystem : MonoBehaviour
                     else
                     {
                         dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
+                        yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
                             state = BattleState.PlayerTurn;
@@ -714,5 +725,42 @@ public class BattleSystem : MonoBehaviour
     public void Sair()
     {
         SceneManager.LoadScene("Main menu");
+    }
+    public void MoveCheck()
+    {
+        
+        if (command1.inputEnabled == true)
+        {
+            for (int i = 0; i < p1Galo.moves.Count; i++)
+            {
+                if (command1.inputString == p1Galo.moves[i].Combo)
+                {
+                    p1Galo.selectedMove = i;
+                    p1Input = false;
+                    command1.inputEnabled = false;
+                    commandBox1.SetActive(false);
+                    command1.inputString = null;
+                }
+            }
+
+           
+        }
+          if (command2.inputEnabled == true)
+        {
+
+            for (int i = 0; i < p2Galo.moves.Count; i++)
+            {
+                if (command2.inputString == p2Galo.moves[i].Combo)
+                {
+                    p2Galo.selectedMove = i;
+                    p2Input = false;
+                    command2.inputEnabled = false;
+                    commandBox2.SetActive(false);
+                    command2.inputString = null;
+
+                }
+            }
+            
+        }
     }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Defender
   m_EditorClassIdentifier: 
   moveName: Defender
-  description: "recupera 30 de f\xF4lego e diminui o pr\xF3ximo dano recebido"
+  description: "Recupera 30 de f\xF4lego e diminui o pr\xF3ximo dano recebido"
   damage: 0
   spCost: -30
   effects:
