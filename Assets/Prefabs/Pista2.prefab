@@ -561,7 +561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2016805303913344887}
   m_Layer: 0
-  m_Name: Start1
+  m_Name: Start2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -724,7 +724,7 @@ GameObject:
   - component: {fileID: 5802695434740107006}
   - component: {fileID: 3715819699513454935}
   m_Layer: 0
-  m_Name: End1
+  m_Name: End2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1020,9 +1020,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start1: {fileID: 1296012273158366770}
-  start2: {fileID: 0}
+  start2: {fileID: 2535980754976658044}
   finish1: {fileID: 996598542112428454}
-  finish2: {fileID: 0}
+  finish2: {fileID: 2852698866485197757}
 --- !u!50 &8206038562747078915
 Rigidbody2D:
   serializedVersion: 4
