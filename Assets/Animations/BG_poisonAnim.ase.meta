@@ -1,0 +1,531 @@
+fileFormatVersion: 2
+guid: cb13b7e91823edb40ab01bf1f651d8ce
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: BG_poisonAnim_Frame_0
+    originalName: 
+    pivot: {x: 0.5625, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 86
+      y: 59
+      width: 16
+      height: 3
+    spriteID: 6ed1cb83a95184e488a0e828c4f511b5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 86, y: 59}
+  - name: BG_poisonAnim_Frame_1
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.20000002}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 43
+      width: 18
+      height: 5
+    spriteID: f32d162c2dff5bc4ab93130c746b2e04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 43}
+  - name: BG_poisonAnim_Frame_2
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.40000004}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 59
+      width: 18
+      height: 5
+    spriteID: c79211fb0efd3c346b4889d52c3b0b3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 59}
+  - name: BG_poisonAnim_Frame_3
+    originalName: 
+    pivot: {x: 0.55, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 59
+      width: 20
+      height: 6
+    spriteID: a2cb8317ca8c5bc4eb300df9c9b8fc7f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 59}
+  - name: BG_poisonAnim_Frame_4
+    originalName: 
+    pivot: {x: 0.56, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 43
+      width: 25
+      height: 8
+    spriteID: 1081889ce46ddcc4da3601ee0e63d512
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 43}
+  - name: BG_poisonAnim_Frame_5
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 43
+      width: 27
+      height: 8
+    spriteID: 59543ccc4698b4f41b129d6e01550489
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 43}
+  - name: BG_poisonAnim_Frame_6
+    originalName: 
+    pivot: {x: 0.5357143, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 41
+      y: 4
+      width: 28
+      height: 14
+    spriteID: 12ae31568b442c74ab4b7ec094e4fc96
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 41, y: 4}
+  - name: BG_poisonAnim_Frame_7
+    originalName: 
+    pivot: {x: 0.51724136, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 29
+      height: 14
+    spriteID: 90bb706a406ddd4449cab80a7be279b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: BG_poisonAnim_Frame_8
+    originalName: 
+    pivot: {x: 0.51724136, y: -0.15384616}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 77
+      y: 4
+      width: 29
+      height: 13
+    spriteID: 733d1c9e68110a843b9bf54662cdae79
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 77, y: 4}
+  - name: BG_poisonAnim_Frame_9
+    originalName: 
+    pivot: {x: 0.55, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 59
+      width: 20
+      height: 6
+    spriteID: ada560b9059b82343b556f35dc6bec53
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 59}
+  - name: BG_poisonAnim_Frame_10
+    originalName: 
+    pivot: {x: 0.56, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 43
+      width: 25
+      height: 8
+    spriteID: 3fb6eeefdc64f8540baf6eb25756ab54
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 43}
+  - name: BG_poisonAnim_Frame_11
+    originalName: 
+    pivot: {x: 0.5357143, y: -0.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 26
+      width: 28
+      height: 9
+    spriteID: d5b6e233c092f2247aaddb6531e2f4c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 26}
+  - name: BG_poisonAnim_Frame_12
+    originalName: 
+    pivot: {x: 0.51724136, y: -0.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 26
+      width: 29
+      height: 9
+    spriteID: b311928e5dd68a14496b4752421fe651
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 26}
+  - name: BG_poisonAnim_Frame_13
+    originalName: 
+    pivot: {x: 0.51724136, y: -0.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 41
+      y: 26
+      width: 29
+      height: 9
+    spriteID: 2f9be98d61d771b43b49b16a1e349969
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 41, y: 26}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1809288079
+    name: BG_poisonAnim
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: BG_poisonAnim_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 7
+        y: 1
+        width: 16
+        height: 3
+      spriteId: 6ed1cb83a95184e488a0e828c4f511b5
+    - name: BG_poisonAnim_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 6
+        y: 1
+        width: 18
+        height: 5
+      spriteId: f32d162c2dff5bc4ab93130c746b2e04
+    - name: BG_poisonAnim_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 6
+        y: 2
+        width: 18
+        height: 5
+      spriteId: c79211fb0efd3c346b4889d52c3b0b3f
+    - name: BG_poisonAnim_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 5
+        y: 3
+        width: 20
+        height: 6
+      spriteId: a2cb8317ca8c5bc4eb300df9c9b8fc7f
+    - name: BG_poisonAnim_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 2
+        y: 4
+        width: 25
+        height: 8
+      spriteId: 1081889ce46ddcc4da3601ee0e63d512
+    - name: BG_poisonAnim_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 1
+        y: 5
+        width: 27
+        height: 8
+      spriteId: 59543ccc4698b4f41b129d6e01550489
+    - name: BG_poisonAnim_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 1
+        y: 1
+        width: 28
+        height: 14
+      spriteId: 12ae31568b442c74ab4b7ec094e4fc96
+    - name: BG_poisonAnim_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 1
+        y: 1
+        width: 29
+        height: 14
+      spriteId: 90bb706a406ddd4449cab80a7be279b7
+    - name: BG_poisonAnim_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 1
+        y: 2
+        width: 29
+        height: 13
+      spriteId: 733d1c9e68110a843b9bf54662cdae79
+    - name: BG_poisonAnim_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 5
+        y: 3
+        width: 20
+        height: 6
+      spriteId: ada560b9059b82343b556f35dc6bec53
+    - name: BG_poisonAnim_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 2
+        y: 4
+        width: 25
+        height: 8
+      spriteId: 3fb6eeefdc64f8540baf6eb25756ab54
+    - name: BG_poisonAnim_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 1
+        y: 6
+        width: 28
+        height: 9
+      spriteId: d5b6e233c092f2247aaddb6531e2f4c8
+    - name: BG_poisonAnim_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 1
+        y: 6
+        width: 29
+        height: 9
+      spriteId: b311928e5dd68a14496b4752421fe651
+    - name: BG_poisonAnim_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 1
+        y: 6
+        width: 29
+        height: 9
+      spriteId: 2f9be98d61d771b43b49b16a1e349969
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 32, y: 15}

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ConditionDB
 {
+    public static event Action<int, Galo> statusAnim;
+    
     public static Dictionary<ConditionID, Condition> Conditions { get; set; } = new Dictionary<ConditionID, Condition>()
     {
         {
@@ -16,6 +18,7 @@ public class ConditionDB
                 Percentage = 100,
                 OnStart = (Galo galo) =>
                 {
+                    statusAnim?.Invoke(0, galo);
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.psn]);
                     galo.Status[index].StatusTime = UnityEngine.Random.Range(1,4);
                 },

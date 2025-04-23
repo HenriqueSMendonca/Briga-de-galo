@@ -7188,6 +7188,8 @@ MonoBehaviour:
   - {fileID: 3393916639083115193, guid: 537dde342742cfd42b23b5fb25eb8f1c, type: 3}
   - {fileID: 1102773074022770574, guid: 6a31a46ea8f347b48b774254de5741bd, type: 3}
   - {fileID: 4397340074259233424, guid: 48c139d1419642945a0f66774d76ce84, type: 3}
+  effectAnims:
+  - {fileID: -2253911629886400664, guid: cb13b7e91823edb40ab01bf1f651d8ce, type: 3}
   spawn1: {fileID: 172865106}
   spawn2: {fileID: 2072388385}
   state: 0
