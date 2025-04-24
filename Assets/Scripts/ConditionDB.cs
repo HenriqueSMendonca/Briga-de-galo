@@ -36,6 +36,7 @@ public class ConditionDB
                         Debug.Log(galo.Status[index].StatusTime);
                         galo.Status[index].StatusTime--;
                     }
+                    statusAnim?.Invoke(0, galo);
                   galo.TakeDamage(galo.maxHP / 6);
                 }
             }
@@ -50,6 +51,7 @@ public class ConditionDB
                 Inflicted = false,
                 OnStart = (Galo galo) =>
                 {
+                    statusAnim?.Invoke(1, galo);
                     Conditions[ConditionID.grd].StatusTime = 0;
                 },
                 OnInflicted = (Galo galo) =>
@@ -86,6 +88,7 @@ public class ConditionDB
                 Percentage = 50,
                 OnStart = (Galo galo) =>
                 {
+                    statusAnim?.Invoke(2, galo);
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.stn]);
                 },
                  OnAfterTurn = (Galo galo) =>
@@ -98,6 +101,7 @@ public class ConditionDB
                 },
                 OnBeforeMove = (Galo galo) =>
                 {
+                    statusAnim?.Invoke(2, galo);
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.stn]);
                    galo.Status[index].Percentage -= 50;
                     

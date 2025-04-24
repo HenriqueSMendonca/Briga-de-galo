@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb13b7e91823edb40ab01bf1f651d8ce
+guid: 3431c8b786e230d4e960aab8554b96fa
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638810331734119465
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,158 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: BG_poisonAnim_Frame_0
+  - name: BG_Guard_Frame_0
     originalName: 
-    pivot: {x: 0.5625, y: -0.33333334}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 86
-      y: 59
-      width: 16
-      height: 3
-    spriteID: 6ed1cb83a95184e488a0e828c4f511b5
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 86, y: 59}
-  - name: BG_poisonAnim_Frame_1
-    originalName: 
-    pivot: {x: 0.5555556, y: -0.20000002}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 105
-      y: 43
-      width: 18
-      height: 5
-    spriteID: f32d162c2dff5bc4ab93130c746b2e04
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 105, y: 43}
-  - name: BG_poisonAnim_Frame_2
-    originalName: 
-    pivot: {x: 0.5555556, y: -0.40000004}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 60
-      y: 59
-      width: 18
-      height: 5
-    spriteID: c79211fb0efd3c346b4889d52c3b0b3f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 60, y: 59}
-  - name: BG_poisonAnim_Frame_3
-    originalName: 
-    pivot: {x: 0.55, y: -0.5}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 59
-      width: 20
-      height: 6
-    spriteID: a2cb8317ca8c5bc4eb300df9c9b8fc7f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 59}
-  - name: BG_poisonAnim_Frame_4
-    originalName: 
-    pivot: {x: 0.56, y: -0.5}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 39
-      y: 43
-      width: 25
-      height: 8
-    spriteID: 1081889ce46ddcc4da3601ee0e63d512
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 39, y: 43}
-  - name: BG_poisonAnim_Frame_5
-    originalName: 
-    pivot: {x: 0.5555556, y: -0.625}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 43
-      width: 27
-      height: 8
-    spriteID: 59543ccc4698b4f41b129d6e01550489
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 43}
-  - name: BG_poisonAnim_Frame_6
-    originalName: 
-    pivot: {x: 0.5357143, y: -0.071428575}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 41
-      y: 4
-      width: 28
-      height: 14
-    spriteID: 12ae31568b442c74ab4b7ec094e4fc96
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 41, y: 4}
-  - name: BG_poisonAnim_Frame_7
-    originalName: 
-    pivot: {x: 0.51724136, y: -0.071428575}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 29
-      height: 14
-    spriteID: 90bb706a406ddd4449cab80a7be279b7
+      width: 32
+      height: 31
+    spriteID: 267929b8a0d88ec4d96e510071987100
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -281,98 +141,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: BG_poisonAnim_Frame_8
+  - name: BG_Guard_Frame_1
     originalName: 
-    pivot: {x: 0.51724136, y: -0.15384616}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 77
-      y: 4
-      width: 29
-      height: 13
-    spriteID: 733d1c9e68110a843b9bf54662cdae79
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 77, y: 4}
-  - name: BG_poisonAnim_Frame_9
-    originalName: 
-    pivot: {x: 0.55, y: -0.5}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 32
-      y: 59
-      width: 20
-      height: 6
-    spriteID: ada560b9059b82343b556f35dc6bec53
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 32, y: 59}
-  - name: BG_poisonAnim_Frame_10
-    originalName: 
-    pivot: {x: 0.56, y: -0.5}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 72
-      y: 43
-      width: 25
-      height: 8
-    spriteID: 3fb6eeefdc64f8540baf6eb25756ab54
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 72, y: 43}
-  - name: BG_poisonAnim_Frame_11
-    originalName: 
-    pivot: {x: 0.5357143, y: -0.6666667}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 78
-      y: 26
-      width: 28
-      height: 9
-    spriteID: d5b6e233c092f2247aaddb6531e2f4c8
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 78, y: 26}
-  - name: BG_poisonAnim_Frame_12
-    originalName: 
-    pivot: {x: 0.51724136, y: -0.6666667}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 26
-      width: 29
-      height: 9
-    spriteID: b311928e5dd68a14496b4752421fe651
+      y: 43
+      width: 32
+      height: 31
+    spriteID: 537b8870725552245bdec4bc616a353f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -380,19 +160,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 26}
-  - name: BG_poisonAnim_Frame_13
+    uvTransform: {x: 4, y: 43}
+  - name: BG_Guard_Frame_2
     originalName: 
-    pivot: {x: 0.51724136, y: -0.6666667}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 41
-      y: 26
-      width: 29
-      height: 9
-    spriteID: 2f9be98d61d771b43b49b16a1e349969
+      x: 4
+      y: 82
+      width: 32
+      height: 31
+    spriteID: 7a2a6106b8ef5f84d8e2cd904f3cd944
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -400,180 +180,352 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 41, y: 26}
+    uvTransform: {x: 4, y: 82}
+  - name: BG_Guard_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 121
+      width: 32
+      height: 31
+    spriteID: 0d3fb4fce5e6daa4fab269e224baccdb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 121}
+  - name: BG_Guard_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 160
+      width: 32
+      height: 31
+    spriteID: a097e8d1a2984e04c85f219630e78eb5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 160}
+  - name: BG_Guard_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 199
+      width: 32
+      height: 31
+    spriteID: cce20c8c77a0aa7418233a25168482c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 199}
+  - name: BG_Guard_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 4
+      width: 32
+      height: 31
+    spriteID: df0b64606eb9cba4390c0cb9d0020b29
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 4}
+  - name: BG_Guard_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 43
+      width: 32
+      height: 31
+    spriteID: 95b7b808486254f4d961940bcfb18acb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 43}
+  - name: BG_Guard_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 82
+      width: 32
+      height: 31
+    spriteID: 31516cbf8ed36ff439a126687bebb9cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 82}
+  - name: BG_Guard_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 121
+      width: 32
+      height: 31
+    spriteID: 679eaa78b7d18954786482219144e29e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 121}
+  - name: BG_Guard_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 160
+      width: 32
+      height: 31
+    spriteID: 3ac8a9f7c390e064fb8f213e61f0488b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 160}
+  - name: BG_Guard_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 199
+      width: 32
+      height: 31
+    spriteID: 686765d7b00fd8a419cd1c1b9c80136b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 199}
+  - name: BG_Guard_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 4
+      width: 32
+      height: 31
+    spriteID: 6f185f489c713dd40a4fc4abbd310fa6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 4}
+  - name: BG_Guard_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 43
+      width: 32
+      height: 31
+    spriteID: 446cde6d54b1d5942aa47c25e4ceb96f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 43}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1809288079
-    name: BG_poisonAnim
+    guid: 1768295923
+    name: BG_Guard
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: BG_poisonAnim_Frame_0
+    - name: BG_Guard_Frame_0
       frameIndex: 0
       cellRect:
-        x: 7
-        y: 1
-        width: 16
-        height: 3
-      spriteId: 6ed1cb83a95184e488a0e828c4f511b5
-    - name: BG_poisonAnim_Frame_1
+        x: 0
+        y: 0
+        width: 32
+        height: 31
+      spriteId: 267929b8a0d88ec4d96e510071987100
+    - name: BG_Guard_Frame_1
       frameIndex: 1
       cellRect:
-        x: 6
-        y: 1
-        width: 18
-        height: 5
-      spriteId: f32d162c2dff5bc4ab93130c746b2e04
-    - name: BG_poisonAnim_Frame_2
+        x: 0
+        y: 0
+        width: 32
+        height: 31
+      spriteId: 537b8870725552245bdec4bc616a353f
+    - name: BG_Guard_Frame_2
       frameIndex: 2
       cellRect:
-        x: 6
-        y: 2
-        width: 18
-        height: 5
-      spriteId: c79211fb0efd3c346b4889d52c3b0b3f
-    - name: BG_poisonAnim_Frame_3
+        x: 0
+        y: 0
+        width: 32
+        height: 31
+      spriteId: 7a2a6106b8ef5f84d8e2cd904f3cd944
+    - name: BG_Guard_Frame_3
       frameIndex: 3
       cellRect:
-        x: 5
-        y: 3
-        width: 20
-        height: 6
-      spriteId: a2cb8317ca8c5bc4eb300df9c9b8fc7f
-    - name: BG_poisonAnim_Frame_4
+        x: 0
+        y: 0
+        width: 32
+        height: 31
+      spriteId: 0d3fb4fce5e6daa4fab269e224baccdb
+    - name: BG_Guard_Frame_4
       frameIndex: 4
       cellRect:
-        x: 2
-        y: 4
-        width: 25
-        height: 8
-      spriteId: 1081889ce46ddcc4da3601ee0e63d512
-    - name: BG_poisonAnim_Frame_5
+        x: 0
+        y: 0
+        width: 32
+        height: 31
+      spriteId: a097e8d1a2984e04c85f219630e78eb5
+    - name: BG_Guard_Frame_5
       frameIndex: 5
       cellRect:
-        x: 1
-        y: 5
-        width: 27
-        height: 8
-      spriteId: 59543ccc4698b4f41b129d6e01550489
-    - name: BG_poisonAnim_Frame_6
+        x: 0
+        y: 0
+        width: 32
+        height: 31
+      spriteId: cce20c8c77a0aa7418233a25168482c0
+    - name: BG_Guard_Frame_6
       frameIndex: 6
       cellRect:
-        x: 1
-        y: 1
-        width: 28
-        height: 14
-      spriteId: 12ae31568b442c74ab4b7ec094e4fc96
-    - name: BG_poisonAnim_Frame_7
+        x: 0
+        y: 0
+        width: 32
+        height: 31
+      spriteId: df0b64606eb9cba4390c0cb9d0020b29
+    - name: BG_Guard_Frame_7
       frameIndex: 7
       cellRect:
-        x: 1
-        y: 1
-        width: 29
-        height: 14
-      spriteId: 90bb706a406ddd4449cab80a7be279b7
-    - name: BG_poisonAnim_Frame_8
+        x: 0
+        y: 0
+        width: 32
+        height: 31
+      spriteId: 95b7b808486254f4d961940bcfb18acb
+    - name: BG_Guard_Frame_8
       frameIndex: 8
       cellRect:
-        x: 1
-        y: 2
-        width: 29
-        height: 13
-      spriteId: 733d1c9e68110a843b9bf54662cdae79
-    - name: BG_poisonAnim_Frame_9
+        x: 0
+        y: 0
+        width: 32
+        height: 31
+      spriteId: 31516cbf8ed36ff439a126687bebb9cd
+    - name: BG_Guard_Frame_9
       frameIndex: 9
       cellRect:
-        x: 5
-        y: 3
-        width: 20
-        height: 6
-      spriteId: ada560b9059b82343b556f35dc6bec53
-    - name: BG_poisonAnim_Frame_10
+        x: 0
+        y: 0
+        width: 32
+        height: 31
+      spriteId: 679eaa78b7d18954786482219144e29e
+    - name: BG_Guard_Frame_10
       frameIndex: 10
       cellRect:
-        x: 2
-        y: 4
-        width: 25
-        height: 8
-      spriteId: 3fb6eeefdc64f8540baf6eb25756ab54
-    - name: BG_poisonAnim_Frame_11
+        x: 0
+        y: 0
+        width: 32
+        height: 31
+      spriteId: 3ac8a9f7c390e064fb8f213e61f0488b
+    - name: BG_Guard_Frame_11
       frameIndex: 11
       cellRect:
-        x: 1
-        y: 6
-        width: 28
-        height: 9
-      spriteId: d5b6e233c092f2247aaddb6531e2f4c8
-    - name: BG_poisonAnim_Frame_12
+        x: 0
+        y: 0
+        width: 32
+        height: 31
+      spriteId: 686765d7b00fd8a419cd1c1b9c80136b
+    - name: BG_Guard_Frame_12
       frameIndex: 12
       cellRect:
-        x: 1
-        y: 6
-        width: 29
-        height: 9
-      spriteId: b311928e5dd68a14496b4752421fe651
-    - name: BG_poisonAnim_Frame_13
+        x: 0
+        y: 0
+        width: 32
+        height: 31
+      spriteId: 6f185f489c713dd40a4fc4abbd310fa6
+    - name: BG_Guard_Frame_13
       frameIndex: 13
       cellRect:
-        x: 1
-        y: 6
-        width: 29
-        height: 9
-      spriteId: 2f9be98d61d771b43b49b16a1e349969
+        x: 0
+        y: 0
+        width: 32
+        height: 31
+      spriteId: 446cde6d54b1d5942aa47c25e4ceb96f
     linkedCells: []
     parentIndex: -1
-  platformSettings:
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Android
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: WebGL
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
+  platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 15}
+  canvasSize: {x: 32, y: 32}
