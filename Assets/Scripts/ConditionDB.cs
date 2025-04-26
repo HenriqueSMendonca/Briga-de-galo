@@ -122,6 +122,7 @@ public class ConditionDB
                 Inflicted = false,
                 OnStart = (Galo galo) =>
                 {
+                    statusAnim?.Invoke(3, galo);
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.nau]);
                     galo.Status[index].StatusTime = UnityEngine.Random.Range(2,4);
                 },
@@ -162,6 +163,7 @@ public class ConditionDB
                 Inflicted = false,
                 OnStart = (Galo galo) =>
                 {
+                    statusAnim?.Invoke(4, galo);
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.wek]);
                     galo.Status[index].StatusTime = UnityEngine.Random.Range(1,4);
                 },
@@ -200,6 +202,7 @@ public class ConditionDB
                 Inflicted = false,
                 OnStart = (Galo galo) =>
                 {
+                    statusAnim?.Invoke(4, galo);
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.irn]);
                     galo.Status[index].StatusTime = UnityEngine.Random.Range(1,4);
                 },

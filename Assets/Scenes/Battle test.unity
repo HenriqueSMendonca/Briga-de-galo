@@ -7192,6 +7192,9 @@ MonoBehaviour:
   - {fileID: 3759828739544645923, guid: 562ffc9a09688fd4390c5519ad4b514f, type: 3}
   - {fileID: 5738627832727213452, guid: 57fb75908d1929042bb92b44ae1dff72, type: 3}
   - {fileID: 3623914663550464931, guid: d837431203500aa479662603c1860b6a, type: 3}
+  - {fileID: 6611693605010069389, guid: 961febb8b8d734846b5a304d8d5a17d6, type: 3}
+  - {fileID: 6047488749625183973, guid: abcafab4d7c7e004dbfc64136611c57d, type: 3}
+  - {fileID: 127142025630498709, guid: f129ed3c2dc7ac64c9c66f0c1d8dfe71, type: 3}
   spawn1: {fileID: 172865106}
   spawn2: {fileID: 2072388385}
   state: 0
