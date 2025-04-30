@@ -7195,6 +7195,7 @@ MonoBehaviour:
   - {fileID: 6611693605010069389, guid: 961febb8b8d734846b5a304d8d5a17d6, type: 3}
   - {fileID: 6047488749625183973, guid: abcafab4d7c7e004dbfc64136611c57d, type: 3}
   - {fileID: 127142025630498709, guid: f129ed3c2dc7ac64c9c66f0c1d8dfe71, type: 3}
+  - {fileID: 563036828768859725, guid: 721938ed329e8984bb9e75d5e9e89bbc, type: 3}
   spawn1: {fileID: 172865106}
   spawn2: {fileID: 2072388385}
   state: 0

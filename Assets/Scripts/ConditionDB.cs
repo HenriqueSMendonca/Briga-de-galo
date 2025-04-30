@@ -239,6 +239,7 @@ public class ConditionDB
                 Inflicted = false,
                 OnStart = (Galo galo) =>
                 {
+                    statusAnim?.Invoke(5, galo);
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.off]);
                     galo.Status[index].StatusTime = UnityEngine.Random.Range(1,3);
                 },
