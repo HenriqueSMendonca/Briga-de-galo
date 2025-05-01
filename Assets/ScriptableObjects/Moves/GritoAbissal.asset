@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GritoAbissal
   m_EditorClassIdentifier: 
   moveName: Grito abissal
-  description: "(ZVVV) Aplica enfraquecido no oponente, custa 20 de f\xF4lego"
+  description: "(ZVVV) Aplica enfraquecido no oponente reduzindo o ataque, custa
+    20 de f\xF4lego"
   damage: 0
   spCost: 20
   effects:
