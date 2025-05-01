@@ -45,6 +45,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG_stunAnim 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: a27a9cbdccbb2ac468a24ab4b22cc761, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: a27a9cbdccbb2ac468a24ab4b22cc761, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -117,7 +121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5a2ef7d6a040d9a4bbce7e4e5d5be539, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 5a2ef7d6a040d9a4bbce7e4e5d5be539, type: 3}
       propertyPath: m_LocalScale.x

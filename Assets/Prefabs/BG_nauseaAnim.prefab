@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG_nauseaAnim
       objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 880636848ea7839418526187ea0def41, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 880636848ea7839418526187ea0def41, type: 3}
       propertyPath: m_LocalScale.x
       value: 5

@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG_ironAnim
       objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: f2d20b438e55bba4a8c8674f56da80da, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: f2d20b438e55bba4a8c8674f56da80da, type: 3}
       propertyPath: m_LocalScale.x
       value: 5

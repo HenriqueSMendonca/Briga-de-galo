@@ -50,13 +50,14 @@ public class ConditionDB
                 Percentage = 100,
                 Inflicted = false,
                 OnStart = (Galo galo) =>
-                {
-                    statusAnim?.Invoke(1, galo);
+                {                
                     Conditions[ConditionID.grd].StatusTime = 0;
                 },
                 OnInflicted = (Galo galo) =>
-                { 
+                {
+                    
                     if (ConditionDB.Conditions[ConditionID.grd].Inflicted == false){
+                        statusAnim?.Invoke(1, galo);
                     galo.guard += 1;
                         ConditionDB.Conditions[ConditionID.grd].Inflicted = true;
                     }
@@ -122,13 +123,15 @@ public class ConditionDB
                 Inflicted = false,
                 OnStart = (Galo galo) =>
                 {
-                    statusAnim?.Invoke(3, galo);
+                    
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.nau]);
                     galo.Status[index].StatusTime = UnityEngine.Random.Range(2,4);
                 },
                 OnInflicted = (Galo galo) =>
-                { 
+                {
+                    
                     if (ConditionDB.Conditions[ConditionID.nau].Inflicted == false){
+                        statusAnim?.Invoke(3, galo);
                     galo.guard -= 0.5f;
                     galo.carSpeed -= 3;
                         ConditionDB.Conditions[ConditionID.nau].Inflicted = true;
@@ -146,6 +149,7 @@ public class ConditionDB
                         galo.carSpeed += 3;
                     } else
                     {
+                        statusAnim?.Invoke(3, galo);
                         galo.Status[index].StatusTime--;
                     }
 
@@ -162,14 +166,15 @@ public class ConditionDB
                 Percentage = 100,
                 Inflicted = false,
                 OnStart = (Galo galo) =>
-                {
-                    statusAnim?.Invoke(4, galo);
+                {                   
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.wek]);
                     galo.Status[index].StatusTime = UnityEngine.Random.Range(1,4);
                 },
                 OnInflicted = (Galo galo) =>
-                { 
+                {
+                    
                     if (ConditionDB.Conditions[ConditionID.wek].Inflicted == false){
+                        statusAnim?.Invoke(4, galo);
                     galo.attack -= 0.5f;
                         ConditionDB.Conditions[ConditionID.wek].Inflicted = true;
                     }
@@ -185,6 +190,7 @@ public class ConditionDB
                         galo.attack += 0.5f;
                     } else
                     {
+                        statusAnim?.Invoke(4, galo);
                         galo.Status[index].StatusTime--;
                     }
 
@@ -202,13 +208,15 @@ public class ConditionDB
                 Inflicted = false,
                 OnStart = (Galo galo) =>
                 {
-                    statusAnim?.Invoke(4, galo);
+                    
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.irn]);
                     galo.Status[index].StatusTime = UnityEngine.Random.Range(1,4);
                 },
                 OnInflicted = (Galo galo) =>
                 {
+                   
                     if (ConditionDB.Conditions[ConditionID.irn].Inflicted == false){
+                         statusAnim?.Invoke(5, galo);
                     galo.guard += 1;
                         ConditionDB.Conditions[ConditionID.irn].Inflicted = true;
                     }
@@ -224,6 +232,7 @@ public class ConditionDB
                         galo.guard -= 1;
                     } else
                     {
+                        statusAnim?.Invoke(5, galo);
                         galo.Status[index].StatusTime--;
                     }                   
                 }
@@ -239,13 +248,15 @@ public class ConditionDB
                 Inflicted = false,
                 OnStart = (Galo galo) =>
                 {
-                    statusAnim?.Invoke(5, galo);
+                    
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.off]);
-                    galo.Status[index].StatusTime = UnityEngine.Random.Range(1,3);
+                    galo.Status[index].StatusTime = 1;
                 },
                 OnInflicted = (Galo galo) =>
                 {
+                    
                     if (ConditionDB.Conditions[ConditionID.off].Inflicted == false){
+                        statusAnim?.Invoke(6, galo);
                     galo.guard -= 1f;
                         ConditionDB.Conditions[ConditionID.off].Inflicted = true;
                     }
@@ -261,6 +272,7 @@ public class ConditionDB
                         galo.guard += 1f;
                     } else
                     {
+                        statusAnim?.Invoke(6, galo);
                         galo.Status[index].StatusTime--;
                     }
 
