@@ -23,7 +23,6 @@ public class BattleSystem : MonoBehaviour
     public GameObject[] panels;
     public GameObject[] characters;
     public GameObject[] pistas;
-    public GameObject[] effectAnims;
     public Transform spawn1, spawn2;
     public BattleState state;
     Galo p1Galo, p2Galo;
@@ -41,7 +40,6 @@ public class BattleSystem : MonoBehaviour
     private void OnEnable()
     {
         ActionCommands.commandCheck += MoveCheck;
-        ConditionDB.statusAnim += ShowStatus;
     }
     private void OnDisable()
     {
@@ -279,11 +277,11 @@ public class BattleSystem : MonoBehaviour
         p1Input = false;
         command1.inputEnabled = false;
         commandBox1.SetActive(false);
-        command1.inputString = "";
+        command1.inputString = null;
         p2Input = false;
         command2.inputEnabled = false;
         commandBox2.SetActive(false);
-        command2.inputString = "";
+        command2.inputString = null;
         StartCoroutine(UseMove(galo1, galo2));
     }
     IEnumerator UseMove(Galo galo1, Galo galo2)
@@ -741,7 +739,7 @@ public class BattleSystem : MonoBehaviour
                     p1Input = false;
                     command1.inputEnabled = false;
                     commandBox1.SetActive(false);
-                    command1.inputString = "";
+                    command1.inputString = null;
                 }
             }
 
@@ -758,7 +756,7 @@ public class BattleSystem : MonoBehaviour
                     p2Input = false;
                     command2.inputEnabled = false;
                     commandBox2.SetActive(false);
-                    command2.inputString = "";
+                    command2.inputString = null;
 
                 }
             }
@@ -766,9 +764,4 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    public void ShowStatus(int i, Galo galo)
-    {
-        GameObject effect = Instantiate(effectAnims[i], galo.transform.position, Quaternion.identity);
-        Destroy(effect,1.4f);
-    }
 }
