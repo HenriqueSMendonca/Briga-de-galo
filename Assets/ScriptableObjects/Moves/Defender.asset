@@ -21,4 +21,3 @@ MonoBehaviour:
   target: 1
   movePriority: 3
   combo: SASQD
-  moveSound: {fileID: 8300000, guid: 434dcd5338458bc40a56bf4d23c3dd58, type: 3}
