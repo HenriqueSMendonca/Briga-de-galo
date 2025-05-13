@@ -22,4 +22,3 @@ MonoBehaviour:
   target: 0
   movePriority: 0
   combo: NAHBRO
-  moveSound: {fileID: 8300000, guid: a899396bc83aa6942a900831e19e8c6a, type: 3}

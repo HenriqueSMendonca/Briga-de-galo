@@ -22,4 +22,3 @@ MonoBehaviour:
   target: 0
   movePriority: 0
   combo: ZXCV
-  moveSound: {fileID: 8300000, guid: 5a12aab0eb7f97e4891307f3fd48cc6c, type: 3}

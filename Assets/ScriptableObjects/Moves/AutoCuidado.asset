@@ -21,4 +21,3 @@ MonoBehaviour:
   target: 1
   movePriority: -1
   combo: XVX
-  moveSound: {fileID: 8300000, guid: 8e04b5e2cd4c4d8438451907536fd3d7, type: 3}

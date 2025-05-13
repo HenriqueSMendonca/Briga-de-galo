@@ -30,5 +30,4 @@ public class ActionCommands : MonoBehaviour
             commandCheck?.Invoke();
         }
     }
-
 }

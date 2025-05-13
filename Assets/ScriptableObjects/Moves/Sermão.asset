@@ -22,4 +22,3 @@ MonoBehaviour:
   target: 0
   movePriority: 0
   combo: CXCX
-  moveSound: {fileID: 8300000, guid: bd3cfc5971bab0341a910ededc65cf7a, type: 3}
