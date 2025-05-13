@@ -21,4 +21,4 @@ MonoBehaviour:
   target: 0
   movePriority: 0
   combo: VXVC
-  moveSound: {fileID: 8300000, guid: 9e137e31e34711c4bbf322ca6e44c4de, type: 3}
+  moveSound: {fileID: 8300000, guid: 75ec2193015da90438393318fc17b27b, type: 3}
