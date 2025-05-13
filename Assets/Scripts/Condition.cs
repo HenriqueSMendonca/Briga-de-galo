@@ -18,4 +18,6 @@ public class Condition
     public Action<Galo> OnStart { get; set; }
     
     public Func<Galo, bool> OnBeforeMove { get; set; }
+
+    public Animation Anim { get; set; }
 }

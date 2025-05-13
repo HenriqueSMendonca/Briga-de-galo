@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: PoseDaMuralha
   m_EditorClassIdentifier: 
   moveName: Pose da muralha
-  description: "(ZVXV) Aplica fortalecido, 40 de f\xF4lego"
+  description: "(ZVXV) Aplica fortalecido em si mesmo aumentando a defesa, 40 de
+    f\xF4lego"
   damage: 0
   spCost: 40
   effects:
