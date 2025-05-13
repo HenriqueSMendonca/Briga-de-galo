@@ -36,13 +36,10 @@ public class BattleSystem : MonoBehaviour
     public GameObject commandBox1, commandBox2;
     public BattleHud p1HUD, p2HUD;
     public GameObject endScreen;
-    public AudioSource soundSource;
-    public AudioSource music;
-    public AudioClip[] audioClips;
 
 
     private void OnEnable()
-    {       
+    {
         ActionCommands.commandCheck += MoveCheck;
         ConditionDB.statusAnim += ShowStatus;
     }
@@ -51,12 +48,7 @@ public class BattleSystem : MonoBehaviour
         ActionCommands.commandCheck -= MoveCheck;
     }
     void Start()
-    {
-        
-       GameObject deleteThis = GameObject.FindGameObjectWithTag("menu music");
-        Destroy(deleteThis);
-        music.clip = audioClips[UnityEngine.Random.Range(0, audioClips.Length)];
-        music.Play();
+    {      
         endScreen.SetActive(false);
         cnvs.gameObject.SetActive(false);     
     }
@@ -98,7 +90,7 @@ public class BattleSystem : MonoBehaviour
         GameObject p2GO = Instantiate(characters[PlayerPrefs.GetInt("selectedChar2")], spawn2.position, new Quaternion(0, 180, 0, 0));
         p2Galo = p2GO.GetComponent<Galo>();
 
-        dialogueText.text = p1Galo.nomeGalo + " e " + p2Galo.nomeGalo + " estï¿½o prontos pra brigar!";
+        dialogueText.text = p1Galo.nomeGalo + " e " + p2Galo.nomeGalo + " estão prontos pra brigar!";
         p1HUD.SetHUD(p1Galo);
         p1Galo.battleHud = p1HUD;
         p2HUD.SetHUD(p2Galo);
@@ -162,7 +154,7 @@ public class BattleSystem : MonoBehaviour
         menu2.SetActive(true);
         desc1.SetActive(true);
         desc2.SetActive(true);
-        dialogueText.text = "Selecione uma aï¿½ï¿½o!";
+        dialogueText.text = "Selecione uma ação!";
     }
     void CarRace()
     {
@@ -174,7 +166,7 @@ public class BattleSystem : MonoBehaviour
         menu2.SetActive(false);
         desc1.SetActive(false);
         desc2.SetActive(false);
-        dialogueText.text = "Chegue atï¿½ o final";
+        dialogueText.text = "Chegue até o final";
         TrocaPlayer();
         pistache = Instantiate(pistas[UnityEngine.Random.Range(0, pistas.Length)]);
 
@@ -243,7 +235,7 @@ public class BattleSystem : MonoBehaviour
         if (galo1.moves[galo1.selectedMove].Name == "Ataque")
         {
 
-            dialogueText.text = $"{galo1.nomeGalo} estï¿½ preparando um ataque";
+            dialogueText.text = $"{galo1.nomeGalo} está preparando um ataque";
             yield return new WaitForSeconds(1);
             if (galo1 == p1Galo)
             {
@@ -262,7 +254,7 @@ public class BattleSystem : MonoBehaviour
         if (galo2.moves[galo2.selectedMove].Name == "Ataque")
         {
 
-            dialogueText.text = $"{galo2.nomeGalo} estï¿½ preparando um ataque";
+            dialogueText.text = $"{galo2.nomeGalo} está preparando um ataque";
             yield return new WaitForSeconds(1);
             if (galo2 == p1Galo)
             {
@@ -302,7 +294,7 @@ public class BattleSystem : MonoBehaviour
         moveCount++;
         if (!canRunMove)
         {
-            dialogueText.text = $"{galo1.nomeGalo} estï¿½ atordoado e nï¿½o conseguiu atacar!";
+            dialogueText.text = $"{galo1.nomeGalo} está atordoado e não conseguiu atacar!";
 
             yield return new WaitForSeconds(1);
             if (moveCount == 2)
@@ -322,7 +314,7 @@ public class BattleSystem : MonoBehaviour
         var move = galo1.moves[galo1.selectedMove];
         switch (move.Name)
         {
-            case ("Cabeï¿½ada"):
+            case ("Cabeçada"):
                 {
                     if (galo1.currentSP >= move.SpCost)
                     {
@@ -331,16 +323,12 @@ public class BattleSystem : MonoBehaviour
                         galo1.RemoveSP(move.SpCost);
                         if (galo2.isParry)
                         {
-                            dialogueText.text = $"mas foi contra-atacado!";
-                            yield return new WaitForSeconds(2);
-                            PlayAudio(move);
                             StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                             galo2.CureStatus(ConditionID.pry);
                             galo2.isParry = false;
                         }
                         else
                         {
-                            PlayAudio(move);
                             StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                             StartCoroutine(Recoil(galo1, move.Damage / 2));
                             yield return RunMoveEffects(move, galo1, galo2);
@@ -349,7 +337,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} nï¿½o possui fï¿½lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -375,7 +363,6 @@ public class BattleSystem : MonoBehaviour
                         galo1.RemoveSP(move.SpCost);
                         if (galo2.isParry)
                         {
-                            PlayAudio(move);
                             StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                             galo2.CureStatus(ConditionID.pry);
                             galo2.isParry = false;
@@ -384,12 +371,10 @@ public class BattleSystem : MonoBehaviour
                         {
                             if (galo2.Status.Contains(ConditionDB.Conditions[ConditionID.stn]))
                             {
-                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage * 3));
                             }
                             else
                             {
-                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                             }
                             yield return RunMoveEffects(move, galo1, galo2);
@@ -397,7 +382,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} nï¿½o possui fï¿½lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -413,7 +398,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     break;
                 }
-            case ("Sermï¿½o"):
+            case ("Sermão"):
                 {
                     if (galo1.currentSP >= move.SpCost)
                     {
@@ -422,7 +407,6 @@ public class BattleSystem : MonoBehaviour
                         galo1.RemoveSP(move.SpCost);
                         if ((galo2.currentSP - 30) < 0)
                         {
-                            PlayAudio(move);
                             StartCoroutine(CheckHP(galo1, galo2, (galo2.currentSP - 30) * -10));
                             galo2.RemoveSP(30);
                             yield return RunMoveEffects(move, galo1, galo2);
@@ -448,7 +432,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} nï¿½o possui fï¿½lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -491,14 +475,12 @@ public class BattleSystem : MonoBehaviour
                         {
                             if (galo2.isParry)
                             {
-                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                                 galo2.CureStatus(ConditionID.pry);
                                 galo2.isParry = false;
                             }
                             else
                             {
-                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                                 yield return RunMoveEffects(move, galo1, galo2);
                             }
@@ -507,7 +489,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} nï¿½o possui fï¿½lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -524,7 +506,7 @@ public class BattleSystem : MonoBehaviour
 
                     break;
                 }
-            case ("Manipulaï¿½ï¿½o"):
+            case ("Manipulação"):
                 {
                     if (galo1.currentSP >= move.SpCost)
                     {
@@ -534,7 +516,6 @@ public class BattleSystem : MonoBehaviour
                         galo1.RemoveSP(move.SpCost);
                         if (galo2.isParry)
                         {
-                            PlayAudio(move);
                             StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                             galo2.CureStatus(ConditionID.pry);
                             galo2.isParry = false;
@@ -543,12 +524,10 @@ public class BattleSystem : MonoBehaviour
                         {
                             if (galo1.Status != null)
                             {
-                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage * 2));
                             }
                             else
                             {
-                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                             }
                             yield return RunMoveEffects(move, galo1, galo2);
@@ -556,7 +535,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} nï¿½o possui fï¿½lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -591,7 +570,6 @@ public class BattleSystem : MonoBehaviour
 
                         if (move.Damage <= 0)
                         {
-                            PlayAudio(move);
                             galo1.Heal(move.Damage);
                             yield return RunMoveEffects(move, galo1, galo2);
                             if (moveCount == 2)
@@ -612,7 +590,6 @@ public class BattleSystem : MonoBehaviour
                         {
                             if (galo2.isParry)
                             {
-                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                                 galo2.CureStatus(ConditionID.pry);
                                 galo2.isParry = false;
@@ -620,7 +597,6 @@ public class BattleSystem : MonoBehaviour
                             }
                             else
                             {
-                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                                 yield return RunMoveEffects(move, galo1, galo2);
                             }
@@ -628,7 +604,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} nï¿½o possui fï¿½lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -677,7 +653,6 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(1 / Math.Clamp(dmg, 1, 1000));
         if (isDead)
         {
-            music.Stop();
             EndBattle(galo1);
         }
     }
@@ -711,7 +686,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} jï¿½ possui esse efeito de status";
+                        dialogueText.text = $"{galo1.nomeGalo} já possui esse efeito de status";
                         yield return new WaitForSeconds(2);
                     }
                 }
@@ -725,7 +700,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo2.nomeGalo} jï¿½ possui esse efeito de status";
+                        dialogueText.text = $"{galo2.nomeGalo} já possui esse efeito de status";
                         yield return new WaitForSeconds(2);
                     }
                 }
@@ -790,12 +765,6 @@ public class BattleSystem : MonoBehaviour
             
         }
     }
-    public void PlayAudio(Moves move)
-    {
-        soundSource.clip = move.MoveSound;
-        soundSource.Play();
-    }
-       
 
     public void ShowStatus(int i, Galo galo)
     {
