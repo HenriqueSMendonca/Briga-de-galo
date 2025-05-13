@@ -42,12 +42,11 @@ public class ConditionDB
             new Condition()
             {
                 Name = "Defendendo",
-                StartMessage = "estÃ¡ defendendo",
+                StartMessage = "está defendendo",
                 Percentage = 100,
                 Inflicted = false,
                 OnStart = (Galo galo) =>
                 {
-                    statusAnim?.Invoke(1, galo);
                     Conditions[ConditionID.grd].StatusTime = 0;
                 },
                 OnInflicted = (Galo galo) =>
@@ -111,12 +110,11 @@ public class ConditionDB
             new Condition()
             {
                 Name = "Nausea",
-                StartMessage = "estÃ¡ enjoado",
+                StartMessage = "está enjoado",
                 Percentage = 100,
                 Inflicted = false,
                 OnStart = (Galo galo) =>
                 {
-                    statusAnim?.Invoke(3, galo);
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.nau]);
                     galo.Status[index].StatusTime = UnityEngine.Random.Range(2,4);
                 },
@@ -157,8 +155,6 @@ public class ConditionDB
                 Inflicted = false,
                 OnStart = (Galo galo) =>
                 {
-                    statusAnim?.Invoke(4, galo);
-
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.wek]);
                     galo.Status[index].StatusTime = UnityEngine.Random.Range(1,4);
                 },
@@ -197,7 +193,6 @@ public class ConditionDB
                 Inflicted = false,
                 OnStart = (Galo galo) =>
                 {
-                    statusAnim?.Invoke(4, galo);
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.irn]);
                     galo.Status[index].StatusTime = UnityEngine.Random.Range(1,4);
                 },
@@ -234,8 +229,6 @@ public class ConditionDB
                 Inflicted = false,
                 OnStart = (Galo galo) =>
                 {
-
-                    statusAnim?.Invoke(5, galo);
                     int index = galo.Status.IndexOf(ConditionDB.Conditions[ConditionID.off]);
                     galo.Status[index].StatusTime = UnityEngine.Random.Range(1,3);
                 },
@@ -269,7 +262,7 @@ public class ConditionDB
             new Condition()
             {
                 Name = "Preparado",
-                StartMessage = "estÃ¡ preparando um contra-ataque",
+                StartMessage = "está preparando um contra-ataque",
                 Percentage = 100,
                 Inflicted = false,
                 OnStart = (Galo galo) =>

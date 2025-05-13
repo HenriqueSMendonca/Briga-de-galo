@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_fontSize: 15.8
 =======
   m_fontSize: 14.65
->>>>>>> parent of 6cce32d (Merge pull request #18 from HenriqueSMendonca/Feature/BG-18)
+>>>>>>> parent of 5e0ae11 (Musica)
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1758,7 +1758,7 @@ MonoBehaviour:
   m_fontSize: 16.35
 =======
   m_fontSize: 14.75
->>>>>>> parent of 6cce32d (Merge pull request #18 from HenriqueSMendonca/Feature/BG-18)
+>>>>>>> parent of 5e0ae11 (Musica)
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2799,7 +2799,7 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 =======
->>>>>>> parent of 6cce32d (Merge pull request #18 from HenriqueSMendonca/Feature/BG-18)
+>>>>>>> parent of 5e0ae11 (Musica)
 --- !u!1 &2109713187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2888,7 +2888,7 @@ MonoBehaviour:
   m_fontSize: 16.85
 =======
   m_fontSize: 14.8
->>>>>>> parent of 6cce32d (Merge pull request #18 from HenriqueSMendonca/Feature/BG-18)
+>>>>>>> parent of 5e0ae11 (Musica)
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3084,4 +3084,4 @@ SceneRoots:
 <<<<<<< HEAD
   - {fileID: 585122414}
 =======
->>>>>>> parent of 6cce32d (Merge pull request #18 from HenriqueSMendonca/Feature/BG-18)
+>>>>>>> parent of 5e0ae11 (Musica)
