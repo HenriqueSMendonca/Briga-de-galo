@@ -16,6 +16,7 @@ public class Moves : ScriptableObject
     [SerializeField] MoveTarget target;
     [SerializeField] int movePriority;
     [SerializeField] string combo;
+    [SerializeField] AudioClip moveSound;
 
     public string Name { get { return moveName; } }
     public string Description { get { return description; } }
@@ -26,6 +27,7 @@ public class Moves : ScriptableObject
 
     public string Combo { get { return combo; } }
     public int Priority { get { return movePriority; } }
+    public AudioClip MoveSound { get { return moveSound; } }
 
     [System.Serializable]
     public class MoveEffects

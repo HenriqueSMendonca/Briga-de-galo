@@ -35,6 +35,7 @@ public class BattleSystem : MonoBehaviour
     public GameObject commandBox1, commandBox2;
     public BattleHud p1HUD, p2HUD;
     public GameObject endScreen;
+    public AudioSource soundSource;
 
 
     private void OnEnable()
@@ -762,5 +763,11 @@ public class BattleSystem : MonoBehaviour
             }
             
         }
+    }
+    public void PlayAudio(Moves move)
+    {
+        soundSource.clip = move.MoveSound;
+        soundSource.Play();
+       
     }
 }
