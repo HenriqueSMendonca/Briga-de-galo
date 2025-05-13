@@ -35,6 +35,9 @@ public class BattleSystem : MonoBehaviour
     public GameObject commandBox1, commandBox2;
     public BattleHud p1HUD, p2HUD;
     public GameObject endScreen;
+    public AudioSource soundSource;
+    public AudioSource music;
+    public AudioClip[] audioClips;
 
 
     private void OnEnable()
@@ -47,6 +50,11 @@ public class BattleSystem : MonoBehaviour
     }
     void Start()
     {      
+                
+       GameObject deleteThis = GameObject.FindGameObjectWithTag("menu music");
+        Destroy(deleteThis);
+        music.clip = audioClips[UnityEngine.Random.Range(0, audioClips.Length)];
+        music.Play();
         endScreen.SetActive(false);
         cnvs.gameObject.SetActive(false);     
     }
@@ -763,5 +771,4 @@ public class BattleSystem : MonoBehaviour
             
         }
     }
-
 }
