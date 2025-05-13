@@ -96,7 +96,7 @@ public class BattleSystem : MonoBehaviour
         GameObject p2GO = Instantiate(characters[PlayerPrefs.GetInt("selectedChar2")], spawn2.position, new Quaternion(0, 180, 0, 0));
         p2Galo = p2GO.GetComponent<Galo>();
 
-        dialogueText.text = p1Galo.nomeGalo + " e " + p2Galo.nomeGalo + " est�o prontos pra brigar!";
+        dialogueText.text = p1Galo.nomeGalo + " e " + p2Galo.nomeGalo + " estão prontos pra brigar!";
         p1HUD.SetHUD(p1Galo);
         p1Galo.battleHud = p1HUD;
         p2HUD.SetHUD(p2Galo);
@@ -160,7 +160,7 @@ public class BattleSystem : MonoBehaviour
         menu2.SetActive(true);
         desc1.SetActive(true);
         desc2.SetActive(true);
-        dialogueText.text = "Selecione uma a��o!";
+        dialogueText.text = "Selecione uma ação!";
     }
     void CarRace()
     {
@@ -172,7 +172,7 @@ public class BattleSystem : MonoBehaviour
         menu2.SetActive(false);
         desc1.SetActive(false);
         desc2.SetActive(false);
-        dialogueText.text = "Chegue at� o final";
+        dialogueText.text = "Chegue até o final";
         TrocaPlayer();
         pistache = Instantiate(pistas[UnityEngine.Random.Range(0, pistas.Length)]);
 
@@ -241,7 +241,7 @@ public class BattleSystem : MonoBehaviour
         if (galo1.moves[galo1.selectedMove].Name == "Ataque")
         {
 
-            dialogueText.text = $"{galo1.nomeGalo} est� preparando um ataque";
+            dialogueText.text = $"{galo1.nomeGalo} está preparando um ataque";
             yield return new WaitForSeconds(1);
             if (galo1 == p1Galo)
             {
@@ -260,7 +260,7 @@ public class BattleSystem : MonoBehaviour
         if (galo2.moves[galo2.selectedMove].Name == "Ataque")
         {
 
-            dialogueText.text = $"{galo2.nomeGalo} est� preparando um ataque";
+            dialogueText.text = $"{galo2.nomeGalo} está preparando um ataque";
             yield return new WaitForSeconds(1);
             if (galo2 == p1Galo)
             {
@@ -300,7 +300,7 @@ public class BattleSystem : MonoBehaviour
         moveCount++;
         if (!canRunMove)
         {
-            dialogueText.text = $"{galo1.nomeGalo} est� atordoado e n�o conseguiu atacar!";
+            dialogueText.text = $"{galo1.nomeGalo} está atordoado e não conseguiu atacar!";
 
             yield return new WaitForSeconds(1);
             if (moveCount == 2)
@@ -320,7 +320,7 @@ public class BattleSystem : MonoBehaviour
         var move = galo1.moves[galo1.selectedMove];
         switch (move.Name)
         {
-            case ("Cabe�ada"):
+            case ("Cabeçada"):
                 {
                     if (galo1.currentSP >= move.SpCost)
                     {
@@ -343,7 +343,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} n�o possui f�lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -388,7 +388,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} n�o possui f�lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -404,7 +404,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     break;
                 }
-            case ("Serm�o"):
+            case ("Sermão"):
                 {
                     if (galo1.currentSP >= move.SpCost)
                     {
@@ -438,7 +438,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} n�o possui f�lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -495,7 +495,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} n�o possui f�lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -512,7 +512,7 @@ public class BattleSystem : MonoBehaviour
 
                     break;
                 }
-            case ("Manipula��o"):
+            case ("Manipulação"):
                 {
                     if (galo1.currentSP >= move.SpCost)
                     {
@@ -541,7 +541,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} n�o possui f�lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -610,7 +610,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} n�o possui f�lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -692,7 +692,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} j� possui esse efeito de status";
+                        dialogueText.text = $"{galo1.nomeGalo} já possui esse efeito de status";
                         yield return new WaitForSeconds(2);
                     }
                 }
@@ -706,7 +706,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo2.nomeGalo} j� possui esse efeito de status";
+                        dialogueText.text = $"{galo2.nomeGalo} já possui esse efeito de status";
                         yield return new WaitForSeconds(2);
                     }
                 }
