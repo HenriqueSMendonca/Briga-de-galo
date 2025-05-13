@@ -794,6 +794,7 @@ public class BattleSystem : MonoBehaviour
     {
         soundSource.clip = move.MoveSound;
         soundSource.Play();
+    }
        
 
     public void ShowStatus(int i, Galo galo)
