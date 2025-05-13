@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -45,5 +46,11 @@ public class MenuManager : MonoBehaviour
     public void Text()
     {
         Debug.Log("alalala");
+    }
+
+    public void NavigationJump (GameObject gameObject)
+    {
+        pe1.SetSelectedGameObject(gameObject);
+        pe2.SetSelectedGameObject(gameObject);
     }
 }
