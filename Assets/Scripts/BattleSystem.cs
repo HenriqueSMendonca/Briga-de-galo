@@ -23,6 +23,7 @@ public class BattleSystem : MonoBehaviour
     public GameObject[] panels;
     public GameObject[] characters;
     public GameObject[] pistas;
+    public GameObject[] effectAnims;
     public Transform spawn1, spawn2;
     public BattleState state;
     Galo p1Galo, p2Galo;
@@ -40,6 +41,7 @@ public class BattleSystem : MonoBehaviour
     private void OnEnable()
     {
         ActionCommands.commandCheck += MoveCheck;
+        ConditionDB.statusAnim += ShowStatus;
     }
     private void OnDisable()
     {
@@ -88,7 +90,7 @@ public class BattleSystem : MonoBehaviour
         GameObject p2GO = Instantiate(characters[PlayerPrefs.GetInt("selectedChar2")], spawn2.position, new Quaternion(0, 180, 0, 0));
         p2Galo = p2GO.GetComponent<Galo>();
 
-        dialogueText.text = p1Galo.nomeGalo + " e " + p2Galo.nomeGalo + " estï¿½o prontos pra brigar!";
+        dialogueText.text = p1Galo.nomeGalo + " e " + p2Galo.nomeGalo + " estão prontos pra brigar!";
         p1HUD.SetHUD(p1Galo);
         p1Galo.battleHud = p1HUD;
         p2HUD.SetHUD(p2Galo);
@@ -152,7 +154,7 @@ public class BattleSystem : MonoBehaviour
         menu2.SetActive(true);
         desc1.SetActive(true);
         desc2.SetActive(true);
-        dialogueText.text = "Selecione uma aï¿½ï¿½o!";
+        dialogueText.text = "Selecione uma ação!";
     }
     void CarRace()
     {
@@ -164,7 +166,7 @@ public class BattleSystem : MonoBehaviour
         menu2.SetActive(false);
         desc1.SetActive(false);
         desc2.SetActive(false);
-        dialogueText.text = "Chegue atï¿½ o final";
+        dialogueText.text = "Chegue até o final";
         TrocaPlayer();
         pistache = Instantiate(pistas[UnityEngine.Random.Range(0, pistas.Length)]);
 
@@ -233,7 +235,7 @@ public class BattleSystem : MonoBehaviour
         if (galo1.moves[galo1.selectedMove].Name == "Ataque")
         {
 
-            dialogueText.text = $"{galo1.nomeGalo} estï¿½ preparando um ataque";
+            dialogueText.text = $"{galo1.nomeGalo} está preparando um ataque";
             yield return new WaitForSeconds(1);
             if (galo1 == p1Galo)
             {
@@ -252,7 +254,7 @@ public class BattleSystem : MonoBehaviour
         if (galo2.moves[galo2.selectedMove].Name == "Ataque")
         {
 
-            dialogueText.text = $"{galo2.nomeGalo} estï¿½ preparando um ataque";
+            dialogueText.text = $"{galo2.nomeGalo} está preparando um ataque";
             yield return new WaitForSeconds(1);
             if (galo2 == p1Galo)
             {
@@ -277,11 +279,11 @@ public class BattleSystem : MonoBehaviour
         p1Input = false;
         command1.inputEnabled = false;
         commandBox1.SetActive(false);
-        command1.inputString = null;
+        command1.inputString = "";
         p2Input = false;
         command2.inputEnabled = false;
         commandBox2.SetActive(false);
-        command2.inputString = null;
+        command2.inputString = "";
         StartCoroutine(UseMove(galo1, galo2));
     }
     IEnumerator UseMove(Galo galo1, Galo galo2)
@@ -292,7 +294,7 @@ public class BattleSystem : MonoBehaviour
         moveCount++;
         if (!canRunMove)
         {
-            dialogueText.text = $"{galo1.nomeGalo} estï¿½ atordoado e nï¿½o conseguiu atacar!";
+            dialogueText.text = $"{galo1.nomeGalo} está atordoado e não conseguiu atacar!";
 
             yield return new WaitForSeconds(1);
             if (moveCount == 2)
@@ -312,7 +314,7 @@ public class BattleSystem : MonoBehaviour
         var move = galo1.moves[galo1.selectedMove];
         switch (move.Name)
         {
-            case ("Cabeï¿½ada"):
+            case ("Cabeçada"):
                 {
                     if (galo1.currentSP >= move.SpCost)
                     {
@@ -335,7 +337,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} nï¿½o possui fï¿½lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -380,7 +382,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} nï¿½o possui fï¿½lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -396,7 +398,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     break;
                 }
-            case ("Sermï¿½o"):
+            case ("Sermão"):
                 {
                     if (galo1.currentSP >= move.SpCost)
                     {
@@ -430,7 +432,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} nï¿½o possui fï¿½lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -487,7 +489,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} nï¿½o possui fï¿½lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -504,7 +506,7 @@ public class BattleSystem : MonoBehaviour
 
                     break;
                 }
-            case ("Manipulaï¿½ï¿½o"):
+            case ("Manipulação"):
                 {
                     if (galo1.currentSP >= move.SpCost)
                     {
@@ -533,7 +535,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} nï¿½o possui fï¿½lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -602,7 +604,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} nï¿½o possui fï¿½lego o suficiente!";
+                        dialogueText.text = $"{galo1.nomeGalo} não possui fôlego o suficiente!";
                         yield return new WaitForSeconds(2);
                         if (moveCount == 2)
                         {
@@ -684,7 +686,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo1.nomeGalo} jï¿½ possui esse efeito de status";
+                        dialogueText.text = $"{galo1.nomeGalo} já possui esse efeito de status";
                         yield return new WaitForSeconds(2);
                     }
                 }
@@ -698,7 +700,7 @@ public class BattleSystem : MonoBehaviour
                     }
                     else
                     {
-                        dialogueText.text = $"{galo2.nomeGalo} jï¿½ possui esse efeito de status";
+                        dialogueText.text = $"{galo2.nomeGalo} já possui esse efeito de status";
                         yield return new WaitForSeconds(2);
                     }
                 }
@@ -739,7 +741,7 @@ public class BattleSystem : MonoBehaviour
                     p1Input = false;
                     command1.inputEnabled = false;
                     commandBox1.SetActive(false);
-                    command1.inputString = null;
+                    command1.inputString = "";
                 }
             }
 
@@ -756,7 +758,7 @@ public class BattleSystem : MonoBehaviour
                     p2Input = false;
                     command2.inputEnabled = false;
                     commandBox2.SetActive(false);
-                    command2.inputString = null;
+                    command2.inputString = "";
 
                 }
             }
@@ -768,10 +770,5 @@ public class BattleSystem : MonoBehaviour
     {
         GameObject effect = Instantiate(effectAnims[i], galo.transform.position, Quaternion.identity);
         Destroy(effect,1.4f);
-    public void PlayAudio(Moves move)
-    {
-        soundSource.clip = move.MoveSound;
-        soundSource.Play();
-       
     }
 }

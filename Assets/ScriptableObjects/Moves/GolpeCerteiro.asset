@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GolpeCerteiro
   m_EditorClassIdentifier: 
   moveName: Golpe certeiro
-  description: "(ZXCV) Causa 150 de dano e aplica enfraquecido, 30 de f\xF4lego"
+  description: "(ZXCV) Causa 150 de dano e aplica enfraquecido reduzindo o ataque,
+    30 de f\xF4lego"
   damage: 150
   spCost: 30
   effects:
