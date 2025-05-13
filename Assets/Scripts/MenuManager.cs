@@ -13,13 +13,10 @@ public class MenuManager : MonoBehaviour
     private bool roomFull = false;
     public GameObject roadBlock;
     public EventSystem pe1, pe2;
-    public GameObject Buttons;
     // Start is called before the first frame update
     void Start()
     {
-        Buttons.SetActive(false);
         roadBlock.SetActive(true);
-
     }
 
     // Update is called once per frame
@@ -30,9 +27,6 @@ public class MenuManager : MonoBehaviour
             roomFull = true;
             playerManager.DisableJoining();
             roadBlock.SetActive(false);
-            Buttons.SetActive(true);
-            pe1.SetSelectedGameObject(pe1.firstSelectedGameObject);
-            pe2.SetSelectedGameObject(pe2.firstSelectedGameObject);
         }
     }
     public void ChangeScene()
