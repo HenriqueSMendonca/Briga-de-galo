@@ -5,6 +5,7 @@ using TMPro;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -40,6 +41,7 @@ public class BattleSystem : MonoBehaviour
     public AudioSource music;
     public AudioClip[] audioClips;
     public bool focus;
+    public EventSystem pe1, pe2;
 
 
     private void OnEnable()
@@ -703,6 +705,7 @@ public class BattleSystem : MonoBehaviour
         p2HUD.gameObject.SetActive(false);
         endScreen.SetActive(true);      
         dialogueText.text = $"{galo1.nomeGalo} ganhou a briga";
+        NavigationJump(endScreen.gameObject.transform.GetChild(0).gameObject);
 
         return;
     }
@@ -815,5 +818,11 @@ public class BattleSystem : MonoBehaviour
     {
         soundSource.clip = move.MoveSound;
         soundSource.Play();
+    }
+
+    public void NavigationJump(GameObject gameObject)
+    {
+        pe1.SetSelectedGameObject(gameObject);
+        pe2.SetSelectedGameObject(gameObject);
     }
 }
