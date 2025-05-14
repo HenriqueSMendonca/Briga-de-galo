@@ -39,6 +39,7 @@ public class BattleSystem : MonoBehaviour
     public AudioSource soundSource;
     public AudioSource music;
     public AudioClip[] audioClips;
+    public bool focus;
 
 
     private void OnEnable()
@@ -57,13 +58,31 @@ public class BattleSystem : MonoBehaviour
         Destroy(deleteThis);
         music.clip = audioClips[UnityEngine.Random.Range(0, audioClips.Length)];
         music.Play();
+        music.volume = PlayerPrefs.GetFloat("Musica");
+        soundSource.volume = PlayerPrefs.GetFloat("Efeitos");
         endScreen.SetActive(false);
         cnvs.gameObject.SetActive(false);     
     }
 
+    private void OnApplicationFocus()
+    {
+      focus = true;       
+    }
+
+    private void OnApplicationPause()
+    {
+        focus = false;
+    }
+
+
     // Update is called once per frame
     void Update()
     {
+        if (!music.isPlaying && focus)
+        {
+            music.clip = audioClips[UnityEngine.Random.Range(0, audioClips.Length)];
+            music.Play();
+        }
         if (p1Input)
         {
             commandInputs1.text = command1.inputString;

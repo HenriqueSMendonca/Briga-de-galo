@@ -132,7 +132,7 @@ public class ConditionDB
                     
                     if (ConditionDB.Conditions[ConditionID.nau].Inflicted == false){
                         statusAnim?.Invoke(3, galo);
-                    galo.guard -= 0.5f;
+                    galo.guard -= 0.25f;
                     galo.carSpeed -= 3;
                         ConditionDB.Conditions[ConditionID.nau].Inflicted = true;
                     }
@@ -145,7 +145,7 @@ public class ConditionDB
 
                         galo.CureStatus(ConditionID.nau);
                         ConditionDB.Conditions[ConditionID.nau].Inflicted = false;
-                        galo.guard += 0.5f;
+                        galo.guard += 0.25f;
                         galo.carSpeed += 3;
                     } else
                     {
@@ -175,7 +175,7 @@ public class ConditionDB
                     
                     if (ConditionDB.Conditions[ConditionID.wek].Inflicted == false){
                         statusAnim?.Invoke(4, galo);
-                    galo.attack -= 0.5f;
+                    galo.attack -= 0.3f;
                         ConditionDB.Conditions[ConditionID.wek].Inflicted = true;
                     }
                 },
@@ -187,7 +187,7 @@ public class ConditionDB
 
                         galo.CureStatus(ConditionID.wek);
                         ConditionDB.Conditions[ConditionID.wek].Inflicted = false;
-                        galo.attack += 0.5f;
+                        galo.attack += 0.3f;
                     } else
                     {
                         statusAnim?.Invoke(4, galo);
@@ -257,7 +257,8 @@ public class ConditionDB
                     
                     if (ConditionDB.Conditions[ConditionID.off].Inflicted == false){
                         statusAnim?.Invoke(6, galo);
-                    galo.guard -= 1f;
+                        Debug.Log("hi sigma");
+                        galo.guard -= 0.3f;
                         ConditionDB.Conditions[ConditionID.off].Inflicted = true;
                     }
                 },
@@ -269,7 +270,7 @@ public class ConditionDB
                        
                         galo.CureStatus(ConditionID.off);
                         ConditionDB.Conditions[ConditionID.off].Inflicted = false;
-                        galo.guard += 1f;
+                        galo.guard += 0.3f;
                     } else
                     {
                         statusAnim?.Invoke(6, galo);
@@ -312,8 +313,9 @@ public class ConditionDB
                         galo.Status[index].Percentage -= 100;
                         galo.CureStatus(ConditionID.pry);
                         ConditionDB.Conditions[ConditionID.pry].Inflicted = false;
-                        galo.isParry= false;
+                        galo.isParry = false;
                         galo.SetStatus(ConditionID.off);
+                        galo.OnInflicted();
                     } else
                     {
                         galo.Status[index].StatusTime--;
