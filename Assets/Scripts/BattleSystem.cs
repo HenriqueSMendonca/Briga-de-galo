@@ -150,14 +150,7 @@ public class BattleSystem : MonoBehaviour
     }
 
     void PlayerTurn()
-    {
-        if (p1Galo.currentHp <= 0)
-        {
-            EndBattle(p1Galo);
-        } else if (p2Galo.currentHp <= 0)
-        {
-            EndBattle(p2Galo);
-        }
+    {       
 
         p1Galo.OnAfterTurn();
         p2Galo.OnAfterTurn();
@@ -171,6 +164,14 @@ public class BattleSystem : MonoBehaviour
         }
         carro1.acceleration = p1Galo.carSpeed;
         carro2.acceleration = p2Galo.carSpeed;
+        if (p1Galo.currentHp <= 0)
+        {
+            EndBattle(p1Galo);
+        }
+        else if (p2Galo.currentHp <= 0)
+        {
+            EndBattle(p2Galo);
+        }
 
         p1Galo.tookDamage = false;
         p2Galo.tookDamage = false;
