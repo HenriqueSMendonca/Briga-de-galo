@@ -5,6 +5,7 @@ using TMPro;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -23,6 +24,7 @@ public class BattleSystem : MonoBehaviour
     public GameObject[] panels;
     public GameObject[] characters;
     public GameObject[] pistas;
+    public GameObject[] effectAnims;
     public Transform spawn1, spawn2;
     public BattleState state;
     Galo p1Galo, p2Galo;
@@ -36,11 +38,16 @@ public class BattleSystem : MonoBehaviour
     public BattleHud p1HUD, p2HUD;
     public GameObject endScreen;
     public AudioSource soundSource;
+    public AudioSource music;
+    public AudioClip[] audioClips;
+    public bool focus;
+    public EventSystem pe1, pe2;
 
 
     private void OnEnable()
     {
         ActionCommands.commandCheck += MoveCheck;
+        ConditionDB.statusAnim += ShowStatus;
     }
     private void OnDisable()
     {
@@ -48,21 +55,36 @@ public class BattleSystem : MonoBehaviour
     }
     void Start()
     {      
-<<<<<<< HEAD
                 
        GameObject deleteThis = GameObject.FindGameObjectWithTag("menu music");
         Destroy(deleteThis);
         music.clip = audioClips[UnityEngine.Random.Range(0, audioClips.Length)];
         music.Play();
-=======
->>>>>>> parent of 5e0ae11 (Musica)
+        music.volume = PlayerPrefs.GetFloat("Musica");
+        soundSource.volume = PlayerPrefs.GetFloat("Efeitos");
         endScreen.SetActive(false);
         cnvs.gameObject.SetActive(false);     
     }
 
+    private void OnApplicationFocus()
+    {
+      focus = true;       
+    }
+
+    private void OnApplicationPause()
+    {
+        focus = false;
+    }
+
+
     // Update is called once per frame
     void Update()
     {
+        if (!music.isPlaying && focus)
+        {
+            music.clip = audioClips[UnityEngine.Random.Range(0, audioClips.Length)];
+            music.Play();
+        }
         if (p1Input)
         {
             commandInputs1.text = command1.inputString;
@@ -128,14 +150,7 @@ public class BattleSystem : MonoBehaviour
     }
 
     void PlayerTurn()
-    {
-        if (p1Galo.currentHp <= 0)
-        {
-            EndBattle(p1Galo);
-        } else if (p2Galo.currentHp <= 0)
-        {
-            EndBattle(p2Galo);
-        }
+    {       
 
         p1Galo.OnAfterTurn();
         p2Galo.OnAfterTurn();
@@ -149,6 +164,14 @@ public class BattleSystem : MonoBehaviour
         }
         carro1.acceleration = p1Galo.carSpeed;
         carro2.acceleration = p2Galo.carSpeed;
+        if (p1Galo.currentHp <= 0)
+        {
+            EndBattle(p1Galo);
+        }
+        else if (p2Galo.currentHp <= 0)
+        {
+            EndBattle(p2Galo);
+        }
 
         p1Galo.tookDamage = false;
         p2Galo.tookDamage = false;
@@ -286,11 +309,11 @@ public class BattleSystem : MonoBehaviour
         p1Input = false;
         command1.inputEnabled = false;
         commandBox1.SetActive(false);
-        command1.inputString = null;
+        command1.inputString = "";
         p2Input = false;
         command2.inputEnabled = false;
         commandBox2.SetActive(false);
-        command2.inputString = null;
+        command2.inputString = "";
         StartCoroutine(UseMove(galo1, galo2));
     }
     IEnumerator UseMove(Galo galo1, Galo galo2)
@@ -330,12 +353,14 @@ public class BattleSystem : MonoBehaviour
                         galo1.RemoveSP(move.SpCost);
                         if (galo2.isParry)
                         {
+                            PlayAudio(move);
                             StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                             galo2.CureStatus(ConditionID.pry);
                             galo2.isParry = false;
                         }
                         else
                         {
+                            PlayAudio(move);
                             StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                             StartCoroutine(Recoil(galo1, move.Damage / 2));
                             yield return RunMoveEffects(move, galo1, galo2);
@@ -370,6 +395,7 @@ public class BattleSystem : MonoBehaviour
                         galo1.RemoveSP(move.SpCost);
                         if (galo2.isParry)
                         {
+                            PlayAudio(move);
                             StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                             galo2.CureStatus(ConditionID.pry);
                             galo2.isParry = false;
@@ -378,10 +404,12 @@ public class BattleSystem : MonoBehaviour
                         {
                             if (galo2.Status.Contains(ConditionDB.Conditions[ConditionID.stn]))
                             {
+                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage * 3));
                             }
                             else
                             {
+                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                             }
                             yield return RunMoveEffects(move, galo1, galo2);
@@ -482,12 +510,14 @@ public class BattleSystem : MonoBehaviour
                         {
                             if (galo2.isParry)
                             {
+                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                                 galo2.CureStatus(ConditionID.pry);
                                 galo2.isParry = false;
                             }
                             else
                             {
+                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                                 yield return RunMoveEffects(move, galo1, galo2);
                             }
@@ -523,6 +553,7 @@ public class BattleSystem : MonoBehaviour
                         galo1.RemoveSP(move.SpCost);
                         if (galo2.isParry)
                         {
+                            PlayAudio(move);
                             StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                             galo2.CureStatus(ConditionID.pry);
                             galo2.isParry = false;
@@ -531,10 +562,12 @@ public class BattleSystem : MonoBehaviour
                         {
                             if (galo1.Status != null)
                             {
+                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage * 2));
                             }
                             else
                             {
+                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                             }
                             yield return RunMoveEffects(move, galo1, galo2);
@@ -577,6 +610,7 @@ public class BattleSystem : MonoBehaviour
 
                         if (move.Damage <= 0)
                         {
+                            PlayAudio(move);
                             galo1.Heal(move.Damage);
                             yield return RunMoveEffects(move, galo1, galo2);
                             if (moveCount == 2)
@@ -597,6 +631,7 @@ public class BattleSystem : MonoBehaviour
                         {
                             if (galo2.isParry)
                             {
+                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                                 galo2.CureStatus(ConditionID.pry);
                                 galo2.isParry = false;
@@ -604,6 +639,7 @@ public class BattleSystem : MonoBehaviour
                             }
                             else
                             {
+                                PlayAudio(move);
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                                 yield return RunMoveEffects(move, galo1, galo2);
                             }
@@ -670,6 +706,7 @@ public class BattleSystem : MonoBehaviour
         p2HUD.gameObject.SetActive(false);
         endScreen.SetActive(true);      
         dialogueText.text = $"{galo1.nomeGalo} ganhou a briga";
+        NavigationJump(endScreen.gameObject.transform.GetChild(0).gameObject);
 
         return;
     }
@@ -748,7 +785,7 @@ public class BattleSystem : MonoBehaviour
                     p1Input = false;
                     command1.inputEnabled = false;
                     commandBox1.SetActive(false);
-                    command1.inputString = null;
+                    command1.inputString = "";
                 }
             }
 
@@ -765,11 +802,28 @@ public class BattleSystem : MonoBehaviour
                     p2Input = false;
                     command2.inputEnabled = false;
                     commandBox2.SetActive(false);
-                    command2.inputString = null;
+                    command2.inputString = "";
 
                 }
             }
             
         }
+    }
+
+    public void ShowStatus(int i, Galo galo)
+    {
+        GameObject effect = Instantiate(effectAnims[i], galo.transform.position, Quaternion.identity);
+        Destroy(effect,1.4f);
+    }
+    public void PlayAudio(Moves move)
+    {
+        soundSource.clip = move.MoveSound;
+        soundSource.Play();
+    }
+
+    public void NavigationJump(GameObject gameObject)
+    {
+        pe1.SetSelectedGameObject(gameObject);
+        pe2.SetSelectedGameObject(gameObject);
     }
 }
