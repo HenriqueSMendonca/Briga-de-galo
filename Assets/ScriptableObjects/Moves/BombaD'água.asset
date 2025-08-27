@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: "BombaD'\xE1gua"
   m_EditorClassIdentifier: 
-  moveName: "Bomba d'\xE1gua"
-  description: "(CXVV) Causa 150 de dano, custa 30 de f\xF4lego "
+  moveName: "<color=red>Bomba d'\xE1gua"
+  description: "(<color=yellow>CXVV</color>) Causa <color=red>150</color> de dano,
+    custa <color=blue>30</color> de f\xF4lego "
   damage: 150
   spCost: 30
   effects:
