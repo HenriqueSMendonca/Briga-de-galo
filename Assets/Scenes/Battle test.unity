@@ -4283,7 +4283,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "Um ataque b\xE1sico, causa <color=red>50</color> de dano ou permite usar
+    um de seus <color=orange>truques</color> ao digitar a sequ\xEAncia respectiva"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 343fc8aa68e27174fac604a87d6d6a4e, type: 2}
   m_sharedMaterial: {fileID: -421757089836892253, guid: 343fc8aa68e27174fac604a87d6d6a4e, type: 2}
@@ -4292,7 +4293,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -4310,7 +4311,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
+  m_fontSize: 10.25
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6345,7 +6346,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "Um ataque b\xE1sico, causa <color=red>50</color> de dano ou permite usar
+    um de seus <color=orange>truques</color> ao digitar a sequ\xEAncia respectiva"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 343fc8aa68e27174fac604a87d6d6a4e, type: 2}
   m_sharedMaterial: {fileID: -421757089836892253, guid: 343fc8aa68e27174fac604a87d6d6a4e, type: 2}
@@ -6372,7 +6374,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
+  m_fontSize: 10.25
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
