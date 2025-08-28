@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: EscamasEnvenenadas
   m_EditorClassIdentifier: 
-  moveName: Escamas Envenenadas
-  description: "(VVXX) Envenena o oponente tirando um pouco de vida a cada turno,
-    25 de f\xF4lego"
+  moveName: <color=purple>Escamas Envenenadas
+  description: "(<color=yellow>VVXX</color>) <color=purple>Envenena</color> o oponente
+    tirando um pouco de vida a cada turno, <color=blue>25</color> de f\xF4lego"
   damage: 0
   spCost: 25
   effects:

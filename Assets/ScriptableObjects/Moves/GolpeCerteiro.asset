@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: GolpeCerteiro
   m_EditorClassIdentifier: 
-  moveName: Golpe certeiro
-  description: "(ZXCV) Causa 150 de dano e aplica enfraquecido reduzindo o ataque,
-    30 de f\xF4lego"
+  moveName: <color=red>Golpe certeiro
+  description: "(<color=yellow>ZXCV</color>) Causa <color=red>150</color> de dano
+    e aplica <color=purple>enfraquecido</color> reduzindo o ataque, <color=blue>30</color>
+    de f\xF4lego"
   damage: 150
   spCost: 30
   effects:

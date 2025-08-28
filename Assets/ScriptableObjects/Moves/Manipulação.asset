@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: "Manipula\xE7\xE3o"
   m_EditorClassIdentifier: 
-  moveName: "Manipula\xE7\xE3o"
-  description: "(XXX) Causa 200 de dano se o usu\xE1rio possuir um efeito de status
-    do contr\xE1rio causa 100 de dano,  25 de f\xF4lego"
+  moveName: "<color=red>Manipula\xE7\xE3o"
+  description: "(<color=yellow>XXX</color>) Causa <color=red>200</color> de dano
+    se o usu\xE1rio possuir um efeito de status do contr\xE1rio causa <color=red>100</color>
+    de dano,  <color=blue>25</color> de f\xF4lego"
   damage: 100
   spCost: 25
   effects:

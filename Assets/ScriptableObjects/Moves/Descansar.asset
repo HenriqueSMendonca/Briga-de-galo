@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: Descansar
   m_EditorClassIdentifier: 
-  moveName: Descansar
-  description: "(ZZZZ) Recupera todo o f\xF4lego do usu\xE1rio"
+  moveName: <color=blue>Descansar
+  description: "(<color=yellow>ZZZZ</color>) Recupera <color=blue>todo</color> o
+    f\xF4lego do usu\xE1rio"
   damage: 0
   spCost: -80
   effects:

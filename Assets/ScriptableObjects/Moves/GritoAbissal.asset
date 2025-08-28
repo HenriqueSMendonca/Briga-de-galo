@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: GritoAbissal
   m_EditorClassIdentifier: 
-  moveName: Grito abissal
-  description: "(ZVVV) Aplica enfraquecido no oponente reduzindo o ataque, custa
-    20 de f\xF4lego"
+  moveName: <color=purple>Grito abissal
+  description: "(<color=yellow>ZVVV</color>) Aplica <color=purple>enfraquecido</color>
+    no oponente reduzindo o ataque, custa <color=blue>20</color> de f\xF4lego"
   damage: 0
   spCost: 20
   effects:

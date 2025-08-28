@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: GolpeBaixo
   m_EditorClassIdentifier: 
-  moveName: Golpe baixo
-  description: "(VVV) 100 de dano com 50% de chance de atordoar o oponente, chance
-    reduzida em usos consecutivos, 20 de f\xF4lego"
+  moveName: <color=red>Golpe baixo
+  description: "(<color=yellow>VVV</color>) <color=red>100</color> de dano com 50%
+    de chance de <color=purple>atordoar</color> o oponente, chance reduzida em usos
+    consecutivos, <color=blue>20</color> de f\xF4lego"
   damage: 100
   spCost: 20
   effects:

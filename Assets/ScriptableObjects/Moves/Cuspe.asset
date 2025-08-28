@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: Cuspe
   m_EditorClassIdentifier: 
-  moveName: Cuspe
-  description: "(CVZ) Aplica nausea no oponente reduzindo a velocidade e defesa,
-    10 de f\xF4lego"
+  moveName: <color=purple>Cuspe
+  description: "(<color=yellow>CVZ</color>) Aplica <color=purple>nausea</color> no
+    oponente reduzindo a velocidade e defesa, <color=blue>10</color> de f\xF4lego"
   damage: 0
   spCost: 10
   effects:
