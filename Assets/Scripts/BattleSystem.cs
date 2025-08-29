@@ -54,10 +54,12 @@ public class BattleSystem : MonoBehaviour
         ActionCommands.commandCheck -= MoveCheck;
     }
     void Start()
-    {      
-                
-       GameObject deleteThis = GameObject.FindGameObjectWithTag("menu music");
-        Destroy(deleteThis);
+    {
+        if (GameObject.FindGameObjectWithTag("menu music"))
+        {
+            GameObject deleteThis = GameObject.FindGameObjectWithTag("menu music");
+            Destroy(deleteThis);
+        }
         music.clip = audioClips[UnityEngine.Random.Range(0, audioClips.Length)];
         music.Play();
         music.volume = PlayerPrefs.GetFloat("Musica");
