@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: PoseDaMuralha
   m_EditorClassIdentifier: 
-  moveName: Pose da muralha
-  description: "(ZVXV) Aplica fortalecido em si mesmo aumentando a defesa, 40 de
-    f\xF4lego"
+  moveName: <color=#00FFFF>Pose da muralha
+  description: "(<color=yellow>ZVXV</color>) Aplica <color=#00FFFF>fortalecido</color>
+    em si mesmo aumentando a defesa, <color=blue>40</color> de f\xF4lego"
   damage: 0
   spCost: 40
   effects:

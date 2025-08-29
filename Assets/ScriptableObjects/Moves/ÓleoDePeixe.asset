@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: "\xD3leoDePeixe"
   m_EditorClassIdentifier: 
-  moveName: "\xD3leo de peixe"
-  description: "(VXVC) Aplica nausea no oponente reduzindo a velocidade e defesa,
-    custa 10 de f\xF4lego"
+  moveName: "<color=purple>\xD3leo de peixe"
+  description: "(<color=yellow>VXVC</color>) Aplica <color=purple>nausea</color>
+    no oponente reduzindo a velocidade e defesa, custa <color=blue>10</color> de
+    f\xF4lego"
   damage: 0
   spCost: 10
   effects:

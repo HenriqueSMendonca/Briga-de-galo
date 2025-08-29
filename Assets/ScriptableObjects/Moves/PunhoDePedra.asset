@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: PunhoDePedra
   m_EditorClassIdentifier: 
-  moveName: Punho de pedra
-  description: "(ZZXXCVCV) Causa 500 de dano se n\xE3o for interrompido, 50 de f\xF4lego "
+  moveName: <color=#8B0000>Punho de pedra
+  description: "(<color=yellow>ZZXXCVCV</color>) Causa <color=red>500</color> de
+    dano se n\xE3o for interrompido, <color=blue>50</color> de f\xF4lego "
   damage: 500
   spCost: 50
   effects:
