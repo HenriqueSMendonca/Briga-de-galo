@@ -779,8 +779,14 @@ public class BattleSystem : MonoBehaviour
         
         if (command1.inputEnabled == true)
         {
+            if (command1.input)
+            {
+                p2Galo.TakeDamage(Mathf.FloorToInt((5 * UnityEngine.Random.Range(0.9f, 1.1f) * (p1Galo.attack / p2Galo.guard))));
+                command1.input = false;
+            }
             for (int i = 0; i < p1Galo.moves.Count; i++)
             {
+                
                 if (command1.inputString == p1Galo.moves[i].Combo)
                 {
                     p1Galo.selectedMove = i;
@@ -795,9 +801,14 @@ public class BattleSystem : MonoBehaviour
         }
           if (command2.inputEnabled == true)
         {
-
+            if (command2.input)
+            {
+                p1Galo.TakeDamage(Mathf.FloorToInt((5 * UnityEngine.Random.Range(0.9f, 1.1f) * (p2Galo.attack / p1Galo.guard))));
+                command2.input = false;
+            }
             for (int i = 0; i < p2Galo.moves.Count; i++)
             {
+                
                 if (command2.inputString == p2Galo.moves[i].Combo)
                 {
                     p2Galo.selectedMove = i;

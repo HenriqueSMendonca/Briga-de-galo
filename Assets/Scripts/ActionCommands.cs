@@ -9,6 +9,7 @@ public class ActionCommands : MonoBehaviour
     public delegate void CommandCheck();
     public static CommandCheck commandCheck;
     public bool inputEnabled = false;
+    public bool input;
     public string inputString;
     private void Start()
     {
@@ -27,6 +28,7 @@ public class ActionCommands : MonoBehaviour
         if (context.started && inputEnabled && inputString.Length < 9)
         {
             inputString += context.action.name;
+            input = true;
             commandCheck?.Invoke();
         }
     }

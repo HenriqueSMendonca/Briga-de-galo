@@ -23,6 +23,7 @@ public class Galo : MonoBehaviour
     public List<Condition> Status = new List<Condition>();
     public bool TakeDamage(int dmg)
     {
+        StopAllCoroutines();
         StartCoroutine(battleHud.SetHP(this ,dmg));
         currentHp -= dmg;
         if ( currentHp <= 0)

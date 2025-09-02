@@ -10,6 +10,7 @@ public class BattleHud : MonoBehaviour
     public TextMeshProUGUI hpText, spText;
     public TextMeshProUGUI[] abilityText;
     public ButtonDescription[] descriptions;
+    public TextMeshProUGUI[] abilityHelp;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -20,6 +21,7 @@ public class BattleHud : MonoBehaviour
         for (int i = 0; i < abilityText.Length; i++)
         {
             abilityText[i].text = galo.moves[i + 2].Name;
+            abilityHelp[i].text = galo.moves[i + 2].Name + galo.moves[i+2].Combo;
         }
         for (int i = 0; i < descriptions.Length; i++)
         {          
@@ -29,6 +31,7 @@ public class BattleHud : MonoBehaviour
     }
     public IEnumerator SetHP(Galo galo, int dmg)
     {
+        
         int fakeHP = galo.currentHp;
         for (int i = 0; i < dmg && fakeHP > 0; i++)
         {

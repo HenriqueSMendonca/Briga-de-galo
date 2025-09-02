@@ -15,7 +15,7 @@ MonoBehaviour:
   moveName: Ataque
   description: "Um ataque b\xE1sico, causa <color=red>50</color> de dano ou permite
     usar um de seus <color=orange>truques</color> ao digitar a sequ\xEAncia respectiva"
-  damage: 50
+  damage: 10
   spCost: 0
   effects:
     status: 0
