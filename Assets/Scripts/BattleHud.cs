@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.InputSystem;
 
 public class BattleHud : MonoBehaviour
 {
@@ -11,9 +12,23 @@ public class BattleHud : MonoBehaviour
     public TextMeshProUGUI[] abilityText;
     public ButtonDescription[] descriptions;
     public TextMeshProUGUI[] abilityHelp;
+    public Image[] abilityIcons; 
+    private PlayerInput player;
     // Start is called before the first frame update
 
     // Update is called once per frame
+
+    private void Start()
+    {
+        if (this.gameObject.name == "P1UI")
+        {
+            player = GameObject.Find("P1").GetComponent<PlayerInput>();
+        } else if (this.gameObject.name == "P2UI")
+        {
+            player = GameObject.Find("P2").GetComponent<PlayerInput>();
+        }
+        Debug.Log(player.devices[0].name);
+    }
     public void SetHUD(Galo galo)
     {
         hpText.text = galo.currentHp.ToString() + "/" + galo.maxHP.ToString();
@@ -21,7 +36,14 @@ public class BattleHud : MonoBehaviour
         for (int i = 0; i < abilityText.Length; i++)
         {
             abilityText[i].text = galo.moves[i + 2].Name;
-            abilityHelp[i].text = galo.moves[i + 2].Name + galo.moves[i+2].Combo;
+            if (player.devices[0].name == "Keyboard")
+            {
+                abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
+            } else if (player.devices[0].name == "DualShock4GamepadHID")
+            {
+                abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
+                abilityIcons[i].gameObject.SetActive(true);
+            }
         }
         for (int i = 0; i < descriptions.Length; i++)
         {          

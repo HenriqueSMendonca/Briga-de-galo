@@ -55,6 +55,7 @@ public class BattleSystem : MonoBehaviour
     }
     void Start()
     {
+        
         if (GameObject.FindGameObjectWithTag("menu music"))
         {
             GameObject deleteThis = GameObject.FindGameObjectWithTag("menu music");
