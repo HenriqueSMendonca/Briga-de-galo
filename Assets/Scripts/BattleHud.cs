@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityEngine.InputSystem;
+using Unity.VisualScripting;
+using UnityEngine.InputSystem.XInput;
 
 public class BattleHud : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class BattleHud : MonoBehaviour
     public TextMeshProUGUI[] abilityHelp;
     public Image[] abilityIcons; 
     private PlayerInput player;
+    private string controlDevice;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -27,6 +30,7 @@ public class BattleHud : MonoBehaviour
         {
             player = GameObject.Find("P2").GetComponent<PlayerInput>();
         }
+        controlDevice = player.devices[0].name;
         Debug.Log(player.devices[0].name);
     }
     public void SetHUD(Galo galo)
@@ -36,19 +40,26 @@ public class BattleHud : MonoBehaviour
         for (int i = 0; i < abilityText.Length; i++)
         {
             abilityText[i].text = galo.moves[i + 2].Name;
-            if (player.devices[0].name == "Keyboard")
+            if (controlDevice == "Keyboard")
             {
                 abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
-            } else if (player.devices[0].name == "DualShock4GamepadHID")
+                
+            }
+            else if (controlDevice == "DualShock4GamepadHID")
             {
                 abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
-                abilityIcons[i].gameObject.SetActive(true);
+                //abilityIcons[i].gameObject.SetActive(true);
+            }
+            else if (controlDevice == "XInputControllerWindows")
+            {
+                abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
+
             }
         }
         for (int i = 0; i < descriptions.Length; i++)
         {          
             descriptions[i].galo = galo;
-            descriptions[i].cost = descriptions[i].galo.moves[i].SpCost;
+            //descriptions[i].cost = descriptions[i].galo.moves[i].SpCost;
         }
     }
     public IEnumerator SetHP(Galo galo, int dmg)
