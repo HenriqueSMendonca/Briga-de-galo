@@ -24,3 +24,11 @@ MonoBehaviour:
   movePriority: 0
   combo: CZZ
   moveSound: {fileID: 8300000, guid: 5b1bab05cc844954da34342b8858259c, type: 3}
+  moveHelpKap:
+  - {fileID: 8723354275304100278, guid: 5e311187b6b463d459aef67635b5464f, type: 3}
+  - {fileID: 1961624248081851974, guid: 29a5a8f2b8a650e4389325f52523761c, type: 3}
+  - {fileID: 1961624248081851974, guid: 29a5a8f2b8a650e4389325f52523761c, type: 3}
+  moveHelpPs4:
+  - {fileID: 5352315193259771901, guid: 82e83a91060c1414e9ac3e621428352c, type: 3}
+  - {fileID: 1432406385837744417, guid: 311fb8111a3e4874fbd029596c4e463c, type: 3}
+  - {fileID: 1432406385837744417, guid: 311fb8111a3e4874fbd029596c4e463c, type: 3}

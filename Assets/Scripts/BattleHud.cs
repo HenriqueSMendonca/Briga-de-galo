@@ -43,7 +43,10 @@ public class BattleHud : MonoBehaviour
             if (controlDevice == "Keyboard")
             {
                 abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
-                
+                for (int j = 0; j < galo.moves[i + 2].ComboKap.Count; j++)
+                {
+                    Instantiate(galo.moves[i + 2].ComboKap[j], abilityHelp[i].gameObject.transform);
+                }
             }
             else if (controlDevice == "DualShock4GamepadHID")
             {
