@@ -49,7 +49,7 @@ public class BattleHud : MonoBehaviour
             }
             else if (player.devices[0].name == "DualShock4GamepadHID")
             {
-                abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
+                abilityHelp[i].text = galo.moves[i + 2].Name;
                 // abilityIcons[i].gameObject.SetActive(true);
                 for (int j = 0; j < galo.moves[i + 2].ComboKap.Count; j++)
                 {
@@ -60,7 +60,7 @@ public class BattleHud : MonoBehaviour
             }
             else if (player.devices[0].name == "XInputControllerWindows")
             {
-                abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
+                abilityHelp[i].text = galo.moves[i + 2].Name;
                 //abilityIcons[i].gameObject.SetActive(true);
                 for (int j = 0; j < galo.moves[i + 2].ComboKap.Count; j++)
                 {
