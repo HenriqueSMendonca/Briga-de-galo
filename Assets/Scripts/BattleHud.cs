@@ -16,47 +16,56 @@ public class BattleHud : MonoBehaviour
     public TextMeshProUGUI[] abilityHelp;
     public Image[] abilityIcons; 
     private PlayerInput player;
-    private string controlDevice;
     // Start is called before the first frame update
 
     // Update is called once per frame
 
-    private void Start()
-    {
-        if (this.gameObject.name == "P1UI")
-        {
-            player = GameObject.Find("P1").GetComponent<PlayerInput>();
-        } else if (this.gameObject.name == "P2UI")
-        {
-            player = GameObject.Find("P2").GetComponent<PlayerInput>();
-        }
-        controlDevice = player.devices[0].name;
-        Debug.Log(player.devices[0].name);
-    }
     public void SetHUD(Galo galo)
     {
+            if (this.gameObject.name == "P1UI")
+            {
+                player = GameObject.Find("P1").GetComponent<PlayerInput>();
+            }
+            else if (this.gameObject.name == "P2UI")
+            {
+            if (GameObject.Find("P2") != null)
+            {
+                player = GameObject.Find("P2").GetComponent<PlayerInput>();
+            } else
+            {
+                player = GameObject.Find("PlayerInput").GetComponent<PlayerInput>();
+            }
+            }
+
         hpText.text = galo.currentHp.ToString() + "/" + galo.maxHP.ToString();
         spText.text = galo.currentSP.ToString() + "/" + galo.maxSP.ToString();
         for (int i = 0; i < abilityText.Length; i++)
         {
             abilityText[i].text = galo.moves[i + 2].Name;
-            if (controlDevice == "Keyboard")
+            if (player.devices[0].name == "Keyboard")
             {
                 abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
+                
+            }
+            else if (player.devices[0].name == "DualShock4GamepadHID")
+            {
+                abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
+                // abilityIcons[i].gameObject.SetActive(true);
+                for (int j = 0; j < galo.moves[i + 2].ComboKap.Count; j++)
+                {
+                    Instantiate(galo.moves[i + 2].ComboPs4[j], abilityHelp[i].gameObject.transform);
+                    
+
+                }
+            }
+            else if (player.devices[0].name == "XInputControllerWindows")
+            {
+                abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
+                //abilityIcons[i].gameObject.SetActive(true);
                 for (int j = 0; j < galo.moves[i + 2].ComboKap.Count; j++)
                 {
                     Instantiate(galo.moves[i + 2].ComboKap[j], abilityHelp[i].gameObject.transform);
                 }
-            }
-            else if (controlDevice == "DualShock4GamepadHID")
-            {
-                abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
-                //abilityIcons[i].gameObject.SetActive(true);
-            }
-            else if (controlDevice == "XInputControllerWindows")
-            {
-                abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
-
             }
         }
         for (int i = 0; i < descriptions.Length; i++)
