@@ -24,3 +24,11 @@ MonoBehaviour:
   movePriority: 0
   combo: XXX
   moveSound: {fileID: 8300000, guid: bd3cfc5971bab0341a910ededc65cf7a, type: 3}
+  moveHelpKap:
+  - {fileID: 4535724339392039086, guid: c01e0e0900abe3d4498f6ff7ec6eb6e4, type: 3}
+  - {fileID: 4535724339392039086, guid: c01e0e0900abe3d4498f6ff7ec6eb6e4, type: 3}
+  - {fileID: 4535724339392039086, guid: c01e0e0900abe3d4498f6ff7ec6eb6e4, type: 3}
+  moveHelpPs4:
+  - {fileID: 5738830479115040892, guid: 2078682e938eda54aad80c1c774560a9, type: 3}
+  - {fileID: 5738830479115040892, guid: 2078682e938eda54aad80c1c774560a9, type: 3}
+  - {fileID: 5738830479115040892, guid: 2078682e938eda54aad80c1c774560a9, type: 3}

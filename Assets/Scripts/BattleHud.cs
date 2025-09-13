@@ -14,7 +14,7 @@ public class BattleHud : MonoBehaviour
     public TextMeshProUGUI[] abilityText;
     public ButtonDescription[] descriptions;
     public TextMeshProUGUI[] abilityHelp;
-    public Image[] abilityIcons; 
+    public GameObject[] abilityIcons; 
     private PlayerInput player;
     // Start is called before the first frame update
 
@@ -44,16 +44,17 @@ public class BattleHud : MonoBehaviour
             abilityText[i].text = galo.moves[i + 2].Name;
             if (player.devices[0].name == "Keyboard")
             {
-                abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
-                
+                abilityHelp[i].text = galo.moves[i + 2].Name;
+                abilityIcons[i].GetComponent<TextMeshProUGUI>().text = "<color=yellow>" + galo.moves[i + 2].Combo + "</color>";
+
+
             }
             else if (player.devices[0].name == "DualShock4GamepadHID")
             {
                 abilityHelp[i].text = galo.moves[i + 2].Name;
-                // abilityIcons[i].gameObject.SetActive(true);
                 for (int j = 0; j < galo.moves[i + 2].ComboKap.Count; j++)
                 {
-                    Instantiate(galo.moves[i + 2].ComboPs4[j], abilityHelp[i].gameObject.transform);
+                    Instantiate(galo.moves[i + 2].ComboPs4[j], abilityIcons[i].gameObject.transform);
                     
 
                 }
@@ -61,10 +62,9 @@ public class BattleHud : MonoBehaviour
             else if (player.devices[0].name == "XInputControllerWindows")
             {
                 abilityHelp[i].text = galo.moves[i + 2].Name;
-                //abilityIcons[i].gameObject.SetActive(true);
                 for (int j = 0; j < galo.moves[i + 2].ComboKap.Count; j++)
                 {
-                    Instantiate(galo.moves[i + 2].ComboKap[j], abilityHelp[i].gameObject.transform);
+                    Instantiate(galo.moves[i + 2].ComboKap[j], abilityIcons[i].gameObject.transform);
                 }
             }
         }
