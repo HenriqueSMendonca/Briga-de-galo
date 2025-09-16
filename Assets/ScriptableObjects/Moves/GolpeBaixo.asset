@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: GolpeBaixo
   m_EditorClassIdentifier: 
-  moveName: Golpe baixo
-  description: "(VVV) 100 de dano com 50% de chance de atordoar o oponente, chance
-    reduzida em usos consecutivos, 20 de f\xF4lego"
+  moveName: <color=red>Golpe baixo
+  description: "(<color=yellow>VVV</color>) <color=red>100</color> de dano com 50%
+    de chance de <color=purple>atordoar</color> o oponente, chance reduzida em usos
+    consecutivos, <color=blue>20</color> de f\xF4lego"
   damage: 100
   spCost: 20
   effects:
@@ -23,3 +24,11 @@ MonoBehaviour:
   movePriority: 1
   combo: VVV
   moveSound: {fileID: 8300000, guid: f1a120a6cf228ed43a35ba60d37a83b2, type: 3}
+  moveHelpKap:
+  - {fileID: 2477828809030400630, guid: c24d129c8eb646d4eb9e0ed7a3a29584, type: 3}
+  - {fileID: 2477828809030400630, guid: c24d129c8eb646d4eb9e0ed7a3a29584, type: 3}
+  - {fileID: 2477828809030400630, guid: c24d129c8eb646d4eb9e0ed7a3a29584, type: 3}
+  moveHelpPs4:
+  - {fileID: 4870087183235181336, guid: 358d96e107146c044a51aed7daae10da, type: 3}
+  - {fileID: 4870087183235181336, guid: 358d96e107146c044a51aed7daae10da, type: 3}
+  - {fileID: 4870087183235181336, guid: 358d96e107146c044a51aed7daae10da, type: 3}

@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: "Cabe\xE7ada"
   m_EditorClassIdentifier: 
-  moveName: "Cabe\xE7ada"
-  description: "(CZZ) Causa 200 de dano ao alvo e 100 ao usu\xE1rio, 30 de f\xF4lego"
+  moveName: "<color=#8B0000>Cabe\xE7ada"
+  description: "(<color=yellow>CZZ</color>) Causa <color=red>200</color> de dano
+    ao alvo e <color=#8B0000>100</color> ao usu\xE1rio,<color=blue>30</color> de
+    f\xF4lego"
   damage: 200
   spCost: 30
   effects:
@@ -22,3 +24,11 @@ MonoBehaviour:
   movePriority: 0
   combo: CZZ
   moveSound: {fileID: 8300000, guid: 5b1bab05cc844954da34342b8858259c, type: 3}
+  moveHelpKap:
+  - {fileID: 8723354275304100278, guid: 5e311187b6b463d459aef67635b5464f, type: 3}
+  - {fileID: 1961624248081851974, guid: 29a5a8f2b8a650e4389325f52523761c, type: 3}
+  - {fileID: 1961624248081851974, guid: 29a5a8f2b8a650e4389325f52523761c, type: 3}
+  moveHelpPs4:
+  - {fileID: 5352315193259771901, guid: 82e83a91060c1414e9ac3e621428352c, type: 3}
+  - {fileID: 1432406385837744417, guid: 311fb8111a3e4874fbd029596c4e463c, type: 3}
+  - {fileID: 1432406385837744417, guid: 311fb8111a3e4874fbd029596c4e463c, type: 3}

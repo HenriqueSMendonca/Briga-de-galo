@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Attack
   m_EditorClassIdentifier: 
   moveName: Ataque
-  description: "Um ataque b\xE1sico, causa 50 de dano ou permite usar um de seus
-    truques ao digitar a sequ\xEAncia respectiva"
-  damage: 50
+  description: "Um ataque b\xE1sico, causa <color=red>50</color> de dano ou permite
+    usar um de seus <color=orange>truques</color> ao digitar a sequ\xEAncia respectiva"
+  damage: 10
   spCost: 0
   effects:
     status: 0

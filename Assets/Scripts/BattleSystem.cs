@@ -33,6 +33,7 @@ public class BattleSystem : MonoBehaviour
     public bool whoWonRace, p1Input, p2Input;
     private int moveCount;
     private GameObject pistache;
+    public GameObject raceHelp;
     public GameObject menu1, menu2, desc1, desc2;
     public GameObject commandBox1, commandBox2;
     public BattleHud p1HUD, p2HUD;
@@ -54,14 +55,18 @@ public class BattleSystem : MonoBehaviour
         ActionCommands.commandCheck -= MoveCheck;
     }
     void Start()
-    {      
-                
-       GameObject deleteThis = GameObject.FindGameObjectWithTag("menu music");
-        Destroy(deleteThis);
+    {
+        
+        if (GameObject.FindGameObjectWithTag("menu music"))
+        {
+            GameObject deleteThis = GameObject.FindGameObjectWithTag("menu music");
+            Destroy(deleteThis);
+        }
         music.clip = audioClips[UnityEngine.Random.Range(0, audioClips.Length)];
         music.Play();
         music.volume = PlayerPrefs.GetFloat("Musica");
         soundSource.volume = PlayerPrefs.GetFloat("Efeitos");
+        raceHelp.SetActive(false);
         endScreen.SetActive(false);
         cnvs.gameObject.SetActive(false);     
     }
@@ -188,6 +193,7 @@ public class BattleSystem : MonoBehaviour
     }
     void CarRace()
     {
+        raceHelp.SetActive(true);
         p1Decided = false;
         p2Decided = false;
         p1HUD.gameObject.SetActive(false);
@@ -206,6 +212,7 @@ public class BattleSystem : MonoBehaviour
         p1HUD.gameObject.SetActive(true);
         p2HUD.gameObject.SetActive(true);
         TrocaPlayer();
+        raceHelp.SetActive(false);
         Destroy(pistache);
         if (whoWonRace == false)
         {
@@ -777,8 +784,14 @@ public class BattleSystem : MonoBehaviour
         
         if (command1.inputEnabled == true)
         {
+            if (command1.input)
+            {
+                p2Galo.TakeDamage(Mathf.FloorToInt((5 * UnityEngine.Random.Range(0.9f, 1.1f) * (p1Galo.attack / p2Galo.guard))));
+                command1.input = false;
+            }
             for (int i = 0; i < p1Galo.moves.Count; i++)
             {
+                
                 if (command1.inputString == p1Galo.moves[i].Combo)
                 {
                     p1Galo.selectedMove = i;
@@ -793,9 +806,14 @@ public class BattleSystem : MonoBehaviour
         }
           if (command2.inputEnabled == true)
         {
-
+            if (command2.input)
+            {
+                p1Galo.TakeDamage(Mathf.FloorToInt((5 * UnityEngine.Random.Range(0.9f, 1.1f) * (p2Galo.attack / p1Galo.guard))));
+                command2.input = false;
+            }
             for (int i = 0; i < p2Galo.moves.Count; i++)
             {
+                
                 if (command2.inputString == p2Galo.moves[i].Combo)
                 {
                     p2Galo.selectedMove = i;

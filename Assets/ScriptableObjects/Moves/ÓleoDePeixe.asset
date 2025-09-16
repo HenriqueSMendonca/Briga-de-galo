@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: "\xD3leoDePeixe"
   m_EditorClassIdentifier: 
-  moveName: "\xD3leo de peixe"
-  description: "(VXVC) Aplica nausea no oponente reduzindo a velocidade e defesa,
-    custa 10 de f\xF4lego"
+  moveName: "<color=purple>\xD3leo de peixe"
+  description: "(<color=yellow>VXVC</color>) Aplica <color=purple>nausea</color>
+    no oponente reduzindo a velocidade e defesa, custa <color=blue>10</color> de
+    f\xF4lego"
   damage: 0
   spCost: 10
   effects:
@@ -23,3 +24,13 @@ MonoBehaviour:
   movePriority: 0
   combo: VXVC
   moveSound: {fileID: 8300000, guid: 75ec2193015da90438393318fc17b27b, type: 3}
+  moveHelpKap:
+  - {fileID: 2477828809030400630, guid: c24d129c8eb646d4eb9e0ed7a3a29584, type: 3}
+  - {fileID: 4535724339392039086, guid: c01e0e0900abe3d4498f6ff7ec6eb6e4, type: 3}
+  - {fileID: 2477828809030400630, guid: c24d129c8eb646d4eb9e0ed7a3a29584, type: 3}
+  - {fileID: 8723354275304100278, guid: 5e311187b6b463d459aef67635b5464f, type: 3}
+  moveHelpPs4:
+  - {fileID: 4870087183235181336, guid: 358d96e107146c044a51aed7daae10da, type: 3}
+  - {fileID: 5738830479115040892, guid: 2078682e938eda54aad80c1c774560a9, type: 3}
+  - {fileID: 4870087183235181336, guid: 358d96e107146c044a51aed7daae10da, type: 3}
+  - {fileID: 5352315193259771901, guid: 82e83a91060c1414e9ac3e621428352c, type: 3}

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: GritoAbissal
   m_EditorClassIdentifier: 
-  moveName: Grito abissal
-  description: "(ZVVV) Aplica enfraquecido no oponente reduzindo o ataque, custa
-    20 de f\xF4lego"
+  moveName: <color=purple>Grito abissal
+  description: "(<color=yellow>ZVVV</color>) Aplica <color=purple>enfraquecido</color>
+    no oponente reduzindo o ataque, custa <color=blue>20</color> de f\xF4lego"
   damage: 0
   spCost: 20
   effects:
@@ -23,3 +23,13 @@ MonoBehaviour:
   movePriority: 0
   combo: ZVVV
   moveSound: {fileID: 8300000, guid: 368feb75ae39e7044a63d83bbd73a66b, type: 3}
+  moveHelpKap:
+  - {fileID: 1961624248081851974, guid: 29a5a8f2b8a650e4389325f52523761c, type: 3}
+  - {fileID: 4535724339392039086, guid: c01e0e0900abe3d4498f6ff7ec6eb6e4, type: 3}
+  - {fileID: 4535724339392039086, guid: c01e0e0900abe3d4498f6ff7ec6eb6e4, type: 3}
+  - {fileID: 4535724339392039086, guid: c01e0e0900abe3d4498f6ff7ec6eb6e4, type: 3}
+  moveHelpPs4:
+  - {fileID: 1432406385837744417, guid: 311fb8111a3e4874fbd029596c4e463c, type: 3}
+  - {fileID: 5738830479115040892, guid: 2078682e938eda54aad80c1c774560a9, type: 3}
+  - {fileID: 5738830479115040892, guid: 2078682e938eda54aad80c1c774560a9, type: 3}
+  - {fileID: 5738830479115040892, guid: 2078682e938eda54aad80c1c774560a9, type: 3}

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b6428b530ef6f49b0ab250b5ec353a, type: 3}
   m_Name: Mordida
   m_EditorClassIdentifier: 
-  moveName: Mordida
-  description: "(CCC) Causa 300 se o oponente estiver atordoado do contr\xE1rio causa
-    100 de dano, 30 de f\xF4lego"
+  moveName: <color=red>Mordida
+  description: "(<color=yellow>CCC</color>) Causa <color=red>300</color> se o oponente
+    estiver <color=purple>atordoado</color> do contr\xE1rio causa <color=red>100</color>
+    de dano, <color=blue>30</color> de f\xF4lego"
   damage: 100
   spCost: 30
   effects:
@@ -23,3 +24,11 @@ MonoBehaviour:
   movePriority: 1
   combo: CCC
   moveSound: {fileID: 8300000, guid: 787a45d0514c8f24bb88ff2b77c1f870, type: 3}
+  moveHelpKap:
+  - {fileID: 8723354275304100278, guid: 5e311187b6b463d459aef67635b5464f, type: 3}
+  - {fileID: 8723354275304100278, guid: 5e311187b6b463d459aef67635b5464f, type: 3}
+  - {fileID: 8723354275304100278, guid: 5e311187b6b463d459aef67635b5464f, type: 3}
+  moveHelpPs4:
+  - {fileID: 5352315193259771901, guid: 82e83a91060c1414e9ac3e621428352c, type: 3}
+  - {fileID: 5352315193259771901, guid: 82e83a91060c1414e9ac3e621428352c, type: 3}
+  - {fileID: 5352315193259771901, guid: 82e83a91060c1414e9ac3e621428352c, type: 3}
