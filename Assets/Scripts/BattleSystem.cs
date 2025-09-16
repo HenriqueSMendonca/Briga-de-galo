@@ -33,6 +33,7 @@ public class BattleSystem : MonoBehaviour
     public bool whoWonRace, p1Input, p2Input;
     private int moveCount;
     private GameObject pistache;
+    public GameObject raceHelp;
     public GameObject menu1, menu2, desc1, desc2;
     public GameObject commandBox1, commandBox2;
     public BattleHud p1HUD, p2HUD;
@@ -65,6 +66,7 @@ public class BattleSystem : MonoBehaviour
         music.Play();
         music.volume = PlayerPrefs.GetFloat("Musica");
         soundSource.volume = PlayerPrefs.GetFloat("Efeitos");
+        raceHelp.SetActive(false);
         endScreen.SetActive(false);
         cnvs.gameObject.SetActive(false);     
     }
@@ -191,6 +193,7 @@ public class BattleSystem : MonoBehaviour
     }
     void CarRace()
     {
+        raceHelp.SetActive(true);
         p1Decided = false;
         p2Decided = false;
         p1HUD.gameObject.SetActive(false);
@@ -209,6 +212,7 @@ public class BattleSystem : MonoBehaviour
         p1HUD.gameObject.SetActive(true);
         p2HUD.gameObject.SetActive(true);
         TrocaPlayer();
+        raceHelp.SetActive(false);
         Destroy(pistache);
         if (whoWonRace == false)
         {
