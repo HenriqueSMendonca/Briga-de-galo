@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: "Cabe\xE7ada"
   m_EditorClassIdentifier: 
   moveName: "<color=#8B0000>Cabe\xE7ada"
-  description: "(<color=yellow>CZZ</color>) Causa <color=red>200</color> de dano
-    ao alvo e <color=#8B0000>100</color> ao usu\xE1rio,<color=blue>30</color> de
-    f\xF4lego"
+  description: " Causa <color=red>200</color> de dano ao alvo e <color=#8B0000>100</color>
+    ao usu\xE1rio,<color=blue>30</color> de f\xF4lego"
   damage: 200
   spCost: 30
   effects:
@@ -23,6 +22,10 @@ MonoBehaviour:
   target: 0
   movePriority: 0
   combo: CZZ
+  comboKap: <sprite="kap X" name="kap X"><sprite="kap A" name="kap A"><sprite="kap
+    A" name="kap A">
+  comboPs4: <sprite="ps4 Square" name="ps4 Square"> <sprite="ps4 X" name="ps4 X">
+    <sprite="ps4 X" name="ps4 X">
   moveSound: {fileID: 8300000, guid: 5b1bab05cc844954da34342b8858259c, type: 3}
   moveHelpKap:
   - {fileID: 8723354275304100278, guid: 5e311187b6b463d459aef67635b5464f, type: 3}

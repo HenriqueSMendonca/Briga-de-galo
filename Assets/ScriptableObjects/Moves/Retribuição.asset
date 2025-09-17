@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: "Retribui\xE7\xE3o"
   m_EditorClassIdentifier: 
   moveName: "<color=#00FFFF>Retribui\xE7\xE3o"
-  description: "(<color=yellow>XZXZ</color>) <color=#00FFFF>Devolve</color> o dano
-    ao inimigo ao ser atacado neste turno, chance reduzida em usos consecutivos,
-    <color=blue>30</color> de f\xF4lego"
+  description: " <color=#00FFFF>Devolve</color> o dano ao inimigo ao ser atacado
+    neste turno, chance reduzida em usos consecutivos, <color=blue>30</color> de
+    f\xF4lego"
   damage: 0
   spCost: 30
   effects:
@@ -23,6 +23,10 @@ MonoBehaviour:
   target: 1
   movePriority: 3
   combo: XZXZ
+  comboKap: <sprite="kap O" name="kap O"><sprite="kap X" name="kap X"><sprite="kap
+    O" name="kap O"><sprite="kap X" name="kap X">
+  comboPs4: <sprite="ps4 O" name="ps4 O"><sprite="ps4 X" name="ps4 X"><sprite="ps4
+    O" name="ps4 O"><sprite="ps4 X" name="ps4 X">
   moveSound: {fileID: 8300000, guid: da48a8f1e1b132b47aa358ec9ee3661b, type: 3}
   moveHelpKap:
   - {fileID: 4535724339392039086, guid: c01e0e0900abe3d4498f6ff7ec6eb6e4, type: 3}

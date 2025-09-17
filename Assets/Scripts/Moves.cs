@@ -16,6 +16,8 @@ public class Moves : ScriptableObject
     [SerializeField] MoveTarget target;
     [SerializeField] int movePriority;
     [SerializeField] string combo;
+    [SerializeField] string comboKap;
+    [SerializeField] string comboPs4;
     [SerializeField] AudioClip moveSound;
     [SerializeField] List<GameObject> moveHelpKap;
     [SerializeField] List<GameObject> moveHelpPs4;
@@ -28,11 +30,10 @@ public class Moves : ScriptableObject
     public MoveTarget Target { get { return target; } }
 
     public string Combo { get { return combo; } }
+    public string ComboKap { get { return comboKap; } }
+    public string ComboPs4 { get { return comboPs4; } }
     public int Priority { get { return movePriority; } }
     public AudioClip MoveSound { get { return moveSound; } }
-
-    public List<GameObject> ComboKap { get { return moveHelpKap; } }
-    public List<GameObject> ComboPs4 { get { return moveHelpPs4; } }
 
     [System.Serializable]
     public class MoveEffects

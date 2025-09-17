@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Descansar
   m_EditorClassIdentifier: 
   moveName: <color=blue>Descansar
-  description: "(<color=yellow>ZZZZ</color>) Recupera <color=blue>todo</color> o
-    f\xF4lego do usu\xE1rio"
+  description: " Recupera <color=blue>todo</color> o f\xF4lego do usu\xE1rio"
   damage: 0
   spCost: -80
   effects:
@@ -22,6 +21,10 @@ MonoBehaviour:
   target: 0
   movePriority: 0
   combo: ZZZZ
+  comboKap: <sprite="kap A" name="kap A"><sprite="kap A" name="kap A"><sprite="kap
+    A" name="kap A"><sprite="kap A" name="kap A">
+  comboPs4: <sprite="ps4 X" name="ps4 X"><sprite="ps4 X" name="ps4 X"><sprite="ps4
+    X" name="ps4 X"><sprite="ps4 X" name="ps4 X">
   moveSound: {fileID: 8300000, guid: a637a0849687e064b82efb321501f573, type: 3}
   moveHelpKap:
   - {fileID: 1961624248081851974, guid: 29a5a8f2b8a650e4389325f52523761c, type: 3}

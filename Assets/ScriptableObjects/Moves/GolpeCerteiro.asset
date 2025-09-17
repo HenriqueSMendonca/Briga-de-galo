@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: GolpeCerteiro
   m_EditorClassIdentifier: 
   moveName: <color=red>Golpe certeiro
-  description: "(<color=yellow>ZXCV</color>) Causa <color=red>150</color> de dano
-    e aplica <color=purple>enfraquecido</color> reduzindo o ataque, <color=blue>30</color>
-    de f\xF4lego"
+  description: " Causa <color=red>150</color> de dano e aplica <color=purple>enfraquecido</color>
+    reduzindo o ataque, <color=blue>30</color> de f\xF4lego"
   damage: 150
   spCost: 30
   effects:
@@ -23,6 +22,10 @@ MonoBehaviour:
   target: 0
   movePriority: 0
   combo: ZXCV
+  comboKap: <sprite="kap A" name="kap A"><sprite="kap B" name="kap B"><sprite="kap
+    X" name="kap X"><sprite="kap Y" name="kap Y">
+  comboPs4: <sprite="ps4 X" name="ps4 X"><sprite="ps4 O" name="ps4 O"><sprite="ps4
+    Square" name="ps4 Square"><sprite="ps4 triangle" name="ps4 triangle">
   moveSound: {fileID: 8300000, guid: 5a12aab0eb7f97e4891307f3fd48cc6c, type: 3}
   moveHelpKap:
   - {fileID: 1961624248081851974, guid: 29a5a8f2b8a650e4389325f52523761c, type: 3}

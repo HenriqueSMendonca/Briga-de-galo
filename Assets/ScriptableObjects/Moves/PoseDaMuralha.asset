@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PoseDaMuralha
   m_EditorClassIdentifier: 
   moveName: <color=#00FFFF>Pose da muralha
-  description: "(<color=yellow>ZVXV</color>) Aplica <color=#00FFFF>fortalecido</color>
-    em si mesmo aumentando a defesa, <color=blue>40</color> de f\xF4lego"
+  description: " Aplica <color=#00FFFF>fortalecido</color> em si mesmo aumentando
+    a defesa, <color=blue>40</color> de f\xF4lego"
   damage: 0
   spCost: 40
   effects:
@@ -22,6 +22,10 @@ MonoBehaviour:
   target: 1
   movePriority: 3
   combo: ZVXV
+  comboKap: <sprite="kap X" name="kap X"><sprite="kap X" name="kap X"><sprite="kap
+    X" name="kap X"><sprite="kap Y" name="kap Y">
+  comboPs4: <sprite="ps4 X" name="ps4 X"><sprite="ps4 triangle" name="ps4 triangle"><sprite="ps4
+    O" name="ps4 O"><sprite="ps4 triangle" name="ps4 triangle">
   moveSound: {fileID: 8300000, guid: 434dcd5338458bc40a56bf4d23c3dd58, type: 3}
   moveHelpKap:
   - {fileID: 1961624248081851974, guid: 29a5a8f2b8a650e4389325f52523761c, type: 3}

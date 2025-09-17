@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Cuspe
   m_EditorClassIdentifier: 
   moveName: <color=purple>Cuspe
-  description: "(<color=yellow>CVZ</color>) Aplica <color=purple>nausea</color> no
-    oponente reduzindo a velocidade e defesa, <color=blue>10</color> de f\xF4lego"
+  description: " Aplica <color=purple>nausea</color> no oponente reduzindo a velocidade
+    e defesa, <color=blue>10</color> de f\xF4lego"
   damage: 0
   spCost: 10
   effects:
@@ -22,6 +22,10 @@ MonoBehaviour:
   target: 0
   movePriority: 0
   combo: CVZ
+  comboKap: <sprite="kap X" name="kap X"> <sprite="kap Y" name="kap Y"> <sprite="kap
+    A" name="kap A">
+  comboPs4: <sprite="ps4 Square" name="ps4 Square"> <sprite="ps4 triangle" name="ps4
+    triangle"> <sprite="ps4 X" name="ps4 X">
   moveSound: {fileID: 8300000, guid: 75ec2193015da90438393318fc17b27b, type: 3}
   moveHelpKap:
   - {fileID: 8723354275304100278, guid: 5e311187b6b463d459aef67635b5464f, type: 3}

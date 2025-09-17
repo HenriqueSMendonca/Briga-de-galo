@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PunhoDePedra
   m_EditorClassIdentifier: 
   moveName: <color=#8B0000>Punho de pedra
-  description: "(<color=yellow>ZZXXCVCV</color>) Causa <color=red>500</color> de
-    dano se n\xE3o for interrompido, <color=blue>50</color> de f\xF4lego "
+  description: " Causa <color=red>500</color> de dano se n\xE3o for interrompido,
+    <color=blue>50</color> de f\xF4lego "
   damage: 500
   spCost: 50
   effects:
@@ -22,6 +22,13 @@ MonoBehaviour:
   target: 0
   movePriority: -2
   combo: ZZXXCVCV
+  comboKap: <sprite="kap A" name="kap A"><sprite="kap A" name="kap A"><sprite="kap
+    B" name="kap B"><sprite="kap B" name="kap B"><sprite="kap X" name="kap X"><sprite="kap
+    Y" name="kap Y"><sprite="kap X" name="kap X"><sprite="kap Y" name="kap Y">
+  comboPs4: <sprite="ps4 X" name="ps4 X"><sprite="ps4 X" name="ps4 X"><sprite="ps4
+    O" name="ps4 O"><sprite="ps4 O" name="ps4 O"><sprite="ps4 Square" name="ps4 Square"><sprite="ps4
+    triangle" name="ps4 triangle"><sprite="ps4 Square" name="ps4 Square"><sprite="ps4
+    triangle" name="ps4 triangle">
   moveSound: {fileID: 8300000, guid: af4f9c861c80cbf48a20425b35bbc006, type: 3}
   moveHelpKap:
   - {fileID: 1961624248081851974, guid: 29a5a8f2b8a650e4389325f52523761c, type: 3}

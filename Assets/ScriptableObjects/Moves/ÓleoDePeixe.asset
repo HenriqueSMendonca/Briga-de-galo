@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: "\xD3leoDePeixe"
   m_EditorClassIdentifier: 
   moveName: "<color=purple>\xD3leo de peixe"
-  description: "(<color=yellow>VXVC</color>) Aplica <color=purple>nausea</color>
-    no oponente reduzindo a velocidade e defesa, custa <color=blue>10</color> de
-    f\xF4lego"
+  description: " Aplica <color=purple>nausea</color> no oponente reduzindo a velocidade
+    e defesa, custa <color=blue>10</color> de f\xF4lego"
   damage: 0
   spCost: 10
   effects:
@@ -23,6 +22,11 @@ MonoBehaviour:
   target: 0
   movePriority: 0
   combo: VXVC
+  comboKap: <sprite="kap Y" name="kap Y"><sprite="kap B" name="kap B"><sprite="kap
+    Y" name="kap Y"><sprite="kap X" name="kap X">
+  comboPs4: <sprite="ps4 triangle" name="ps4 triangle"><sprite="ps4 O" name="ps4
+    O"><sprite="ps4 triangle" name="ps4 triangle"><sprite="ps4 Square" name="ps4
+    Square">
   moveSound: {fileID: 8300000, guid: 75ec2193015da90438393318fc17b27b, type: 3}
   moveHelpKap:
   - {fileID: 2477828809030400630, guid: c24d129c8eb646d4eb9e0ed7a3a29584, type: 3}
