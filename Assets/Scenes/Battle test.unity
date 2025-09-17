@@ -2012,6 +2012,7 @@ MonoBehaviour:
   galo: {fileID: 0}
   move: 3
   cost: 0
+  device: 
 --- !u!1 &529417208
 GameObject:
   m_ObjectHideFlags: 0
@@ -2861,6 +2862,7 @@ MonoBehaviour:
   galo: {fileID: 0}
   move: 0
   cost: 0
+  device: 
 --- !u!1 &682911308
 GameObject:
   m_ObjectHideFlags: 0
@@ -3720,6 +3722,7 @@ MonoBehaviour:
   galo: {fileID: 0}
   move: 0
   cost: 0
+  device: 
 --- !u!1 &831469950
 GameObject:
   m_ObjectHideFlags: 0
@@ -4271,6 +4274,7 @@ MonoBehaviour:
   galo: {fileID: 0}
   move: 4
   cost: 0
+  device: 
 --- !u!1 &931144856
 GameObject:
   m_ObjectHideFlags: 0
@@ -4869,6 +4873,7 @@ MonoBehaviour:
   galo: {fileID: 0}
   move: 2
   cost: 0
+  device: 
 --- !u!1 &1059204230
 GameObject:
   m_ObjectHideFlags: 0
@@ -5958,6 +5963,7 @@ MonoBehaviour:
   galo: {fileID: 0}
   move: 1
   cost: 0
+  device: 
 --- !u!1 &1319535539
 GameObject:
   m_ObjectHideFlags: 0
@@ -6860,6 +6866,7 @@ MonoBehaviour:
   galo: {fileID: 0}
   move: 2
   cost: 0
+  device: 
 --- !u!1 &1448783995
 GameObject:
   m_ObjectHideFlags: 0
@@ -7471,6 +7478,7 @@ MonoBehaviour:
   galo: {fileID: 0}
   move: 5
   cost: 0
+  device: 
 --- !u!1 &1523845907
 GameObject:
   m_ObjectHideFlags: 0
@@ -7679,6 +7687,7 @@ MonoBehaviour:
   galo: {fileID: 0}
   move: 3
   cost: 0
+  device: 
 --- !u!1 &1562313386
 GameObject:
   m_ObjectHideFlags: 0
@@ -9073,6 +9082,7 @@ MonoBehaviour:
   galo: {fileID: 0}
   move: 5
   cost: 0
+  device: 
 --- !u!1 &1807165082
 GameObject:
   m_ObjectHideFlags: 0
@@ -10198,6 +10208,7 @@ MonoBehaviour:
   galo: {fileID: 0}
   move: 4
   cost: 0
+  device: 
 --- !u!1 &1889130597
 GameObject:
   m_ObjectHideFlags: 0
@@ -10896,6 +10907,7 @@ MonoBehaviour:
   galo: {fileID: 0}
   move: 1
   cost: 0
+  device: 
 --- !u!1 &1996118324
 GameObject:
   m_ObjectHideFlags: 0

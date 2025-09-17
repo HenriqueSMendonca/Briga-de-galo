@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3313793465316505939}
   - component: {fileID: 5447627369581271341}
   - component: {fileID: -5989527944199564562}
+  - component: {fileID: 4942675928408108040}
   m_Layer: 0
   m_Name: Desleixado
   m_TagString: Untagged
@@ -117,3 +118,24 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fc4c73b748d5c5147bee11d6242adfd8, type: 2}
   selectedMove: 0
   battleHud: {fileID: 0}
+--- !u!95 &4942675928408108040
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5007771006888812772}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: -6613016821038126460, guid: 36dbdee149d2ddf44853e02062e617bf, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
