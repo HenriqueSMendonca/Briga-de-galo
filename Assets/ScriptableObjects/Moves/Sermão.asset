@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: "Serm\xE3o"
   m_EditorClassIdentifier: 
   moveName: "<color=#00008B>Serm\xE3o"
-  description: "(<color=yellow>CXCX</color>) Retira <color=#00008B>30</color> de
-    f\xF4lego do oponente e causa danos se ele ficar sem, custa <color=blue>20</color>
-    de f\xF4lego"
+  description: " Retira <color=#00008B>30</color> de f\xF4lego do oponente e causa
+    danos se ele ficar sem, custa <color=blue>20</color> de f\xF4lego"
   damage: 0
   spCost: 20
   effects:
@@ -23,6 +22,10 @@ MonoBehaviour:
   target: 0
   movePriority: 0
   combo: CXCX
+  comboKap: <sprite="kap X" name="kap X"><sprite="kap B" name="kap B"><sprite="kap
+    X" name="kap X"><sprite="kap B" name="kap B">
+  comboPs4: <sprite="ps4 Square" name="ps4 Square"><sprite="ps4 O" name="ps4 O"><sprite="ps4
+    Square" name="ps4 Square"><sprite="ps4 O" name="ps4 O">
   moveSound: {fileID: 8300000, guid: bd3cfc5971bab0341a910ededc65cf7a, type: 3}
   moveHelpKap:
   - {fileID: 8723354275304100278, guid: 5e311187b6b463d459aef67635b5464f, type: 3}

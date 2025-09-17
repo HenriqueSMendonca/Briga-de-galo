@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: EscamasEnvenenadas
   m_EditorClassIdentifier: 
   moveName: <color=purple>Escamas Envenenadas
-  description: "(<color=yellow>VVXX</color>) <color=purple>Envenena</color> o oponente
-    tirando um pouco de vida a cada turno, <color=blue>25</color> de f\xF4lego"
+  description: " <color=purple>Envenena</color> o oponente tirando um pouco de vida
+    a cada turno, <color=blue>25</color> de f\xF4lego"
   damage: 0
   spCost: 25
   effects:
@@ -22,6 +22,10 @@ MonoBehaviour:
   target: 0
   movePriority: 0
   combo: VVXX
+  comboKap: <sprite="kap Y" name="kap Y"><sprite="kap Y" name="kap Y"><sprite="kap
+    B" name="kap B"><sprite="kap B" name="kap B">
+  comboPs4: <sprite="ps4 triangle" name="ps4 triangle"><sprite="ps4 triangle" name="ps4
+    triangle"><sprite="ps4 O" name="ps4 O"><sprite="ps4 O" name="ps4 O">
   moveSound: {fileID: 8300000, guid: 7ed0ad5d12f21524597b001cb78d816e, type: 3}
   moveHelpKap:
   - {fileID: 2477828809030400630, guid: c24d129c8eb646d4eb9e0ed7a3a29584, type: 3}

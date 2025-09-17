@@ -14,7 +14,6 @@ public class BattleHud : MonoBehaviour
     public TextMeshProUGUI[] abilityText;
     public ButtonDescription[] descriptions;
     public TextMeshProUGUI[] abilityHelp;
-    public GameObject[] abilityIcons; 
     private PlayerInput player;
     // Start is called before the first frame update
 
@@ -44,28 +43,18 @@ public class BattleHud : MonoBehaviour
             abilityText[i].text = galo.moves[i + 2].Name;
             if (player.devices[0].name == "Keyboard")
             {
-                abilityHelp[i].text = galo.moves[i + 2].Name;
-                abilityIcons[i].GetComponent<TextMeshProUGUI>().text = "<color=yellow>" + galo.moves[i + 2].Combo + "</color>";
-
-
+                abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
+                descriptions[i + 2].device = "keyboard";
             }
             else if (player.devices[0].name == "DualShock4GamepadHID")
             {
-                abilityHelp[i].text = galo.moves[i + 2].Name;
-                for (int j = 0; j < galo.moves[i + 2].ComboKap.Count; j++)
-                {
-                    Instantiate(galo.moves[i + 2].ComboPs4[j], abilityIcons[i].gameObject.transform);
-                    
-
-                }
+                abilityHelp[i].text = galo.moves[i + 2].Name + "   " + galo.moves[i + 2].ComboPs4;
+                descriptions[i + 2].device = "ps4";
             }
             else if (player.devices[0].name == "XInputControllerWindows")
             {
-                abilityHelp[i].text = galo.moves[i + 2].Name;
-                for (int j = 0; j < galo.moves[i + 2].ComboKap.Count; j++)
-                {
-                    Instantiate(galo.moves[i + 2].ComboKap[j], abilityIcons[i].gameObject.transform);
-                }
+                abilityHelp[i].text = galo.moves[i + 2].Name + "   " + galo.moves[i + 2].ComboKap;
+                descriptions[i + 2].device = "kap";
             }
         }
         for (int i = 0; i < descriptions.Length; i++)

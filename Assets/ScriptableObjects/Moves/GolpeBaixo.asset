@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: GolpeBaixo
   m_EditorClassIdentifier: 
   moveName: <color=red>Golpe baixo
-  description: "(<color=yellow>VVV</color>) <color=red>100</color> de dano com 50%
-    de chance de <color=purple>atordoar</color> o oponente, chance reduzida em usos
-    consecutivos, <color=blue>20</color> de f\xF4lego"
+  description: " <color=red>100</color> de dano com 50% de chance de <color=purple>atordoar</color>
+    o oponente, chance reduzida em usos consecutivos, <color=blue>20</color> de f\xF4lego"
   damage: 100
   spCost: 20
   effects:
@@ -23,6 +22,10 @@ MonoBehaviour:
   target: 0
   movePriority: 1
   combo: VVV
+  comboKap: <sprite="kap Y" name="kap Y"><sprite="kap Y" name="kap Y"><sprite="kap
+    Y" name="kap Y">
+  comboPs4: <sprite="ps4 triangle" name="ps4 triangle"><sprite="ps4 triangle" name="ps4
+    triangle"><sprite="ps4 triangle" name="ps4 triangle">
   moveSound: {fileID: 8300000, guid: f1a120a6cf228ed43a35ba60d37a83b2, type: 3}
   moveHelpKap:
   - {fileID: 2477828809030400630, guid: c24d129c8eb646d4eb9e0ed7a3a29584, type: 3}

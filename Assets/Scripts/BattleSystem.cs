@@ -123,7 +123,11 @@ public class BattleSystem : MonoBehaviour
         p1Galo = p1GO.GetComponent<Galo>();
         GameObject p2GO = Instantiate(characters[PlayerPrefs.GetInt("selectedChar2")], spawn2.position, new Quaternion(0, 180, 0, 0));
         p2Galo = p2GO.GetComponent<Galo>();
-
+        if (p1Galo.nomeGalo == p2Galo.nomeGalo)
+        {
+            p1Galo.nomeGalo = p1Galo.nomeGalo + " 1";
+            p2Galo.nomeGalo = p2Galo.nomeGalo + " 2";
+        } 
         dialogueText.text = p1Galo.nomeGalo + " e " + p2Galo.nomeGalo + " estão prontos pra brigar!";
         p1HUD.SetHUD(p1Galo);
         p1Galo.battleHud = p1HUD;
@@ -349,7 +353,9 @@ public class BattleSystem : MonoBehaviour
         }       
         yield return new WaitForSeconds(2);
         var move = galo1.moves[galo1.selectedMove];
-        switch (move.Name)
+        Debug.Log(move.name);
+        Debug.Log(galo1.tookDamage);
+        switch (move.name)
         {
             case ("Cabeçada"):
                 {
@@ -490,13 +496,14 @@ public class BattleSystem : MonoBehaviour
                     }
                     break;
                 }
-            case ("Punho de pedra"):
+            case ("PunhoDePedra"):
                 {
                     if (galo1.currentSP >= move.SpCost)
                     {
                         dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
                         yield return new WaitForSeconds(2);
                         galo1.RemoveSP(move.SpCost);
+                        Debug.Log(galo1.tookDamage);
                         if (galo1.tookDamage)
                         {
                             dialogueText.text = $"{galo1.nomeGalo} perdeu seu foco e errou!";

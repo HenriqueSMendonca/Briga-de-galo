@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: GritoAbissal
   m_EditorClassIdentifier: 
   moveName: <color=purple>Grito abissal
-  description: "(<color=yellow>ZVVV</color>) Aplica <color=purple>enfraquecido</color>
-    no oponente reduzindo o ataque, custa <color=blue>20</color> de f\xF4lego"
+  description: " Aplica <color=purple>enfraquecido</color> no oponente reduzindo
+    o ataque, custa <color=blue>20</color> de f\xF4lego"
   damage: 0
   spCost: 20
   effects:
@@ -22,6 +22,10 @@ MonoBehaviour:
   target: 0
   movePriority: 0
   combo: ZVVV
+  comboKap: <sprite="kap A" name="kap A"><sprite="kap B" name="kap B"><sprite="kap
+    B" name="kap B"><sprite="kap B" name="kap B">
+  comboPs4: <sprite="ps4 X" name="ps4 X"> <sprite="ps4 O" name="ps4 O"><sprite="ps4
+    O" name="ps4 O"><sprite="ps4 O" name="ps4 O">
   moveSound: {fileID: 8300000, guid: 368feb75ae39e7044a63d83bbd73a66b, type: 3}
   moveHelpKap:
   - {fileID: 1961624248081851974, guid: 29a5a8f2b8a650e4389325f52523761c, type: 3}
