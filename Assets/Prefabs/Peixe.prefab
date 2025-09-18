@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4519853977191036284}
   - component: {fileID: 741271324522726804}
   - component: {fileID: -6535519393175754614}
+  - component: {fileID: 6948888761060935175}
   m_Layer: 0
   m_Name: Peixe
   m_TagString: Untagged
@@ -117,3 +118,24 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 62301109d534e9644ab8b77ad9724054, type: 2}
   selectedMove: 0
   battleHud: {fileID: 0}
+--- !u!95 &6948888761060935175
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7537687736573561179}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 5116667036604630703, guid: 3a78ae42ee0d36740a43a26bbfea67bf, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4555074752618953301}
   - component: {fileID: 4513285076930261523}
   - component: {fileID: -5407478129755091519}
+  - component: {fileID: -908184762898414033}
   m_Layer: 0
   m_Name: Rocha
   m_TagString: Untagged
@@ -117,3 +118,24 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1e98482bbdc31064b87b1959328887b0, type: 2}
   selectedMove: 0
   battleHud: {fileID: 0}
+--- !u!95 &-908184762898414033
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7411359049473825408}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: -6535569621381851204, guid: 05740e66ec1ff0847b26d84505985321, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

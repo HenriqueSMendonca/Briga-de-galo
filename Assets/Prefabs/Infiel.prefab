@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2646816972658680655}
   - component: {fileID: 578943412693848146}
   - component: {fileID: -227079400607728390}
+  - component: {fileID: -3714497675810626870}
   m_Layer: 0
   m_Name: Infiel
   m_TagString: Untagged
@@ -117,3 +118,24 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 90d1687933ae671448fa5a1f6f7bab2a, type: 2}
   selectedMove: 0
   battleHud: {fileID: 0}
+--- !u!95 &-3714497675810626870
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5729975057221581173}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: -6820470953680760344, guid: 882432b90dac9664d852a5c499106e46, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
