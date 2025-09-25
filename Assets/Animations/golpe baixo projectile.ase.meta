@@ -1,0 +1,447 @@
+fileFormatVersion: 2
+guid: 7f0c684ced36df94e9910f1e4f361d81
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: golpe baixo projectile_Frame_0
+    originalName: 
+    pivot: {x: 2.2857144, y: -1.2857144}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 43
+      width: 7
+      height: 7
+    spriteID: e3bd665f0dfc010409f366d7031a2b80
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 43}
+  - name: golpe baixo projectile_Frame_1
+    originalName: 
+    pivot: {x: 1.0666667, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 15
+      height: 14
+    spriteID: 150e0f608d8d73c42aca2207511010f3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: golpe baixo projectile_Frame_2
+    originalName: 
+    pivot: {x: 0.75, y: -0.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 43
+      width: 16
+      height: 10
+    spriteID: 9a51c24505efba543a6a334e46b6b332
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 43}
+  - name: golpe baixo projectile_Frame_3
+    originalName: 
+    pivot: {x: 0.47368422, y: -0.18181819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 4
+      width: 19
+      height: 11
+    spriteID: 245b1f27c27b04a48b92b3363273b4ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 4}
+  - name: golpe baixo projectile_Frame_4
+    originalName: 
+    pivot: {x: 0.29411766, y: -0.16666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 23
+      width: 17
+      height: 12
+    spriteID: adb349eb2e0dddd48ad8c2e079b2d628
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 23}
+  - name: golpe baixo projectile_Frame_5
+    originalName: 
+    pivot: {x: -0.5, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 23
+      width: 8
+      height: 7
+    spriteID: c4ed9786e66e1c54b9621d8d1fa70ca2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 23}
+  - name: golpe baixo projectile_Frame_6
+    originalName: 
+    pivot: {x: -0.8571429, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 58
+      width: 7
+      height: 7
+    spriteID: 532037391c1c83e499ed1702ec9bbf5f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 58}
+  - name: golpe baixo projectile_Frame_7
+    originalName: 
+    pivot: {x: -0.8571429, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 73
+      width: 7
+      height: 7
+    spriteID: 3fbfe32e85636d342aa6a28516ff6ce2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 73}
+  - name: golpe baixo projectile_Frame_8
+    originalName: 
+    pivot: {x: -0.5555556, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 61
+      width: 9
+      height: 11
+    spriteID: eadfe160e7f745a4ba0386a283a42ea6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 61}
+  - name: golpe baixo projectile_Frame_9
+    originalName: 
+    pivot: {x: -0.5555556, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 80
+      width: 9
+      height: 11
+    spriteID: d9eb0aea1c1364a4ea8f8677820b94ce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 80}
+  - name: golpe baixo projectile_Frame_10
+    originalName: 
+    pivot: {x: -0.5555556, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 99
+      width: 9
+      height: 11
+    spriteID: 76297008c75aa2c44ade4f242b71487d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 99}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1258479229
+    name: golpe baixo projectile
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: golpe baixo projectile_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 9
+        width: 7
+        height: 7
+      spriteId: e3bd665f0dfc010409f366d7031a2b80
+    - name: golpe baixo projectile_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 1
+        width: 15
+        height: 14
+      spriteId: 150e0f608d8d73c42aca2207511010f3
+    - name: golpe baixo projectile_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 4
+        y: 2
+        width: 16
+        height: 10
+      spriteId: 9a51c24505efba543a6a334e46b6b332
+    - name: golpe baixo projectile_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 7
+        y: 2
+        width: 19
+        height: 11
+      spriteId: 245b1f27c27b04a48b92b3363273b4ff
+    - name: golpe baixo projectile_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 11
+        y: 2
+        width: 17
+        height: 12
+      spriteId: adb349eb2e0dddd48ad8c2e079b2d628
+    - name: golpe baixo projectile_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 20
+        y: 7
+        width: 8
+        height: 7
+      spriteId: c4ed9786e66e1c54b9621d8d1fa70ca2
+    - name: golpe baixo projectile_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 22
+        y: 8
+        width: 7
+        height: 7
+      spriteId: 532037391c1c83e499ed1702ec9bbf5f
+    - name: golpe baixo projectile_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 22
+        y: 8
+        width: 7
+        height: 7
+      spriteId: 3fbfe32e85636d342aa6a28516ff6ce2
+    - name: golpe baixo projectile_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 21
+        y: 6
+        width: 9
+        height: 11
+      spriteId: eadfe160e7f745a4ba0386a283a42ea6
+    - name: golpe baixo projectile_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 21
+        y: 6
+        width: 9
+        height: 11
+      spriteId: d9eb0aea1c1364a4ea8f8677820b94ce
+    - name: golpe baixo projectile_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 21
+        y: 6
+        width: 9
+        height: 11
+      spriteId: 76297008c75aa2c44ade4f242b71487d
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 32, y: 32}
