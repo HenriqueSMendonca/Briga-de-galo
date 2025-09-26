@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eff607235725c6a4aa03cbcc07ff050b
+guid: e4de78e0f574b8f439b5b781cc3b26aa
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: cuspe anim_Frame_0
+  - name: Auto cuidado projectile_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -31}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 60
-      y: 4
-      width: 16
-      height: 46
-    spriteID: a2b18fbaef6036d4b92b1b6cbf49f6c8
+      x: 4
+      y: 244
+      width: 12
+      height: 1
+    spriteID: 9efdcf981f9252c4d8d6df4251e5ef5c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,19 +140,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 60, y: 4}
-  - name: cuspe anim_Frame_1
+    uvTransform: {x: 4, y: 244}
+  - name: Auto cuidado projectile_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -2.5555556}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 84
-      y: 4
-      width: 16
-      height: 46
-    spriteID: ec5e6d6747aa4194893c204d27cebdbe
+      x: 44
+      y: 170
+      width: 14
+      height: 9
+    spriteID: 8312b2dad02178c448a065df704e2820
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,19 +160,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 84, y: 4}
-  - name: cuspe anim_Frame_2
+    uvTransform: {x: 44, y: 170}
+  - name: Auto cuidado projectile_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -1.1333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 108
-      y: 4
-      width: 16
-      height: 46
-    spriteID: 10381456202260b438add3ccfbf8d751
+      x: 44
+      y: 147
+      width: 18
+      height: 15
+    spriteID: 5582ffb92b89d6c45904821d655030a9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -180,8 +180,48 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 108, y: 4}
-  - name: cuspe anim_Frame_3
+    uvTransform: {x: 44, y: 147}
+  - name: Auto cuidado projectile_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.6}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 119
+      width: 22
+      height: 20
+    spriteID: e7f385a9c179f7d49a950553d8808aad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 119}
+  - name: Auto cuidado projectile_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -0.1851852}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 84
+      width: 28
+      height: 27
+    spriteID: 4076379cdc6578f488e67688f83cd052
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 84}
+  - name: Auto cuidado projectile_Frame_5
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -189,130 +229,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 58
-      width: 16
-      height: 46
-    spriteID: fd21bc4e2d1abed46a020f84d8ed08d7
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 58}
-  - name: cuspe anim_Frame_4
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 28
-      y: 58
-      width: 16
-      height: 46
-    spriteID: 99f387c2d90f25f46a9ae1dbdd8fcb44
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 28, y: 58}
-  - name: cuspe anim_Frame_5
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 52
-      y: 58
-      width: 16
-      height: 46
-    spriteID: cda9df9d90374c347846788334e7e994
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 52, y: 58}
-  - name: cuspe anim_Frame_6
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 76
-      y: 58
-      width: 16
-      height: 46
-    spriteID: 17458a335ed03a54aafaae07dd63f072
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 76, y: 58}
-  - name: cuspe anim_Frame_7
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 100
-      y: 58
-      width: 16
-      height: 46
-    spriteID: abd8e2e855ec140479b3e101dbe7306f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 100, y: 58}
-  - name: cuspe anim_Frame_8
-    originalName: 
-    pivot: {x: 0.47058824, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 35
       y: 4
-      width: 17
-      height: 46
-    spriteID: 127fc040478e5454e9f2a410cc8525fc
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 35, y: 4}
-  - name: cuspe anim_Frame_9
-    originalName: 
-    pivot: {x: 0.3478261, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 23
-      height: 46
-    spriteID: a067fcfe3985a0e4d9afba2f75151515
+      width: 32
+      height: 32
+    spriteID: b5a7080b18fa7ba4e9904c1ebd78e9af
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -321,99 +241,263 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Auto cuidado projectile_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 44
+      width: 32
+      height: 32
+    spriteID: 933981cbdbdeb2e48a36a4095408bf57
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 44}
+  - name: Auto cuidado projectile_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 84
+      width: 32
+      height: 32
+    spriteID: 17c9d4e06d8d9ac4f91f1c86c1102f35
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 84}
+  - name: Auto cuidado projectile_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 124
+      width: 32
+      height: 32
+    spriteID: 49639260fbf73bf43a48a322439057a2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 124}
+  - name: Auto cuidado projectile_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 164
+      width: 32
+      height: 32
+    spriteID: ab309963d2cb60c42a60965d6cb159cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 164}
+  - name: Auto cuidado projectile_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 204
+      width: 32
+      height: 32
+    spriteID: 0e69f8c1cdbba8d47ae0943555f0af4c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 204}
+  - name: Auto cuidado projectile_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 4
+      width: 32
+      height: 32
+    spriteID: e1ccd69a1da2610489f79014759985c1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 4}
+  - name: Auto cuidado projectile_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 44
+      width: 32
+      height: 32
+    spriteID: e322311c9959d574480dc2adb246d10c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 44}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1615178597
-    name: cuspe anim
+    guid: 965823235
+    name: Auto cuidado projectile
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: cuspe anim_Frame_0
+    - name: Auto cuidado projectile_Frame_0
       frameIndex: 0
       cellRect:
-        x: 8
-        y: 0
-        width: 16
-        height: 46
-      spriteId: a2b18fbaef6036d4b92b1b6cbf49f6c8
-    - name: cuspe anim_Frame_1
+        x: 10
+        y: 31
+        width: 12
+        height: 1
+      spriteId: 9efdcf981f9252c4d8d6df4251e5ef5c
+    - name: Auto cuidado projectile_Frame_1
       frameIndex: 1
       cellRect:
-        x: 8
-        y: 0
-        width: 16
-        height: 46
-      spriteId: ec5e6d6747aa4194893c204d27cebdbe
-    - name: cuspe anim_Frame_2
+        x: 9
+        y: 23
+        width: 14
+        height: 9
+      spriteId: 8312b2dad02178c448a065df704e2820
+    - name: Auto cuidado projectile_Frame_2
       frameIndex: 2
       cellRect:
-        x: 8
-        y: 0
-        width: 16
-        height: 46
-      spriteId: 10381456202260b438add3ccfbf8d751
-    - name: cuspe anim_Frame_3
+        x: 7
+        y: 17
+        width: 18
+        height: 15
+      spriteId: 5582ffb92b89d6c45904821d655030a9
+    - name: Auto cuidado projectile_Frame_3
       frameIndex: 3
       cellRect:
-        x: 8
-        y: 0
-        width: 16
-        height: 46
-      spriteId: fd21bc4e2d1abed46a020f84d8ed08d7
-    - name: cuspe anim_Frame_4
+        x: 5
+        y: 12
+        width: 22
+        height: 20
+      spriteId: e7f385a9c179f7d49a950553d8808aad
+    - name: Auto cuidado projectile_Frame_4
       frameIndex: 4
       cellRect:
-        x: 8
-        y: 0
-        width: 16
-        height: 46
-      spriteId: 99f387c2d90f25f46a9ae1dbdd8fcb44
-    - name: cuspe anim_Frame_5
+        x: 2
+        y: 5
+        width: 28
+        height: 27
+      spriteId: 4076379cdc6578f488e67688f83cd052
+    - name: Auto cuidado projectile_Frame_5
       frameIndex: 5
       cellRect:
-        x: 8
+        x: 0
         y: 0
-        width: 16
-        height: 46
-      spriteId: cda9df9d90374c347846788334e7e994
-    - name: cuspe anim_Frame_6
+        width: 32
+        height: 32
+      spriteId: b5a7080b18fa7ba4e9904c1ebd78e9af
+    - name: Auto cuidado projectile_Frame_6
       frameIndex: 6
       cellRect:
-        x: 8
+        x: 0
         y: 0
-        width: 16
-        height: 46
-      spriteId: 17458a335ed03a54aafaae07dd63f072
-    - name: cuspe anim_Frame_7
+        width: 32
+        height: 32
+      spriteId: 933981cbdbdeb2e48a36a4095408bf57
+    - name: Auto cuidado projectile_Frame_7
       frameIndex: 7
       cellRect:
-        x: 8
+        x: 0
         y: 0
-        width: 16
-        height: 46
-      spriteId: abd8e2e855ec140479b3e101dbe7306f
-    - name: cuspe anim_Frame_8
+        width: 32
+        height: 32
+      spriteId: 17c9d4e06d8d9ac4f91f1c86c1102f35
+    - name: Auto cuidado projectile_Frame_8
       frameIndex: 8
       cellRect:
-        x: 8
+        x: 0
         y: 0
-        width: 17
-        height: 46
-      spriteId: 127fc040478e5454e9f2a410cc8525fc
-    - name: cuspe anim_Frame_9
+        width: 32
+        height: 32
+      spriteId: 49639260fbf73bf43a48a322439057a2
+    - name: Auto cuidado projectile_Frame_9
       frameIndex: 9
       cellRect:
-        x: 8
+        x: 0
         y: 0
-        width: 23
-        height: 46
-      spriteId: a067fcfe3985a0e4d9afba2f75151515
+        width: 32
+        height: 32
+      spriteId: ab309963d2cb60c42a60965d6cb159cf
+    - name: Auto cuidado projectile_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      spriteId: 0e69f8c1cdbba8d47ae0943555f0af4c
+    - name: Auto cuidado projectile_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      spriteId: e1ccd69a1da2610489f79014759985c1
+    - name: Auto cuidado projectile_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      spriteId: e322311c9959d574480dc2adb246d10c
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 48}
+  canvasSize: {x: 32, y: 32}

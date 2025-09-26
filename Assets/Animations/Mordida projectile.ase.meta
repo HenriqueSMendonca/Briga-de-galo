@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eff607235725c6a4aa03cbcc07ff050b
+guid: 74ad8cd735c3f1e488dcef25100be6d4
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,78 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: cuspe anim_Frame_0
+  - name: Mordida projectile_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 60
-      y: 4
-      width: 16
-      height: 46
-    spriteID: a2b18fbaef6036d4b92b1b6cbf49f6c8
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 60, y: 4}
-  - name: cuspe anim_Frame_1
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 84
-      y: 4
-      width: 16
-      height: 46
-    spriteID: ec5e6d6747aa4194893c204d27cebdbe
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 84, y: 4}
-  - name: cuspe anim_Frame_2
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 108
-      y: 4
-      width: 16
-      height: 46
-    spriteID: 10381456202260b438add3ccfbf8d751
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 108, y: 4}
-  - name: cuspe anim_Frame_3
-    originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.53333336}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 58
-      width: 16
-      height: 46
-    spriteID: fd21bc4e2d1abed46a020f84d8ed08d7
+      y: 53
+      width: 28
+      height: 15
+    spriteID: d7cbbc805386e4e40a918f0825d7f789
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,99 +140,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 58}
-  - name: cuspe anim_Frame_4
+    uvTransform: {x: 4, y: 53}
+  - name: Mordida projectile_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.4117647}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 28
-      y: 58
-      width: 16
-      height: 46
-    spriteID: 99f387c2d90f25f46a9ae1dbdd8fcb44
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 28, y: 58}
-  - name: cuspe anim_Frame_5
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 52
-      y: 58
-      width: 16
-      height: 46
-    spriteID: cda9df9d90374c347846788334e7e994
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 52, y: 58}
-  - name: cuspe anim_Frame_6
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 76
-      y: 58
-      width: 16
-      height: 46
-    spriteID: 17458a335ed03a54aafaae07dd63f072
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 76, y: 58}
-  - name: cuspe anim_Frame_7
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 100
-      y: 58
-      width: 16
-      height: 46
-    spriteID: abd8e2e855ec140479b3e101dbe7306f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 100, y: 58}
-  - name: cuspe anim_Frame_8
-    originalName: 
-    pivot: {x: 0.47058824, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 35
+      x: 40
       y: 4
-      width: 17
-      height: 46
-    spriteID: 127fc040478e5454e9f2a410cc8525fc
+      width: 28
+      height: 17
+    spriteID: 5d4f5d302bf3e9b4a9dc41fb7f5c082c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -300,19 +160,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 35, y: 4}
-  - name: cuspe anim_Frame_9
+    uvTransform: {x: 40, y: 4}
+  - name: Mordida projectile_Frame_2
     originalName: 
-    pivot: {x: 0.3478261, y: 0}
+    pivot: {x: 0.5, y: -0.31578946}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 23
-      height: 46
-    spriteID: a067fcfe3985a0e4d9afba2f75151515
+      width: 28
+      height: 19
+    spriteID: e8644b484ab655241b909a2f4d9c24bc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -321,99 +181,239 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Mordida projectile_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.4117647}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 4
+      width: 28
+      height: 17
+    spriteID: d8532b3696e645c48ab9ecd0ade6d10c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 4}
+  - name: Mordida projectile_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -0.53333336}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 40
+      y: 53
+      width: 28
+      height: 15
+    spriteID: 072aed79ebea4cb489e17fb23b743602
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 40, y: 53}
+  - name: Mordida projectile_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: -0.5714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 31
+      width: 30
+      height: 14
+    spriteID: 7d514e2bc180fb944a448b365c23c26c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 82, y: 31}
+  - name: Mordida projectile_Frame_6
+    originalName: 
+    pivot: {x: 0.516129, y: -0.5714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 31
+      width: 31
+      height: 14
+    spriteID: 5896b9903f2f5c1409a17fa73b3faec3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 31}
+  - name: Mordida projectile_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: -0.5714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 53
+      width: 28
+      height: 14
+    spriteID: ddf976d234efafc4a80bfa279cef160b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 53}
+  - name: Mordida projectile_Frame_8
+    originalName: 
+    pivot: {x: 0.48387095, y: -0.5714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 31
+      width: 31
+      height: 14
+    spriteID: 738ff4907fe339545a2b7ae424c9951a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 31}
+  - name: Mordida projectile_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: -0.5714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 76
+      width: 28
+      height: 14
+    spriteID: af07f7db5f8cd4d419cdeed6ec0bc5ce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 76}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1615178597
-    name: cuspe anim
+    guid: -1100412723
+    name: Mordida projectile
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: cuspe anim_Frame_0
+    - name: Mordida projectile_Frame_0
       frameIndex: 0
       cellRect:
-        x: 8
-        y: 0
-        width: 16
-        height: 46
-      spriteId: a2b18fbaef6036d4b92b1b6cbf49f6c8
-    - name: cuspe anim_Frame_1
+        x: 2
+        y: 8
+        width: 28
+        height: 15
+      spriteId: d7cbbc805386e4e40a918f0825d7f789
+    - name: Mordida projectile_Frame_1
       frameIndex: 1
       cellRect:
-        x: 8
-        y: 0
-        width: 16
-        height: 46
-      spriteId: ec5e6d6747aa4194893c204d27cebdbe
-    - name: cuspe anim_Frame_2
+        x: 2
+        y: 7
+        width: 28
+        height: 17
+      spriteId: 5d4f5d302bf3e9b4a9dc41fb7f5c082c
+    - name: Mordida projectile_Frame_2
       frameIndex: 2
       cellRect:
-        x: 8
-        y: 0
-        width: 16
-        height: 46
-      spriteId: 10381456202260b438add3ccfbf8d751
-    - name: cuspe anim_Frame_3
+        x: 2
+        y: 6
+        width: 28
+        height: 19
+      spriteId: e8644b484ab655241b909a2f4d9c24bc
+    - name: Mordida projectile_Frame_3
       frameIndex: 3
       cellRect:
-        x: 8
-        y: 0
-        width: 16
-        height: 46
-      spriteId: fd21bc4e2d1abed46a020f84d8ed08d7
-    - name: cuspe anim_Frame_4
+        x: 2
+        y: 7
+        width: 28
+        height: 17
+      spriteId: d8532b3696e645c48ab9ecd0ade6d10c
+    - name: Mordida projectile_Frame_4
       frameIndex: 4
       cellRect:
-        x: 8
-        y: 0
-        width: 16
-        height: 46
-      spriteId: 99f387c2d90f25f46a9ae1dbdd8fcb44
-    - name: cuspe anim_Frame_5
+        x: 2
+        y: 8
+        width: 28
+        height: 15
+      spriteId: 072aed79ebea4cb489e17fb23b743602
+    - name: Mordida projectile_Frame_5
       frameIndex: 5
       cellRect:
-        x: 8
-        y: 0
-        width: 16
-        height: 46
-      spriteId: cda9df9d90374c347846788334e7e994
-    - name: cuspe anim_Frame_6
+        x: 1
+        y: 8
+        width: 30
+        height: 14
+      spriteId: 7d514e2bc180fb944a448b365c23c26c
+    - name: Mordida projectile_Frame_6
       frameIndex: 6
       cellRect:
-        x: 8
-        y: 0
-        width: 16
-        height: 46
-      spriteId: 17458a335ed03a54aafaae07dd63f072
-    - name: cuspe anim_Frame_7
+        x: 0
+        y: 8
+        width: 31
+        height: 14
+      spriteId: 5896b9903f2f5c1409a17fa73b3faec3
+    - name: Mordida projectile_Frame_7
       frameIndex: 7
       cellRect:
-        x: 8
-        y: 0
-        width: 16
-        height: 46
-      spriteId: abd8e2e855ec140479b3e101dbe7306f
-    - name: cuspe anim_Frame_8
+        x: 2
+        y: 8
+        width: 28
+        height: 14
+      spriteId: ddf976d234efafc4a80bfa279cef160b
+    - name: Mordida projectile_Frame_8
       frameIndex: 8
       cellRect:
-        x: 8
-        y: 0
-        width: 17
-        height: 46
-      spriteId: 127fc040478e5454e9f2a410cc8525fc
-    - name: cuspe anim_Frame_9
+        x: 1
+        y: 8
+        width: 31
+        height: 14
+      spriteId: 738ff4907fe339545a2b7ae424c9951a
+    - name: Mordida projectile_Frame_9
       frameIndex: 9
       cellRect:
-        x: 8
-        y: 0
-        width: 23
-        height: 46
-      spriteId: a067fcfe3985a0e4d9afba2f75151515
+        x: 2
+        y: 8
+        width: 28
+        height: 14
+      spriteId: af07f7db5f8cd4d419cdeed6ec0bc5ce
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 48}
+  canvasSize: {x: 32, y: 32}

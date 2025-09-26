@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 82
       width: 25
       height: 10
-    spriteID: c4193ab787d01944888d9f9a35468cf0
+    spriteID: d94fd11c5f2ddb64f98adc7ad4e5c624
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 56
       width: 26
       height: 14
-    spriteID: 6e26d748e1146844aa8d36b2469b9505
+    spriteID: b244c9f62e9b0a7498b7f5b97223903d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 56
       width: 25
       height: 16
-    spriteID: 244c34d5a2611834793da66d4776c99a
+    spriteID: 2d42ba5b80eece2498d746915826babc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 4
       width: 26
       height: 18
-    spriteID: 7d62ccd2c83c7e74598419f7a01e7a50
+    spriteID: fd607e2d2d54e854fab8244186456b27
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 30
       width: 25
       height: 18
-    spriteID: 9d4a8c018993bac4192da71d925fac00
+    spriteID: 96334a2bcc3b2f94ba1dcd2d71c546f8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -232,7 +232,7 @@ ScriptedImporter:
       y: 4
       width: 26
       height: 18
-    spriteID: 586dc7795c3e1fa4191a4d7bc0b6c480
+    spriteID: 30090f143a5990242b02f1caf7080c7d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -252,7 +252,7 @@ ScriptedImporter:
       y: 56
       width: 25
       height: 18
-    spriteID: 04e60d392c663474da6ada0231b80825
+    spriteID: e2abba858ad407448a39e86a8dda8f0f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -272,7 +272,7 @@ ScriptedImporter:
       y: 30
       width: 26
       height: 18
-    spriteID: 09d53b837a5fdf342a0c6289bf8f83d9
+    spriteID: 624129d6c692e5f40ba96b8755db1523
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -292,7 +292,7 @@ ScriptedImporter:
       y: 4
       width: 28
       height: 18
-    spriteID: 585cdbc89f6e7b94cb16fcf40855cde7
+    spriteID: 52af4a51fa598bc44b90685b1460a36f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -312,7 +312,7 @@ ScriptedImporter:
       y: 30
       width: 26
       height: 18
-    spriteID: 308cc5ef71a72d64c8f0d51bf93673b7
+    spriteID: 7bbbcc4eeb13ac948a9f42930f4018de
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -337,7 +337,7 @@ ScriptedImporter:
         y: 11
         width: 25
         height: 10
-      spriteId: c4193ab787d01944888d9f9a35468cf0
+      spriteId: d94fd11c5f2ddb64f98adc7ad4e5c624
     - name: Cuspe projectile_Frame_1
       frameIndex: 1
       cellRect:
@@ -345,7 +345,7 @@ ScriptedImporter:
         y: 9
         width: 26
         height: 14
-      spriteId: 6e26d748e1146844aa8d36b2469b9505
+      spriteId: b244c9f62e9b0a7498b7f5b97223903d
     - name: Cuspe projectile_Frame_2
       frameIndex: 2
       cellRect:
@@ -353,7 +353,7 @@ ScriptedImporter:
         y: 8
         width: 25
         height: 16
-      spriteId: 244c34d5a2611834793da66d4776c99a
+      spriteId: 2d42ba5b80eece2498d746915826babc
     - name: Cuspe projectile_Frame_3
       frameIndex: 3
       cellRect:
@@ -361,7 +361,7 @@ ScriptedImporter:
         y: 7
         width: 26
         height: 18
-      spriteId: 7d62ccd2c83c7e74598419f7a01e7a50
+      spriteId: fd607e2d2d54e854fab8244186456b27
     - name: Cuspe projectile_Frame_4
       frameIndex: 4
       cellRect:
@@ -369,7 +369,7 @@ ScriptedImporter:
         y: 7
         width: 25
         height: 18
-      spriteId: 9d4a8c018993bac4192da71d925fac00
+      spriteId: 96334a2bcc3b2f94ba1dcd2d71c546f8
     - name: Cuspe projectile_Frame_5
       frameIndex: 5
       cellRect:
@@ -377,7 +377,7 @@ ScriptedImporter:
         y: 7
         width: 26
         height: 18
-      spriteId: 586dc7795c3e1fa4191a4d7bc0b6c480
+      spriteId: 30090f143a5990242b02f1caf7080c7d
     - name: Cuspe projectile_Frame_6
       frameIndex: 6
       cellRect:
@@ -385,7 +385,7 @@ ScriptedImporter:
         y: 7
         width: 25
         height: 18
-      spriteId: 04e60d392c663474da6ada0231b80825
+      spriteId: e2abba858ad407448a39e86a8dda8f0f
     - name: Cuspe projectile_Frame_7
       frameIndex: 7
       cellRect:
@@ -393,7 +393,7 @@ ScriptedImporter:
         y: 7
         width: 26
         height: 18
-      spriteId: 09d53b837a5fdf342a0c6289bf8f83d9
+      spriteId: 624129d6c692e5f40ba96b8755db1523
     - name: Cuspe projectile_Frame_8
       frameIndex: 8
       cellRect:
@@ -401,7 +401,7 @@ ScriptedImporter:
         y: 7
         width: 28
         height: 18
-      spriteId: 585cdbc89f6e7b94cb16fcf40855cde7
+      spriteId: 52af4a51fa598bc44b90685b1460a36f
     - name: Cuspe projectile_Frame_9
       frameIndex: 9
       cellRect:
@@ -409,7 +409,7 @@ ScriptedImporter:
         y: 7
         width: 26
         height: 18
-      spriteId: 308cc5ef71a72d64c8f0d51bf93673b7
+      spriteId: 7bbbcc4eeb13ac948a9f42930f4018de
     linkedCells: []
     parentIndex: -1
   platformSettings: []

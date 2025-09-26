@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 43
       width: 7
       height: 7
-    spriteID: c96c43cd464f8d646bfc7f3b7a412321
+    spriteID: 2fa977e6a8da48d41ad903e89441a390
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 4
       width: 15
       height: 14
-    spriteID: 49043d70aeb85e74e82cd86ba2c08779
+    spriteID: 2e6c8aad03ea94a41b20b55ebebcb53c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 43
       width: 16
       height: 10
-    spriteID: 2836e6f95174637489584944cd127a09
+    spriteID: b5c8d95890f92564bb26c658820c99ac
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 4
       width: 19
       height: 11
-    spriteID: 2abfb13a0f5e49348b6d7b07eb8ddf53
+    spriteID: 07be36337897c5945bec7f20a943deb0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 23
       width: 17
       height: 12
-    spriteID: 10bfee1ed01e7da439f62422050d6fce
+    spriteID: 2438f0c45afd70d418561a129266daba
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -232,7 +232,7 @@ ScriptedImporter:
       y: 23
       width: 8
       height: 7
-    spriteID: 135d7303ed7187047bc6ed32422d0c0b
+    spriteID: 7f08acdfea8bdef4d96a7b8d3fe9539b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -252,7 +252,7 @@ ScriptedImporter:
       y: 58
       width: 7
       height: 7
-    spriteID: 3ccdf1b57e650714e858a8a51397dd62
+    spriteID: 833245c7fe5518f48a93cbe11468bc7a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -272,7 +272,7 @@ ScriptedImporter:
       y: 73
       width: 7
       height: 7
-    spriteID: 990633a8eda96a041a58815c5b11d94c
+    spriteID: af1dcc26a7a4ac945ae3d1427a538680
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -292,7 +292,7 @@ ScriptedImporter:
       y: 61
       width: 9
       height: 11
-    spriteID: 6f2e3559d02b8214592ab03bfca6134a
+    spriteID: 133bd58b172f949408486ec3e051627a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -312,7 +312,7 @@ ScriptedImporter:
       y: 80
       width: 9
       height: 11
-    spriteID: a7842aef522a93549837e36e2c93995d
+    spriteID: 582163c0b3d3a494892790f947331daa
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -332,7 +332,7 @@ ScriptedImporter:
       y: 99
       width: 9
       height: 11
-    spriteID: 8a39a9a3f8583ae489cffb4e7def02f2
+    spriteID: 89c32aabde30a1f44b9ab33cc4c243c1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -357,7 +357,7 @@ ScriptedImporter:
         y: 9
         width: 7
         height: 7
-      spriteId: c96c43cd464f8d646bfc7f3b7a412321
+      spriteId: 2fa977e6a8da48d41ad903e89441a390
     - name: golpe baixo projectile_Frame_1
       frameIndex: 1
       cellRect:
@@ -365,7 +365,7 @@ ScriptedImporter:
         y: 1
         width: 15
         height: 14
-      spriteId: 49043d70aeb85e74e82cd86ba2c08779
+      spriteId: 2e6c8aad03ea94a41b20b55ebebcb53c
     - name: golpe baixo projectile_Frame_2
       frameIndex: 2
       cellRect:
@@ -373,7 +373,7 @@ ScriptedImporter:
         y: 2
         width: 16
         height: 10
-      spriteId: 2836e6f95174637489584944cd127a09
+      spriteId: b5c8d95890f92564bb26c658820c99ac
     - name: golpe baixo projectile_Frame_3
       frameIndex: 3
       cellRect:
@@ -381,7 +381,7 @@ ScriptedImporter:
         y: 2
         width: 19
         height: 11
-      spriteId: 2abfb13a0f5e49348b6d7b07eb8ddf53
+      spriteId: 07be36337897c5945bec7f20a943deb0
     - name: golpe baixo projectile_Frame_4
       frameIndex: 4
       cellRect:
@@ -389,7 +389,7 @@ ScriptedImporter:
         y: 2
         width: 17
         height: 12
-      spriteId: 10bfee1ed01e7da439f62422050d6fce
+      spriteId: 2438f0c45afd70d418561a129266daba
     - name: golpe baixo projectile_Frame_5
       frameIndex: 5
       cellRect:
@@ -397,7 +397,7 @@ ScriptedImporter:
         y: 7
         width: 8
         height: 7
-      spriteId: 135d7303ed7187047bc6ed32422d0c0b
+      spriteId: 7f08acdfea8bdef4d96a7b8d3fe9539b
     - name: golpe baixo projectile_Frame_6
       frameIndex: 6
       cellRect:
@@ -405,7 +405,7 @@ ScriptedImporter:
         y: 8
         width: 7
         height: 7
-      spriteId: 3ccdf1b57e650714e858a8a51397dd62
+      spriteId: 833245c7fe5518f48a93cbe11468bc7a
     - name: golpe baixo projectile_Frame_7
       frameIndex: 7
       cellRect:
@@ -413,7 +413,7 @@ ScriptedImporter:
         y: 8
         width: 7
         height: 7
-      spriteId: 990633a8eda96a041a58815c5b11d94c
+      spriteId: af1dcc26a7a4ac945ae3d1427a538680
     - name: golpe baixo projectile_Frame_8
       frameIndex: 8
       cellRect:
@@ -421,7 +421,7 @@ ScriptedImporter:
         y: 6
         width: 9
         height: 11
-      spriteId: 6f2e3559d02b8214592ab03bfca6134a
+      spriteId: 133bd58b172f949408486ec3e051627a
     - name: golpe baixo projectile_Frame_9
       frameIndex: 9
       cellRect:
@@ -429,7 +429,7 @@ ScriptedImporter:
         y: 6
         width: 9
         height: 11
-      spriteId: a7842aef522a93549837e36e2c93995d
+      spriteId: 582163c0b3d3a494892790f947331daa
     - name: golpe baixo projectile_Frame_10
       frameIndex: 10
       cellRect:
@@ -437,7 +437,7 @@ ScriptedImporter:
         y: 6
         width: 9
         height: 11
-      spriteId: 8a39a9a3f8583ae489cffb4e7def02f2
+      spriteId: 89c32aabde30a1f44b9ab33cc4c243c1
     linkedCells: []
     parentIndex: -1
   platformSettings: []
