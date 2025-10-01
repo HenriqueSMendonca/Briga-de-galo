@@ -646,6 +646,7 @@ public class BattleSystem : MonoBehaviour
                             if (galo2.isParry)
                             {
                                 PlayAudio(move);
+                                StartCoroutine(MoveAnim(move, galo2, galo1));
                                 StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                                 galo2.CureStatus(ConditionID.pry);
                                 galo2.isParry = false;
@@ -653,7 +654,9 @@ public class BattleSystem : MonoBehaviour
                             }
                             else
                             {
+
                                 PlayAudio(move);
+                                StartCoroutine(MoveAnim(move, galo1, galo2));
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                                 yield return RunMoveEffects(move, galo1, galo2);
                             }
@@ -858,5 +861,24 @@ public class BattleSystem : MonoBehaviour
     {
         pe1.SetSelectedGameObject(gameObject);
         pe2.SetSelectedGameObject(gameObject);
+    }
+
+    public IEnumerator MoveAnim(Moves move, Galo galo1, Galo galo2)
+    {
+        if (move.MoveAnim != null)
+        {
+            if (galo2 == p1Galo)
+            {
+                GameObject anim = Instantiate(move.MoveAnim, galo2.transform.position, quaternion.identity, spawn1.transform);
+                yield return new WaitForSeconds(move.AnimTime);
+                Destroy(anim);
+            }
+            else
+            {
+                GameObject anim = Instantiate(move.MoveAnim, galo2.transform.position, quaternion.identity, spawn2.transform);
+                yield return new WaitForSeconds(move.AnimTime);
+                Destroy(anim);
+            }
+        }
     }
 }
