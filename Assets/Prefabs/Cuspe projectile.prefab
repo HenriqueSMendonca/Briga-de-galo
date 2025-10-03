@@ -12,21 +12,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cuspe projectile
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: 1827ab2b4bf84114089024ccff41eb23, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 016d1934444a07e48be3d5bb529a773f, type: 2}
     - target: {fileID: 7878350319992209165, guid: 1827ab2b4bf84114089024ccff41eb23, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 1827ab2b4bf84114089024ccff41eb23, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 1827ab2b4bf84114089024ccff41eb23, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.295589
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 1827ab2b4bf84114089024ccff41eb23, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5149847
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 1827ab2b4bf84114089024ccff41eb23, type: 3}
       propertyPath: m_LocalPosition.z
