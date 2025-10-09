@@ -165,11 +165,11 @@ public class BattleSystem : MonoBehaviour
         p2Galo.OnAfterTurn();
         for (int i = 0; p1Galo.Status?.Count > i; i++)
         {
-            Debug.Log(p1Galo.Status[i].Name);
+            Debug.Log(p1Galo.Status[i].Name + "turnos restantes: " + p2Galo.Status[i].StatusTime);
         }
         for (int i = 0; p2Galo.Status?.Count > i; i++)
         {
-            Debug.Log(p2Galo.Status[i].Name);
+            Debug.Log(p2Galo.Status[i].Name + "turnos restantes: " + p2Galo.Status[i].StatusTime);
         }
         carro1.acceleration = p1Galo.carSpeed;
         carro2.acceleration = p2Galo.carSpeed;

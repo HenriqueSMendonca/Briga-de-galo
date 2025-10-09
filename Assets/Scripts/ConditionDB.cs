@@ -59,7 +59,7 @@ public class ConditionDB
                     if (ConditionDB.Conditions[ConditionID.grd].Inflicted == false){
                         statusAnim?.Invoke(1, galo);
                     galo.guard += 1;
-                        ConditionDB.Conditions[ConditionID.grd].Inflicted = true;
+                        //ConditionDB.Conditions[ConditionID.grd].Inflicted = true;
                     }
                 },
                 OnAfterTurn = (Galo galo) =>
@@ -149,6 +149,7 @@ public class ConditionDB
                         galo.carSpeed += 3;
                     } else
                     {
+                        Debug.Log("do " + galo.Status[index].StatusTime);
                         statusAnim?.Invoke(3, galo);
                         galo.Status[index].StatusTime--;
                     }
