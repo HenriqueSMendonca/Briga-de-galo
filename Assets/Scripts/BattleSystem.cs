@@ -638,8 +638,14 @@ public class BattleSystem : MonoBehaviour
                         {
                             PlayAudio(move);
                             galo1.Heal(move.Damage);
-                            StartCoroutine(MoveAnim(move, galo2, galo1));
-                            yield return RunMoveEffects(move, galo1, galo2);
+                            if (move.Target == Moves.MoveTarget.Self)
+                            {
+                                StartCoroutine(MoveAnim(move, galo2, galo1));
+                            } else
+                            {
+                                StartCoroutine(MoveAnim(move, galo1, galo2));
+                            }
+                                yield return RunMoveEffects(move, galo1, galo2);
                             if (moveCount == 2)
                             {
 

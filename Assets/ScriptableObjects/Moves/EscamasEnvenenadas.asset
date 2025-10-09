@@ -27,6 +27,9 @@ MonoBehaviour:
   comboPs4: <sprite="ps4 triangle" name="ps4 triangle"><sprite="ps4 triangle" name="ps4
     triangle"><sprite="ps4 O" name="ps4 O"><sprite="ps4 O" name="ps4 O">
   moveSound: {fileID: 8300000, guid: 7ed0ad5d12f21524597b001cb78d816e, type: 3}
+  moveAnim: {fileID: 5056956533287451392, guid: 816429bd234a14e4cb44fb698e86e644, type: 3}
+  animTime: 1.55
+  animOffset: {x: 0, y: -1, z: 0}
   moveHelpKap:
   - {fileID: 2477828809030400630, guid: c24d129c8eb646d4eb9e0ed7a3a29584, type: 3}
   - {fileID: 2477828809030400630, guid: c24d129c8eb646d4eb9e0ed7a3a29584, type: 3}
