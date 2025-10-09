@@ -367,6 +367,7 @@ public class BattleSystem : MonoBehaviour
                         if (galo2.isParry)
                         {
                             PlayAudio(move);
+                            StartCoroutine(MoveAnim(move, galo2, galo1));
                             StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                             galo2.CureStatus(ConditionID.pry);
                             galo2.isParry = false;
@@ -374,6 +375,7 @@ public class BattleSystem : MonoBehaviour
                         else
                         {
                             PlayAudio(move);
+                            StartCoroutine(MoveAnim(move, galo1, galo2));
                             StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                             StartCoroutine(Recoil(galo1, move.Damage / 2));
                             yield return RunMoveEffects(move, galo1, galo2);
@@ -409,6 +411,7 @@ public class BattleSystem : MonoBehaviour
                         if (galo2.isParry)
                         {
                             PlayAudio(move);
+                            StartCoroutine(MoveAnim(move, galo2, galo1));
                             StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                             galo2.CureStatus(ConditionID.pry);
                             galo2.isParry = false;
@@ -418,11 +421,13 @@ public class BattleSystem : MonoBehaviour
                             if (galo2.Status.Contains(ConditionDB.Conditions[ConditionID.stn]))
                             {
                                 PlayAudio(move);
+                                StartCoroutine(MoveAnim(move, galo1, galo2));
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage * 3));
                             }
                             else
                             {
                                 PlayAudio(move);
+                                StartCoroutine(MoveAnim(move, galo1, galo2));
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                             }
                             yield return RunMoveEffects(move, galo1, galo2);
@@ -455,12 +460,14 @@ public class BattleSystem : MonoBehaviour
                         galo1.RemoveSP(move.SpCost);
                         if ((galo2.currentSP - 30) < 0)
                         {
+                            StartCoroutine(MoveAnim(move, galo1, galo2));
                             StartCoroutine(CheckHP(galo1, galo2, (galo2.currentSP - 30) * -10));
                             galo2.RemoveSP(30);
                             yield return RunMoveEffects(move, galo1, galo2);
                         }
                         else
                         {
+                            StartCoroutine(MoveAnim(move, galo1, galo2));
                             galo2.RemoveSP(30);
                             yield return RunMoveEffects(move, galo1, galo2);
                             if (moveCount == 2)
@@ -525,6 +532,7 @@ public class BattleSystem : MonoBehaviour
                             if (galo2.isParry)
                             {
                                 PlayAudio(move);
+                                StartCoroutine(MoveAnim(move, galo1, galo2));
                                 StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                                 galo2.CureStatus(ConditionID.pry);
                                 galo2.isParry = false;
@@ -532,6 +540,7 @@ public class BattleSystem : MonoBehaviour
                             else
                             {
                                 PlayAudio(move);
+                                StartCoroutine(MoveAnim(move, galo2, galo1));
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                                 yield return RunMoveEffects(move, galo1, galo2);
                             }
@@ -568,6 +577,7 @@ public class BattleSystem : MonoBehaviour
                         if (galo2.isParry)
                         {
                             PlayAudio(move);
+                            StartCoroutine(MoveAnim(move, galo2, galo1));
                             StartCoroutine(CheckHP(galo2, galo1, move.Damage));
                             galo2.CureStatus(ConditionID.pry);
                             galo2.isParry = false;
@@ -577,11 +587,13 @@ public class BattleSystem : MonoBehaviour
                             if (galo1.Status != null)
                             {
                                 PlayAudio(move);
+                                StartCoroutine(MoveAnim(move, galo1, galo2));
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage * 2));
                             }
                             else
                             {
                                 PlayAudio(move);
+                                StartCoroutine(MoveAnim(move, galo1, galo2));
                                 StartCoroutine(CheckHP(galo1, galo2, move.Damage));
                             }
                             yield return RunMoveEffects(move, galo1, galo2);
@@ -626,6 +638,7 @@ public class BattleSystem : MonoBehaviour
                         {
                             PlayAudio(move);
                             galo1.Heal(move.Damage);
+                            StartCoroutine(MoveAnim(move, galo2, galo1));
                             yield return RunMoveEffects(move, galo1, galo2);
                             if (moveCount == 2)
                             {
@@ -869,13 +882,14 @@ public class BattleSystem : MonoBehaviour
         {
             if (galo2 == p1Galo)
             {
-                GameObject anim = Instantiate(move.MoveAnim, galo2.transform.position, quaternion.identity, spawn1.transform);
+                GameObject anim = Instantiate(move.MoveAnim, galo2.transform.position + new Vector3(-move.AnimOffset.x, move.AnimOffset.y), quaternion.identity);
+                anim.gameObject.transform.localScale = new Vector3(anim.gameObject.transform.localScale.x * -1, anim.gameObject.transform.localScale.y, anim.gameObject.transform.localScale.z);
                 yield return new WaitForSeconds(move.AnimTime);
                 Destroy(anim);
             }
             else
             {
-                GameObject anim = Instantiate(move.MoveAnim, galo2.transform.position, quaternion.identity, spawn2.transform);
+                GameObject anim = Instantiate(move.MoveAnim, galo2.transform.position + move.AnimOffset, quaternion.identity);        
                 yield return new WaitForSeconds(move.AnimTime);
                 Destroy(anim);
             }

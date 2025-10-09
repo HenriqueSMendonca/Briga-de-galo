@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &445401660784815324
+--- !u!1001 &5066176932449722523
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,59 +8,59 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -2253911629886400664, guid: db830724512de8047ba1f0ff8e418528, type: 3}
+    - target: {fileID: -2253911629886400664, guid: 7f303c6e93cf3c042a386d5226274348, type: 3}
       propertyPath: m_Name
-      value: golpe baixo projectile
+      value: "cabe\xE7ada projectile"
       objectReference: {fileID: 0}
-    - target: {fileID: 3626916397498700004, guid: db830724512de8047ba1f0ff8e418528, type: 3}
+    - target: {fileID: 3626916397498700004, guid: 7f303c6e93cf3c042a386d5226274348, type: 3}
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7878350319992209165, guid: db830724512de8047ba1f0ff8e418528, type: 3}
+    - target: {fileID: 7878350319992209165, guid: 7f303c6e93cf3c042a386d5226274348, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 7878350319992209165, guid: db830724512de8047ba1f0ff8e418528, type: 3}
+    - target: {fileID: 7878350319992209165, guid: 7f303c6e93cf3c042a386d5226274348, type: 3}
       propertyPath: m_LocalScale.y
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 7878350319992209165, guid: db830724512de8047ba1f0ff8e418528, type: 3}
+    - target: {fileID: 7878350319992209165, guid: 7f303c6e93cf3c042a386d5226274348, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7878350319992209165, guid: db830724512de8047ba1f0ff8e418528, type: 3}
+    - target: {fileID: 7878350319992209165, guid: 7f303c6e93cf3c042a386d5226274348, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7878350319992209165, guid: db830724512de8047ba1f0ff8e418528, type: 3}
+    - target: {fileID: 7878350319992209165, guid: 7f303c6e93cf3c042a386d5226274348, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7878350319992209165, guid: db830724512de8047ba1f0ff8e418528, type: 3}
+    - target: {fileID: 7878350319992209165, guid: 7f303c6e93cf3c042a386d5226274348, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7878350319992209165, guid: db830724512de8047ba1f0ff8e418528, type: 3}
+    - target: {fileID: 7878350319992209165, guid: 7f303c6e93cf3c042a386d5226274348, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7878350319992209165, guid: db830724512de8047ba1f0ff8e418528, type: 3}
+    - target: {fileID: 7878350319992209165, guid: 7f303c6e93cf3c042a386d5226274348, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7878350319992209165, guid: db830724512de8047ba1f0ff8e418528, type: 3}
+    - target: {fileID: 7878350319992209165, guid: 7f303c6e93cf3c042a386d5226274348, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7878350319992209165, guid: db830724512de8047ba1f0ff8e418528, type: 3}
+    - target: {fileID: 7878350319992209165, guid: 7f303c6e93cf3c042a386d5226274348, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7878350319992209165, guid: db830724512de8047ba1f0ff8e418528, type: 3}
+    - target: {fileID: 7878350319992209165, guid: 7f303c6e93cf3c042a386d5226274348, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7878350319992209165, guid: db830724512de8047ba1f0ff8e418528, type: 3}
+    - target: {fileID: 7878350319992209165, guid: 7f303c6e93cf3c042a386d5226274348, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
@@ -68,4 +68,4 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: -8435245712485981826, guid: db830724512de8047ba1f0ff8e418528, type: 3}
+  m_SourcePrefab: {fileID: -8435245712485981826, guid: 7f303c6e93cf3c042a386d5226274348, type: 3}

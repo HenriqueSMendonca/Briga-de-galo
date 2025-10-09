@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: golpe certeiro projectile_Frame_0
     originalName: 
-    pivot: {x: 0.44827586, y: 0}
+    pivot: {x: 0.55172414, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -153,7 +153,7 @@ ScriptedImporter:
     - name: golpe certeiro projectile
       frameIndex: 0
       cellRect:
-        x: 3
+        x: 0
         y: 0
         width: 29
         height: 29

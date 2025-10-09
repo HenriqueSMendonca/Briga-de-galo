@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 74ad8cd735c3f1e488dcef25100be6d4
+guid: f10b935c1e4574a44bffe307f4d88ebe
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -75,7 +75,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 0
+    defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -88,7 +88,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 0
+    defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638956137755440669
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Mordida projectile_Frame_0
+  - name: Oleo de peixe projectile_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0.49999997}
+    pivot: {x: 0.5, y: -0.22727273}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 53
-      width: 28
-      height: 15
-    spriteID: d7cbbc805386e4e40a918f0825d7f789
+      x: 36
+      y: 4
+      width: 24
+      height: 22
+    spriteID: 8d199182e8313c841a852de9437b5d7c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,19 +140,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 53}
-  - name: Mordida projectile_Frame_1
+    uvTransform: {x: 36, y: 4}
+  - name: Oleo de peixe projectile_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: -0.22727273}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 40
-      y: 4
-      width: 28
-      height: 17
-    spriteID: 5d4f5d302bf3e9b4a9dc41fb7f5c082c
+      x: 36
+      y: 34
+      width: 24
+      height: 22
+    spriteID: ab3be08db9932b44f92cd31b180112bd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,19 +160,59 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 40, y: 4}
-  - name: Mordida projectile_Frame_2
+    uvTransform: {x: 36, y: 34}
+  - name: Oleo de peixe projectile_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: -0.17391305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 101
+      width: 24
+      height: 23
+    spriteID: 6d73f01c25b1a6e4fa8682154e5e8c78
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 101}
+  - name: Oleo de peixe projectile_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 37
+      width: 24
+      height: 24
+    spriteID: 8fadd513036f5c44a8774da2f8243de1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 37}
+  - name: Oleo de peixe projectile_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -0.08}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 28
-      height: 19
-    spriteID: e8644b484ab655241b909a2f4d9c24bc
+      width: 24
+      height: 25
+    spriteID: 6b7920262e12dc7439c17b1de71f1a52
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,78 +221,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Mordida projectile_Frame_3
+  - name: Oleo de peixe projectile_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 76
-      y: 4
-      width: 28
-      height: 17
-    spriteID: d8532b3696e645c48ab9ecd0ade6d10c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 76, y: 4}
-  - name: Mordida projectile_Frame_4
-    originalName: 
-    pivot: {x: 0.5, y: 0.49999997}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 40
-      y: 53
-      width: 28
-      height: 15
-    spriteID: 072aed79ebea4cb489e17fb23b743602
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 40, y: 53}
-  - name: Mordida projectile_Frame_5
-    originalName: 
-    pivot: {x: 0.5, y: 0.53571427}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 82
-      y: 31
-      width: 30
-      height: 14
-    spriteID: 7d514e2bc180fb944a448b365c23c26c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 82, y: 31}
-  - name: Mordida projectile_Frame_6
-    originalName: 
-    pivot: {x: 0.516129, y: 0.53571427}
+    pivot: {x: 0.5, y: -0.041666668}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 31
-      width: 31
-      height: 14
-    spriteID: 5896b9903f2f5c1409a17fa73b3faec3
+      y: 69
+      width: 24
+      height: 24
+    spriteID: 0af6a84b85a928b41924031f86e80055
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -260,19 +240,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 31}
-  - name: Mordida projectile_Frame_7
+    uvTransform: {x: 4, y: 69}
+  - name: Oleo de peixe projectile_Frame_6
     originalName: 
-    pivot: {x: 0.5, y: 0.53571427}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 76
-      y: 53
-      width: 28
-      height: 14
-    spriteID: ddf976d234efafc4a80bfa279cef160b
+      x: 36
+      y: 64
+      width: 12
+      height: 24
+    spriteID: 7340b97e8525ef64a913132496b0d3ec
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -280,19 +260,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 76, y: 53}
-  - name: Mordida projectile_Frame_8
+    uvTransform: {x: 36, y: 64}
+  - name: Oleo de peixe projectile_Frame_7
     originalName: 
-    pivot: {x: 0.48387095, y: 0.53571427}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
-      y: 31
-      width: 31
-      height: 14
-    spriteID: 738ff4907fe339545a2b7ae424c9951a
+      x: 36
+      y: 96
+      width: 8
+      height: 22
+    spriteID: ede7b6f28541eb246b9d0d98ef1838c4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -300,19 +280,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 31}
-  - name: Mordida projectile_Frame_9
+    uvTransform: {x: 36, y: 96}
+  - name: Oleo de peixe projectile_Frame_8
     originalName: 
-    pivot: {x: 0.5, y: 0.53571427}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 76
-      width: 28
-      height: 14
-    spriteID: af07f7db5f8cd4d419cdeed6ec0bc5ce
+      x: 56
+      y: 64
+      width: 4
+      height: 21
+    spriteID: 72d8a706778df22409cb97789f8e15fa
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -320,148 +300,92 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 76}
+    uvTransform: {x: 56, y: 64}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1100412723
-    name: Mordida projectile
+    guid: -688067124
+    name: Oleo de peixe projectile
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Mordida projectile_Frame_0
+    - name: Oleo de peixe projectile_Frame_0
       frameIndex: 0
       cellRect:
-        x: 2
-        y: 2
-        width: 28
-        height: 15
-      spriteId: d7cbbc805386e4e40a918f0825d7f789
-    - name: Mordida projectile_Frame_1
+        x: 4
+        y: 5
+        width: 24
+        height: 22
+      spriteId: 8d199182e8313c841a852de9437b5d7c
+    - name: Oleo de peixe projectile_Frame_1
       frameIndex: 1
       cellRect:
-        x: 2
-        y: 1
-        width: 28
-        height: 17
-      spriteId: 5d4f5d302bf3e9b4a9dc41fb7f5c082c
-    - name: Mordida projectile_Frame_2
+        x: 4
+        y: 5
+        width: 24
+        height: 22
+      spriteId: ab3be08db9932b44f92cd31b180112bd
+    - name: Oleo de peixe projectile_Frame_2
       frameIndex: 2
       cellRect:
-        x: 2
-        y: 0
-        width: 28
-        height: 19
-      spriteId: e8644b484ab655241b909a2f4d9c24bc
-    - name: Mordida projectile_Frame_3
+        x: 4
+        y: 4
+        width: 24
+        height: 23
+      spriteId: 6d73f01c25b1a6e4fa8682154e5e8c78
+    - name: Oleo de peixe projectile_Frame_3
       frameIndex: 3
       cellRect:
-        x: 2
-        y: 1
-        width: 28
-        height: 17
-      spriteId: d8532b3696e645c48ab9ecd0ade6d10c
-    - name: Mordida projectile_Frame_4
+        x: 4
+        y: 3
+        width: 24
+        height: 24
+      spriteId: 8fadd513036f5c44a8774da2f8243de1
+    - name: Oleo de peixe projectile_Frame_4
       frameIndex: 4
       cellRect:
-        x: 2
+        x: 4
         y: 2
-        width: 28
-        height: 15
-      spriteId: 072aed79ebea4cb489e17fb23b743602
-    - name: Mordida projectile_Frame_5
+        width: 24
+        height: 25
+      spriteId: 6b7920262e12dc7439c17b1de71f1a52
+    - name: Oleo de peixe projectile_Frame_5
       frameIndex: 5
       cellRect:
-        x: 1
-        y: 2
-        width: 30
-        height: 14
-      spriteId: 7d514e2bc180fb944a448b365c23c26c
-    - name: Mordida projectile_Frame_6
+        x: 4
+        y: 1
+        width: 24
+        height: 24
+      spriteId: 0af6a84b85a928b41924031f86e80055
+    - name: Oleo de peixe projectile_Frame_6
       frameIndex: 6
       cellRect:
-        x: 0
-        y: 2
-        width: 31
-        height: 14
-      spriteId: 5896b9903f2f5c1409a17fa73b3faec3
-    - name: Mordida projectile_Frame_7
+        x: 10
+        y: 0
+        width: 12
+        height: 24
+      spriteId: 7340b97e8525ef64a913132496b0d3ec
+    - name: Oleo de peixe projectile_Frame_7
       frameIndex: 7
       cellRect:
-        x: 2
-        y: 2
-        width: 28
-        height: 14
-      spriteId: ddf976d234efafc4a80bfa279cef160b
-    - name: Mordida projectile_Frame_8
+        x: 12
+        y: 0
+        width: 8
+        height: 22
+      spriteId: ede7b6f28541eb246b9d0d98ef1838c4
+    - name: Oleo de peixe projectile_Frame_8
       frameIndex: 8
       cellRect:
-        x: 1
-        y: 2
-        width: 31
-        height: 14
-      spriteId: 738ff4907fe339545a2b7ae424c9951a
-    - name: Mordida projectile_Frame_9
-      frameIndex: 9
-      cellRect:
-        x: 2
-        y: 2
-        width: 28
-        height: 14
-      spriteId: af07f7db5f8cd4d419cdeed6ec0bc5ce
+        x: 14
+        y: 0
+        width: 4
+        height: 21
+      spriteId: 72d8a706778df22409cb97789f8e15fa
     linkedCells: []
     parentIndex: -1
-  platformSettings:
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Android
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: WebGL
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
+  platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 19}
+  canvasSize: {x: 32, y: 32}

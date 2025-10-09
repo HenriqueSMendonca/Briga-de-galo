@@ -27,6 +27,9 @@ MonoBehaviour:
   comboPs4: <sprite="ps4 Square" name="ps4 Square"> <sprite="ps4 X" name="ps4 X">
     <sprite="ps4 X" name="ps4 X">
   moveSound: {fileID: 8300000, guid: 5b1bab05cc844954da34342b8858259c, type: 3}
+  moveAnim: {fileID: 2807662609133631475, guid: 12dc0bb6cc1dad24ba8318742f625bbc, type: 3}
+  animTime: 0.4
+  animOffset: {x: 0, y: 0, z: 0}
   moveHelpKap:
   - {fileID: 8723354275304100278, guid: 5e311187b6b463d459aef67635b5464f, type: 3}
   - {fileID: 1961624248081851974, guid: 29a5a8f2b8a650e4389325f52523761c, type: 3}

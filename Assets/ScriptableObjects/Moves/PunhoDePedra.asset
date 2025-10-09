@@ -30,6 +30,9 @@ MonoBehaviour:
     triangle" name="ps4 triangle"><sprite="ps4 Square" name="ps4 Square"><sprite="ps4
     triangle" name="ps4 triangle">
   moveSound: {fileID: 8300000, guid: af4f9c861c80cbf48a20425b35bbc006, type: 3}
+  moveAnim: {fileID: 3476592794277682299, guid: 1d1b74004b5ec35478cff712621eddf1, type: 3}
+  animTime: 2.5
+  animOffset: {x: 0, y: 0, z: 0}
   moveHelpKap:
   - {fileID: 1961624248081851974, guid: 29a5a8f2b8a650e4389325f52523761c, type: 3}
   - {fileID: 1961624248081851974, guid: 29a5a8f2b8a650e4389325f52523761c, type: 3}

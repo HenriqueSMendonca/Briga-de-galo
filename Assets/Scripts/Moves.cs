@@ -21,6 +21,7 @@ public class Moves : ScriptableObject
     [SerializeField] AudioClip moveSound;
     [SerializeField] GameObject moveAnim;
     [SerializeField] float animTime;
+    [SerializeField] Vector3 animOffset;
     [SerializeField] List<GameObject> moveHelpKap;
     [SerializeField] List<GameObject> moveHelpPs4;
 
@@ -39,6 +40,8 @@ public class Moves : ScriptableObject
     public GameObject MoveAnim { get { return moveAnim; } }
     
     public float AnimTime { get { return animTime; } }
+
+    public Vector3 AnimOffset { get { return animOffset; } }
     
     
 

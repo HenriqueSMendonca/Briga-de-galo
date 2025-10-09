@@ -1,0 +1,671 @@
+fileFormatVersion: 2
+guid: f0aa5a3d57aa1af4ca14330a8523279d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Escamas envenenadas projectile_Frame_0
+    originalName: 
+    pivot: {x: 0.42857143, y: -5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 136
+      width: 7
+      height: 8
+    spriteID: aed116c0c42c4e740abcc3bab0ab8edf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 136}
+  - name: Escamas envenenadas projectile_Frame_1
+    originalName: 
+    pivot: {x: 0.13043478, y: -3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 116
+      width: 23
+      height: 12
+    spriteID: de2649e5e8da5474db5e6786aa33bf98
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 116}
+  - name: Escamas envenenadas projectile_Frame_2
+    originalName: 
+    pivot: {x: 0.13043478, y: -0.7777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 116
+      width: 23
+      height: 27
+    spriteID: 6fb961b68c7b53343a4ca70df30786a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 36, y: 116}
+  - name: Escamas envenenadas projectile_Frame_3
+    originalName: 
+    pivot: {x: 0.13043478, y: -0.09090909}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 218
+      y: 60
+      width: 23
+      height: 44
+    spriteID: 2d7ed4e274a6cb94c9beaca3518fbed2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 218, y: 60}
+  - name: Escamas envenenadas projectile_Frame_4
+    originalName: 
+    pivot: {x: 0.16666669, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 60
+      width: 24
+      height: 48
+    spriteID: 731b91ba4f159da4d993443f5fb9841b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 60}
+  - name: Escamas envenenadas projectile_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 60
+      width: 40
+      height: 48
+    spriteID: 72ca22ee00435c240b1717bde6a6acd1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 60}
+  - name: Escamas envenenadas projectile_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 60
+      width: 40
+      height: 48
+    spriteID: 4e30143d2e51e314499db04508a77aac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 60}
+  - name: Escamas envenenadas projectile_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 60
+      width: 40
+      height: 48
+    spriteID: bd7b2b7a721e43343b396860e4bc228b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 100, y: 60}
+  - name: Escamas envenenadas projectile_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 4
+      width: 44
+      height: 48
+    spriteID: 2d6aaeebf158aa04d85281e1253f3df5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 4}
+  - name: Escamas envenenadas projectile_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 4
+      width: 44
+      height: 48
+    spriteID: 98b813497b6d84a4fbb3e9aec94b1ed3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 4}
+  - name: Escamas envenenadas projectile_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 48
+      height: 48
+    spriteID: d7c40cc1cbca0a44d82b63f8849c3bc7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Escamas envenenadas projectile_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: -0.02173913}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 164
+      y: 4
+      width: 42
+      height: 46
+    spriteID: 4143532eff383e646aaaa7bfc78adb79
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 164, y: 4}
+  - name: Escamas envenenadas projectile_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 214
+      y: 4
+      width: 36
+      height: 42
+    spriteID: 40230ab41b8402942b0a19cbf7e742ce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 214, y: 4}
+  - name: Escamas envenenadas projectile_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: -0.16666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 60
+      width: 30
+      height: 36
+    spriteID: cb14e6ba8694f4945af3d5f81fe39752
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 60}
+  - name: Escamas envenenadas projectile_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: -0.35714287}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 116
+      width: 24
+      height: 28
+    spriteID: dae2d3162f946814394ffa8a39e14f6e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 116}
+  - name: Escamas envenenadas projectile_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: -0.5909091}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 116
+      width: 24
+      height: 22
+    spriteID: 720432ca94faf8c43a428201338b8d9a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 116}
+  - name: Escamas envenenadas projectile_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: -0.5909091}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 99
+      y: 116
+      width: 24
+      height: 22
+    spriteID: 5f9dbe4412e6dc0418e55adc2f38a7c5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 99, y: 116}
+  - name: Escamas envenenadas projectile_Frame_17
+    originalName: 
+    pivot: {x: 0.50000006, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 186
+      y: 116
+      width: 14
+      height: 16
+    spriteID: 174fb7a916d0203468ddb0c70340e995
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 186, y: 116}
+  - name: Escamas envenenadas projectile_Frame_18
+    originalName: 
+    pivot: {x: 0.49999997, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 162
+      y: 116
+      width: 16
+      height: 16
+    spriteID: 9c0a5823db6fa9e45bc269f60a73ce37
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 162, y: 116}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1712607022
+    name: Escamas envenenadas projectile
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Escamas envenenadas projectile_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 21
+        y: 40
+        width: 7
+        height: 8
+      spriteId: aed116c0c42c4e740abcc3bab0ab8edf
+    - name: Escamas envenenadas projectile_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 21
+        y: 36
+        width: 23
+        height: 12
+      spriteId: de2649e5e8da5474db5e6786aa33bf98
+    - name: Escamas envenenadas projectile_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 21
+        y: 21
+        width: 23
+        height: 27
+      spriteId: 6fb961b68c7b53343a4ca70df30786a5
+    - name: Escamas envenenadas projectile_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 21
+        y: 4
+        width: 23
+        height: 44
+      spriteId: 2d7ed4e274a6cb94c9beaca3518fbed2
+    - name: Escamas envenenadas projectile_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 20
+        y: 0
+        width: 24
+        height: 48
+      spriteId: 731b91ba4f159da4d993443f5fb9841b
+    - name: Escamas envenenadas projectile_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 4
+        y: 0
+        width: 40
+        height: 48
+      spriteId: 72ca22ee00435c240b1717bde6a6acd1
+    - name: Escamas envenenadas projectile_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 4
+        y: 0
+        width: 40
+        height: 48
+      spriteId: 4e30143d2e51e314499db04508a77aac
+    - name: Escamas envenenadas projectile_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 4
+        y: 0
+        width: 40
+        height: 48
+      spriteId: bd7b2b7a721e43343b396860e4bc228b
+    - name: Escamas envenenadas projectile_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 2
+        y: 0
+        width: 44
+        height: 48
+      spriteId: 2d6aaeebf158aa04d85281e1253f3df5
+    - name: Escamas envenenadas projectile_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 2
+        y: 0
+        width: 44
+        height: 48
+      spriteId: 98b813497b6d84a4fbb3e9aec94b1ed3
+    - name: Escamas envenenadas projectile_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      spriteId: d7c40cc1cbca0a44d82b63f8849c3bc7
+    - name: Escamas envenenadas projectile_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 3
+        y: 1
+        width: 42
+        height: 46
+      spriteId: 4143532eff383e646aaaa7bfc78adb79
+    - name: Escamas envenenadas projectile_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 6
+        y: 3
+        width: 36
+        height: 42
+      spriteId: 40230ab41b8402942b0a19cbf7e742ce
+    - name: Escamas envenenadas projectile_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 9
+        y: 6
+        width: 30
+        height: 36
+      spriteId: cb14e6ba8694f4945af3d5f81fe39752
+    - name: Escamas envenenadas projectile_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 12
+        y: 10
+        width: 24
+        height: 28
+      spriteId: dae2d3162f946814394ffa8a39e14f6e
+    - name: Escamas envenenadas projectile_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 12
+        y: 13
+        width: 24
+        height: 22
+      spriteId: 720432ca94faf8c43a428201338b8d9a
+    - name: Escamas envenenadas projectile_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 12
+        y: 13
+        width: 24
+        height: 22
+      spriteId: 5f9dbe4412e6dc0418e55adc2f38a7c5
+    - name: Escamas envenenadas projectile_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 17
+        y: 16
+        width: 14
+        height: 16
+      spriteId: 174fb7a916d0203468ddb0c70340e995
+    - name: Escamas envenenadas projectile_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      spriteId: 9c0a5823db6fa9e45bc269f60a73ce37
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 48, y: 48}
