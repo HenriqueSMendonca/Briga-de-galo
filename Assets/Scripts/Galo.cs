@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -67,10 +68,9 @@ public class Galo : MonoBehaviour
     public void SetStatus(ConditionID conditionId)
     {
             Status.Add(ConditionDB.Conditions[conditionId]);      
-        for (int i = 0; Status?.Count > i; i++)
-        {
-            Status[i]?.OnStart?.Invoke(this);
-        }
+
+            Status[Status.Count - 1]?.OnStart?.Invoke(this);
+        
     
     }
     public void OnAfterTurn()
@@ -95,10 +95,9 @@ public class Galo : MonoBehaviour
     }
     public void OnInflicted()
     {
-        for (int i = 0; Status?.Count > i; i++)
-        {
-            Status[i]?.OnInflicted?.Invoke(this);
-        }
+
+            Status[Status.Count - 1]?.OnInflicted?.Invoke(this);
+        
     }
     public bool OnBeforeMove()
     {

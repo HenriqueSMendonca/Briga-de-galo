@@ -55,7 +55,7 @@ public class ConditionDB
                 },
                 OnInflicted = (Galo galo) =>
                 {
-                    
+                    Debug.Log(ConditionDB.Conditions[ConditionID.grd].Inflicted);
                     if (ConditionDB.Conditions[ConditionID.grd].Inflicted == false){
                         statusAnim?.Invoke(1, galo);
                     galo.guard += 1;
@@ -152,6 +152,7 @@ public class ConditionDB
                         Debug.Log("do " + galo.Status[index].StatusTime);
                         statusAnim?.Invoke(3, galo);
                         galo.Status[index].StatusTime--;
+                        Debug.Log("do " + galo.Status[index].StatusTime);
                     }
 
 
