@@ -409,8 +409,10 @@ public class BattleSystem : MonoBehaviour
                         dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
                         yield return new WaitForSeconds(2);
                         galo1.RemoveSP(move.SpCost);
+                        
                         if (galo2.isParry)
                         {
+                            yield return new WaitForSeconds(2);
                             PlayAudio(move);
                             StartCoroutine(MoveAnim(move, galo2, galo1));
                             StartCoroutine(CheckHP(galo2, galo1, move.Damage));
@@ -532,6 +534,7 @@ public class BattleSystem : MonoBehaviour
                         {
                             if (galo2.isParry)
                             {
+                                yield return new WaitForSeconds(2);
                                 PlayAudio(move);
                                 StartCoroutine(MoveAnim(move, galo1, galo2));
                                 StartCoroutine(CheckHP(galo2, galo1, move.Damage));

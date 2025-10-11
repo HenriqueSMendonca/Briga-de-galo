@@ -38,6 +38,7 @@ public class BattleHud : MonoBehaviour
 
         hpText.text = galo.currentHp.ToString() + "/" + galo.maxHP.ToString();
         spText.text = galo.currentSP.ToString() + "/" + galo.maxSP.ToString();
+        Debug.Log(player.devices[0].name);
         for (int i = 0; i < abilityText.Length; i++)
         {
             abilityText[i].text = galo.moves[i + 2].Name;
@@ -46,7 +47,7 @@ public class BattleHud : MonoBehaviour
                 abilityHelp[i].text = galo.moves[i + 2].Name + "   <color=yellow>" + galo.moves[i + 2].Combo + "</color>";
                 descriptions[i + 2].device = "keyboard";
             }
-            else if (player.devices[0].name == "DualShock4GamepadHID")
+            else if (player.devices[0].name == "DualShock4GamepadHID" || player.devices[0].name == "DualShock4GamepadHID1")
             {
                 abilityHelp[i].text = galo.moves[i + 2].Name + "   " + galo.moves[i + 2].ComboPs4;
                 descriptions[i + 2].device = "ps4";
