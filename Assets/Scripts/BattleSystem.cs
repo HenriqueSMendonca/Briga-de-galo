@@ -163,14 +163,6 @@ public class BattleSystem : MonoBehaviour
 
         p1Galo.OnAfterTurn();
         p2Galo.OnAfterTurn();
-        for (int i = 0; p1Galo.Status?.Count > i; i++)
-        {
-            Debug.Log(p1Galo.Status[i].Name + "turnos restantes: " + p2Galo.Status[i].StatusTime);
-        }
-        for (int i = 0; p2Galo.Status?.Count > i; i++)
-        {
-            Debug.Log(p2Galo.Status[i].Name + "turnos restantes: " + p2Galo.Status[i].StatusTime);
-        }
         carro1.acceleration = p1Galo.carSpeed;
         carro2.acceleration = p2Galo.carSpeed;
         if (p1Galo.currentHp <= 0)
@@ -637,7 +629,7 @@ public class BattleSystem : MonoBehaviour
                         {
                             galo1.RemoveSP(move.SpCost);
                         }
-
+                        yield return new WaitForSeconds(2);
                         if (move.Damage <= 0)
                         {
                             PlayAudio(move);
