@@ -364,6 +364,7 @@ public class BattleSystem : MonoBehaviour
                         dialogueText.text = $"{galo1.nomeGalo} usou {move.Name}!";
                         yield return new WaitForSeconds(2);
                         galo1.RemoveSP(move.SpCost);
+                        yield return new WaitForSeconds(2);
                         if (galo2.isParry)
                         {
                             PlayAudio(move);
