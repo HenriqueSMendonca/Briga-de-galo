@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mordida projectile
       objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 74ad8cd735c3f1e488dcef25100be6d4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 74ad8cd735c3f1e488dcef25100be6d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
