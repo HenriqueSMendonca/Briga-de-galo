@@ -369,8 +369,7 @@ public class BattleSystem : MonoBehaviour
                         {
                             PlayAudio(move);
                             StartCoroutine(MoveAnim(move, galo1, galo2));
-                            StartCoroutine(CheckHP(galo1, galo2, move.Damage));
-                            StartCoroutine(Recoil(galo1, move.Damage / 2));
+                            StartCoroutine(Recoil(galo1, move.Damage / 2, galo2));                                            
                             yield return RunMoveEffects(move, galo1, galo2);
                         }
 
@@ -580,7 +579,7 @@ public class BattleSystem : MonoBehaviour
                         }
                         else
                         {
-                            if (galo1.Status != null)
+                            if (galo1.Status.Contains(ConditionDB.Conditions[ConditionID.wek]) || galo1.Status.Contains(ConditionDB.Conditions[ConditionID.psn]) || galo1.Status.Contains(ConditionDB.Conditions[ConditionID.nau]) || galo1.Status.Contains(ConditionDB.Conditions[ConditionID.off]))
                             {
                                 PlayAudio(move);
                                 StartCoroutine(MoveAnim(move, galo1, galo2));
@@ -720,7 +719,7 @@ public class BattleSystem : MonoBehaviour
 
         }
     }
-    IEnumerator Recoil(Galo galo1, int dmg)
+    IEnumerator Recoil(Galo galo1, int dmg, Galo galo2)
     {
         galo1.tookDamage = true;
         dmg = Mathf.FloorToInt((dmg * UnityEngine.Random.Range(0.9f, 1.1f) * (galo1.attack / galo1.guard)));
@@ -728,7 +727,10 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(1 / Math.Clamp(dmg, 1, 1000));
         if (isDead)
         {
-            EndBattle(galo1);
+            EndBattle(galo2);
+        } else
+        {
+            StartCoroutine(CheckHP(galo1, galo2, dmg * 2));
         }
     }
     void EndBattle(Galo galo1)
