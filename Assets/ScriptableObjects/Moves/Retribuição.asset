@@ -23,8 +23,8 @@ MonoBehaviour:
   target: 1
   movePriority: 3
   combo: XZXZ
-  comboKap: <sprite="kap O" name="kap O"><sprite="kap X" name="kap X"><sprite="kap
-    O" name="kap O"><sprite="kap X" name="kap X">
+  comboKap: <sprite="kap B" name="kap B"><sprite="kap A" name="kap A"><sprite="kap
+    B" name="kap B"><sprite="kap A" name="kap A">
   comboPs4: <sprite="ps4 O" name="ps4 O"><sprite="ps4 X" name="ps4 X"><sprite="ps4
     O" name="ps4 O"><sprite="ps4 X" name="ps4 X">
   moveSound: {fileID: 8300000, guid: da48a8f1e1b132b47aa358ec9ee3661b, type: 3}
