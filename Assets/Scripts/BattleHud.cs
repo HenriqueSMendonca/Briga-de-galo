@@ -52,7 +52,7 @@ public class BattleHud : MonoBehaviour
                 abilityHelp[i].text = galo.moves[i + 2].Name + "   " + galo.moves[i + 2].ComboPs4;
                 descriptions[i + 2].device = "ps4";
             }
-            else if (player.devices[0].name == "XInputControllerWindows" || player.devices[0].name == "XInputControllerWindows1")
+            else if (player.devices[0].name == "XInputControllerWindows" || player.devices[0].name == "XInputControllerWindows1" || player.devices[0].name == "Controller (Xbox360 For Windows)")
             {
                 abilityHelp[i].text = galo.moves[i + 2].Name + "   " + galo.moves[i + 2].ComboKap;
                 descriptions[i + 2].device = "kap";
